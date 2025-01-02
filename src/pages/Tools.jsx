@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper } from '@mui/material';
 
 const toolsData = {
@@ -41,7 +41,7 @@ const Tools = () => {
     return (
         <Box sx={{ width: '100%', paddingBottom: '30px' }}>
             {/* Add Heading Above the Table */}
-            <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: '#3182ce' }}>
+            <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: '#000' }}>
                 AI Hyper Automation Tools
             </Typography>
 
@@ -68,8 +68,8 @@ const Tools = () => {
                                                     src={toolImage}
                                                     alt={`Tool ${imgIndex + 1}`}
                                                     style={{
-                                                        width: '120px', 
-                                                        height: '100px', 
+                                                        width: '120px',
+                                                        height: '100px',
                                                         objectFit: 'cover',
                                                         borderRadius: '8px',
                                                         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',

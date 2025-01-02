@@ -12,8 +12,6 @@ import DigitalTransformation from './pages/DigitalTransformation';
 import SoftwareDevelopment from './pages/SoftwareDevelopment';
 import Consultation from './pages/Consultation';
 import SmoothScroll from "smooth-scroll";
-import Customer from "./pages/Customer";
-import Tools from "./pages/Tools";
 import PageNotFound from "./pages/PageNotFound";
 import Footer from "./components/Footer";
 import Resources from "./pages/Resources";
@@ -48,13 +46,11 @@ const App = () => {
           <Route path="/digital-transformation" element={<DigitalTransformation />} />
           <Route path="/software-development" element={<SoftwareDevelopment />} />
           <Route path="/consultation" element={<Consultation />} />
-          <Route path="/customer" element={<Customer />} />
-          <Route path="/tools" element={<Tools />} />
           <Route path="/resources" element={<Resources />} />
-          
+
           {/* Updated route for Partners */}
-          <Route path="/partners" element={<Partners />} /> 
-          
+          {/* <Route path="/partners" element={<Partners />} /> */}
+
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>

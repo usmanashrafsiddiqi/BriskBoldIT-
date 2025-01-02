@@ -7,7 +7,6 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Navigation = () => {
     const [servicesAnchorEl, setServicesAnchorEl] = useState(null);
-    const [partnersAnchorEl, setPartnersAnchorEl] = useState(null);  
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // Handle Services dropdown
@@ -17,15 +16,6 @@ const Navigation = () => {
 
     const handleCloseServicesMenu = () => {
         setServicesAnchorEl(null);
-    };
-
-    // Handle Partners dropdown (formerly Combine)
-    const handlePartnersMenuClick = (event) => { 
-        setPartnersAnchorEl(event.currentTarget); 
-    };
-
-    const handleClosePartnersMenu = () => {  
-        setPartnersAnchorEl(null);  
     };
 
     const handleMobileMenuToggle = () => {
@@ -60,8 +50,8 @@ const Navigation = () => {
                             marginRight: 2,
                             display: 'flex',
                             alignItems: 'center',
-                            paddingRight: 0, 
-                            paddingLeft: 1,  
+                            paddingRight: 0,
+                            paddingLeft: 1,
                         }}
                         onClick={handleServicesMenuClick}
                     >
@@ -85,35 +75,6 @@ const Navigation = () => {
                         </MenuItem>
                         <MenuItem component={Link} to="/consultation" onClick={handleCloseServicesMenu}>
                             Consultation / Training
-                        </MenuItem>
-                    </Menu>
-
-                    {/* Partners Dropdown (formerly Combine) */}
-                    <Button
-                        color="inherit"
-                        sx={{
-                            marginRight: 2,
-                            display: 'flex',
-                            alignItems: 'center',
-                            paddingRight: 0, // Remove extra padding
-                            paddingLeft: 1,  // Optionally, add a little padding to the left if needed
-                        }}
-                        onClick={handlePartnersMenuClick}  // Updated click handler
-                    >
-                        Partners
-                        <ArrowDropDownIcon sx={{ marginLeft: 0.5 }} />
-                    </Button>
-                    <Menu
-                        anchorEl={partnersAnchorEl}  // Updated anchorEl
-                        open={Boolean(partnersAnchorEl)}  // Updated anchorEl
-                        onClose={handleClosePartnersMenu}  // Updated handler
-                        sx={{ mt: 1 }}
-                    >
-                        <MenuItem component={Link} to="/customer" onClick={handleClosePartnersMenu}>
-                            Customer
-                        </MenuItem>
-                        <MenuItem component={Link} to="/tools" onClick={handleClosePartnersMenu}>
-                            Tools
                         </MenuItem>
                     </Menu>
 
