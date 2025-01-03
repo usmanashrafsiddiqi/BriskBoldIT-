@@ -13,9 +13,9 @@ const Homepage = ({ header, services, about, gallery, contact }) => {
             <Header data={header} />
             <Services data={services} />
             <About data={about} />
-            <Tools />
-            <Gallery data={gallery} />
             <Customer />
+            <Gallery data={gallery} />
+            <Tools />
             <Contact data={contact} />
         </div>
     )

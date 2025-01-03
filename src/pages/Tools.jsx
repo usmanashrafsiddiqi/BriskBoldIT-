@@ -42,7 +42,7 @@ const Tools = () => {
         <Box sx={{ width: '100%', paddingBottom: '30px' }}>
             {/* Add Heading Above the Table */}
             <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: '#000' }}>
-                AI Hyper Automation Tools
+            Expertise
             </Typography>
 
             {/* Table of Tools for Large Screens */}
