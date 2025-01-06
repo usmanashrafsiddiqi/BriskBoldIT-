@@ -1,3 +1,213 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #ffffff; 
+  color: #10374E; 
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; 
+  color: #10374E; 
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #DA7245; 
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #C45037;
+  text-decoration: underline;
+}
+
+button {
+  background-color: #DA7245; 
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #C45037; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.font-light {
+  font-weight: 300; 
+}
+
+.font-regular {
+  font-weight: 400; 
+}
+
+.font-medium {
+  font-weight: 500; 
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.bg-primary {
+  background-color: #10374E; 
+}
+
+.bg-secondary {
+  background-color: #DA7245; 
+}
+
+.bg-tertiary {
+  background-color: #C45037; 
+}
+
+.text-primary {
+  color: #10374E; 
+}
+
+.text-secondary {
+  color: #DA7245; 
+}
+
+.text-tertiary {
+  color: #C45037; 
+}
+
+.text-light {
+  color: #ffffff; 
+}
+
+.clear-space {
+  padding: 20px;
+}
+
+.logo-clear-space {
+  padding: 30px;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.logo-exclusion-zone {
+  margin: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.card-header {
+  font-weight: 600;
+  color: #10374E; 
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #10374E; 
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #DA7245; 
+}
+
+footer a:hover {
+  color: #C45037; 
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px; 
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
