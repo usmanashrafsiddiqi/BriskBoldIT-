@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Box } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import logo from "../assets/logo.png";
+import logo from "../assets/logowebsite.jpg";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Navigation = () => {

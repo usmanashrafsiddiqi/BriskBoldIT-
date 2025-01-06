@@ -3,7 +3,20 @@ import { Container, Grid, Typography, Box, Button } from "@mui/material";
 
 export const Header = () => {
     return (
-        <header className="relative w-full h-[60vh] md:h-[80vh] bg-cover bg-center" style={{ backgroundImage: 'url("src/assets/about.jpg")', marginBottom: '50px', paddingBottom: '20px' }}>
+        <header
+        className="relative w-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url("src/assets/briskboldbanner.jpg")',
+          marginBottom: '50px',
+          paddingBottom: '20px',
+          height: 'auto',
+          minHeight: '300px', 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center', 
+          backgroundRepeat: 'no-repeat', 
+        }}
+      >
+      
           
             <Box className="absolute inset-0 bg-black opacity-50"></Box>
 
@@ -11,7 +24,7 @@ export const Header = () => {
             <Container className="relative z-10 flex h-full px-4">
                 <Grid container justifyContent="center" alignItems="center">
                     <Grid item xs={12} md={10}>
-                        <Box className="text-center text-white">
+                        {/* <Box className="text-center text-white">
                            
                             <Typography
                                 variant="h1"
@@ -56,7 +69,7 @@ export const Header = () => {
                                     Get Started
                                 </Button>
                             </Box>
-                        </Box>
+                        </Box> */}
                     </Grid>
                 </Grid>
             </Container>
