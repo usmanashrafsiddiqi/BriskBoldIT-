@@ -3,28 +3,28 @@ import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, Tabl
 
 const toolsData = {
     ProcessMining: [
-        'https://logowik.com/content/uploads/images/automation-anywhere1292.logowik.com.webp',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7fmuOM47OKp5qwqSEuATmvUyoZ6Bp3kUW2A&s',
-        'https://techchannel.com/wp-content/uploads/company-images/25F30A88-D68F-4B7E-B7BB-176F3D5A8706.jpg'
+        'src/assets/automationanywhere.jpg',
+        'src/assets/uipath.png',
+        'src/assets/softwareag.jpg'
     ],
     RPAAIAutomation: [
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7fmuOM47OKp5qwqSEuATmvUyoZ6Bp3kUW2A&s',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaer6OUw5nSzQZD2LzarVgEOFILGUl4t_thg&s',
-        'https://logowik.com/content/uploads/images/automation-anywhere1292.logowik.com.webp',
+        'src/assets/uipath.png',
+        'src/assets/powerautomate.jpg',
+        'src/assets/automationanywhere.jpg',
     ],
     ConversationalAI: [
-        'https://miro.medium.com/v2/resize:fit:3128/1*b9vA2iwZMmhUtRDF7bkAWw.png',
-        'https://www.temenos.com/wp-content/uploads/2022/03/twixor-Logo-1.png',
+        'src/assets/druid1.png',
+        'src/assets/twixor.png',
     ],
     IntelligentDocumentProcessing: [
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7fmuOM47OKp5qwqSEuATmvUyoZ6Bp3kUW2A&s',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3H2ATRJjg5Jk_dRBc1TYjXCZjVczKhu04Q&s',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAbIl_1z_P6bsi7AAB26ujGZaPFFALwPu88Cj4jnH2qk4smhNTpfjX0rzA76AwsPfp9M&usqp=CAU',
+        'src/assets/uipath.png',
+        'src/assets/docaquire.png',
+        'src/assets/abby.png',
     ],
     Insights: [
-        'https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7fmuOM47OKp5qwqSEuATmvUyoZ6Bp3kUW2A&s',
-        'https://logowik.com/content/uploads/images/automation-anywhere1292.logowik.com.webp',
+        'src/assets/powerbi.png',
+        'src/assets/uipath.png',
+        'src/assets/automationanywhere.jpg',
     ],
 };
 

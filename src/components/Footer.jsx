@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Link, Grid, IconButton } from '@mui/material';
-import { Facebook, Twitter, LinkedIn, Instagram } from '@mui/icons-material';
+import { Facebook, Twitter, LinkedIn, Instagram,YouTube } from '@mui/icons-material';
 
 const Footer = () => {
     return (
@@ -56,7 +56,7 @@ const Footer = () => {
                         <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2,color:"white" }}>
                             Follow Us
                         </Typography>
-                        <Box className="flex space-x-4">
+                        <Box className="flex space-x-4 ">
   <a href="https://www.facebook.com/BriskBoldIT" target="_blank" rel="noopener noreferrer">
     <IconButton
       style={{ color: 'white' }} 
@@ -81,6 +81,14 @@ const Footer = () => {
       className="p-2 hover:text-blue-500 transition-colors duration-200"
     >
       <LinkedIn />
+    </IconButton>
+  </a>
+  <a href="https://www.youtube.com/@BriskBoldAIAutomation" target="_blank" rel="noopener noreferrer">
+    <IconButton
+      style={{ color: 'white' }}
+      className="p-2 hover:text-blue-500 transition-colors duration-200"
+    >
+      <YouTube/>
     </IconButton>
   </a>
 
@@ -133,7 +141,7 @@ const Footer = () => {
                
                 <Box sx={{ mt: 4, textAlign: 'center' }}>
                     <Typography variant="body2" color="inherit">
-                     Copyright  &copy; {new Date().getFullYear()}  — BriskBold IT Services
+                     Copyright  &copy; {new Date().getFullYear()}  —  BriskBold AI and Automation
                     </Typography>
                 </Box>
             </Container>

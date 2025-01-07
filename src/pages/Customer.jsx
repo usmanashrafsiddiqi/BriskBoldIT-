@@ -5,7 +5,8 @@ const carouselImages = [
     'src/assets/nasdaq.jpg',
     'src/assets/abode.jpg',
     'src/assets/wabisabi.jpg',
-    'BriskBoldIT-/src/assets/ucm.jpg',
+    'src/assets/ucm.jpg',
+    'src/assets/der.jpg'
     
 ];
 
