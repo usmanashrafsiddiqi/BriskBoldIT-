@@ -24,7 +24,7 @@ export const Services = ({ data }) => {
                     <Typography variant="h3" className="text-4xl font-bold text-gray-800">
                         Our Services
                     </Typography>
-                    <Typography variant="h5" className="text-lg text-gray-600 mt-4">
+                    <Typography variant="h5" className="text-lg text-gray-600 mt-4 font-meduim">
                         We Build Robots. For a Better Future of Human Force.
                     </Typography>
                 </Box>
@@ -57,8 +57,8 @@ export const Services = ({ data }) => {
                                             <Box mb={3}>
                                                 <FontAwesomeIcon
                                                     icon={icon}
-                                                    className="text-indigo-600"
-                                                    style={{ fontSize: "3rem" }}
+                                                    className="text-indigo-600 "
+                                                    style={{ fontSize: "3rem",color:"#0067A3" }}
                                                 />
                                             </Box>
 
@@ -66,7 +66,8 @@ export const Services = ({ data }) => {
                                             <Typography variant="h6" className="text-xl font-medium text-gray-800 mb-2">
                                                 {service.name}
                                             </Typography>
-                                            <Typography variant="body2" className="text-gray-600">
+                                            <Typography variant="body2" className="text-gray-600"
+                                            style={{fontWeight:"500"}}>
                                                 {service.text}
                                             </Typography>
                                         </CardContent>

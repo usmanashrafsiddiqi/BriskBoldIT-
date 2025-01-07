@@ -84,9 +84,9 @@ export const Contact = () => {
         {
             name: "India",
             address: [
-                "Bal Garden, Karan Nagar",
-                "Srinagar, Jammu & Kashmir",
-                "India",
+                "Delhi",
+                 "Jammu & Kashmir",
+                
             ],
             mobile: "(+91) 8899912129",
             whatsapp: "(+91) 8899912129",
@@ -229,21 +229,21 @@ export const Contact = () => {
                                             height={40}
                                             style={{ borderRadius: "50%" }}
                                         />
-                                        <Typography variant="h6" sx={{ fontWeight: "bold", ml: 2 }}>
+                                        <Typography variant="h6" sx={{ fontWeight: "bold", ml: 2 ,}}>
                                             {location.name}
                                         </Typography>
                                     </Box>
-                                    <Typography variant="body2" sx={{ color: "#4a5568", mb: 2 }}>
+                                    <Typography variant="body2" sx={{ color: "#4a5568", mb: 2 ,fontWeight:"bold"}}>
                                         {location.address.map((line, idx) => (
                                             <Box key={idx}>{line}</Box>
                                         ))}
                                     </Typography>
                                     <Box sx={{ flexGrow: 1 }} /> 
-                                    <Typography variant="body2" sx={{ color: "#2d3748" }}>
+                                    <Typography variant="body2" sx={{ color: "#2d3748", fontWeight:"bold" }}>
                                         Mobile: {location.mobile}
                                     </Typography>
                                     {location.whatsapp && (
-                                        <Typography variant="body2" sx={{ color: "#2d3748" }}>
+                                        <Typography variant="body2" sx={{ color: "#2d3748",fontWeight:"bold" }}>
                                             WhatsApp: {location.whatsapp}
                                         </Typography>
                                     )}

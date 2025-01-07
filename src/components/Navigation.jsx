@@ -29,7 +29,7 @@ const Navigation = () => {
                     <img
                         src={logo}
                         alt="Logo"
-                        style={{ width: 190, height: 60 }}
+                        style={{ width: 82, height: 61 }}
                     />
                 </Box>
 
@@ -106,24 +106,24 @@ const Navigation = () => {
                         <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
                             Home
                         </Button>
-                        <Button component={Link} to="/about" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748' }}>
+                        <Button component={Link} to="/about" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
                             About
                         </Button>
                         <Button
                             color="inherit"
-                            sx={{ width: '100%', textAlign: 'left' , color: '#2d3748'}}
+                            sx={{ width: '100%', textAlign: 'left' , color: 'red'}}
                             onClick={handleServicesMenuClick}
                         >
                             Services
-                            <ArrowDropDownIcon sx={{ marginLeft: 1 }} />
+                            <ArrowDropDownIcon sx={{ marginLeft: 0 }} />
                         </Button>
-                        <Button component={Link} to="/customer" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748'}}>
+                        <Button component={Link} to="/customer" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red'}}>
                             Customer
                         </Button>
-                        <Button component={Link} to="/tools" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748' }}>
+                        <Button component={Link} to="/tools" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
                             Tools
                         </Button>
-                        <Button component={Link} to="/resources" color="inherit" sx={{ width: '100%', textAlign: 'left' , color: '#2d3748'}}>
+                        <Button component={Link} to="/resources" color="inherit" sx={{ width: '100%', textAlign: 'left' , color: 'red'}}>
                             Resources
                         </Button>
                         <Menu

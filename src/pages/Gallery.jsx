@@ -10,7 +10,7 @@ export const Gallery = (props) => {
                 backgroundColor: "#f7fafc",
                 paddingTop: "3rem",
                 paddingBottom: "3rem",
-                overflow: "hidden", // Ensures the overflow effect is applied
+                overflow: "hidden", 
             }}
         >
             <Container>
@@ -39,7 +39,7 @@ export const Gallery = (props) => {
                         display: "flex",
                         justifyContent: "flex-start",
                         alignItems: "center",
-                        animation: "scroll 20s linear infinite", // Animation applied
+                        animation: "scroll 20s linear infinite", 
                     }}
                 >
                     {props.data ? (
@@ -48,17 +48,17 @@ export const Gallery = (props) => {
                             <div
                                 key={`${d.title}-${i}`}
                                 style={{
-                                    marginRight: "20px", // Space between images
+                                    marginRight: "20px", 
                                     display: "inline-block",
                                 }}
                             >
                                 <div
                                     style={{
                                         position: "relative",
-                                        width: "200px", // Control image size
+                                        width: "200px", 
                                         height: "auto",
                                         overflow: "hidden",
-                                        borderRadius: "12px", // Round corners for images
+                                        borderRadius: "12px", 
                                     }}
                                 >
                                     <Image
@@ -70,8 +70,8 @@ export const Gallery = (props) => {
                                             width: "100%",
                                             transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                             "&:hover": {
-                                                transform: "scale(1.05)", // Hover zoom effect
-                                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Hover shadow effect
+                                                transform: "scale(1.05)", 
+                                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", 
                                             },
                                         }}
                                     />

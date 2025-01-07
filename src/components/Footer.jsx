@@ -19,7 +19,7 @@ const Footer = () => {
                 <Grid container spacing={4}>
                     {/* Quick Links */}
                     <Grid item xs={12} sm={6} md={3}>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 ,color:"white"}}>
                             Quick Links
                         </Typography>
                         <Box>
@@ -40,7 +40,7 @@ const Footer = () => {
 
                   
                     <Grid item xs={12} sm={6} md={3}>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2,color:"white" }}>
                             Contact Us
                         </Typography>
                         <Box>
@@ -53,7 +53,7 @@ const Footer = () => {
 
                   
                     <Grid item xs={12} sm={6} md={3}>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2,color:"white" }}>
                             Follow Us
                         </Typography>
                         <Box className="flex space-x-4">
@@ -84,7 +84,7 @@ const Footer = () => {
     </IconButton>
   </a>
 
-  <a href="https://www.instagram.com/YourProfile" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/briskboldaiandautomation?igsh=MXgycjJoMTVseXdrbg==" target="_blank" rel="noopener noreferrer">
     <IconButton
       style={{ color: 'white' }}
       className="p-2 hover:text-blue-500 transition-colors duration-200"
@@ -98,7 +98,7 @@ const Footer = () => {
 
                    
                     <Grid item xs={12} sm={6} md={3}>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 ,color:"white"}}>
                             Subscribe to Our Newsletter
                         </Typography>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>

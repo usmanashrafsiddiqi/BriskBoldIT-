@@ -2,11 +2,11 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 const carouselImages = [
-    'https://images.unsplash.com/photo-1562783912-21ad31ee2a83?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://media.istockphoto.com/id/2110589244/photo/ai-text-artificial-intelligence-digital-concept-chatbot-assistant-ai-chatbot.jpg?s=2048x2048&w=is&k=20&c=5oOCWjtd3yZvukSPngxrKkrIOYNe99IrlgAf8neCYuY=',
-    'https://plus.unsplash.com/premium_photo-1682002135678-87b8a2fdde50?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://media.istockphoto.com/id/1933417108/photo/ai-chatbot-artificial-intelligence-concept.jpg?s=2048x2048&w=is&k=20&c=0vyuUTGrtFH_u13z0_b1icMS6vokRftmcQ4dyU0QZbA=',
-    'https://images.unsplash.com/photo-1619679505795-a4d0e6be5e02?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'src/assets/nasdaq.jpg',
+    'src/assets/abode.jpg',
+    'src/assets/wabisabi.jpg',
+    'BriskBoldIT-/src/assets/ucm.jpg',
+    
 ];
 
 const Customer = () => {
