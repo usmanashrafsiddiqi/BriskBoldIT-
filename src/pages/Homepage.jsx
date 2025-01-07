@@ -9,7 +9,7 @@ import Customer from './Customer'
 
 const Homepage = ({ header, services, about, gallery, contact }) => {
     return (
-        <div>
+        <div style={{ margin: 0, padding: 0 }}>
             <Header data={header} />
             <Services data={services} />
             <About data={about} />

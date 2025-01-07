@@ -9,7 +9,6 @@ const Navigation = () => {
     const [servicesAnchorEl, setServicesAnchorEl] = useState(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    // Handle Services dropdown
     const handleServicesMenuClick = (event) => {
         setServicesAnchorEl(event.currentTarget);
     };
@@ -30,7 +29,7 @@ const Navigation = () => {
                     <img
                         src={logo}
                         alt="Logo"
-                        style={{ width: 90, borderRadius: '10px', height: 60 }}
+                        style={{ width: 190, height: 60 }}
                     />
                 </Box>
 
@@ -101,7 +100,10 @@ const Navigation = () => {
                 {/* Mobile Dropdown Menu */}
                 {mobileMenuOpen && (
                     <Box sx={{ position: 'absolute', top: '64px', right: 0, backgroundColor: 'white', boxShadow: 3 }}>
-                        <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748' }}>
+                        {/* <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748' }}> */}
+
+                        //aise sabko apne hisab se color dena mobile k liye
+                        <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
                             Home
                         </Button>
                         <Button component={Link} to="/about" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748' }}>

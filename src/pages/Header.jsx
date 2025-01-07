@@ -18,14 +18,40 @@ export const Header = () => {
       >
       
           
+        //fix image for mobile and tab
+        <header
+            className="relative w-full h-[60vh] md:h-[80vh] bg-cover bg-center"
+            style={{
+                backgroundImage: 'url("/src/assets/about-mobile.jpg")',
+                marginBottom: '50px',
+                paddingBottom: '20px',
+            }}
+        >
+            <style>
+                {`
+                    @media (min-width: 640px) { 
+                        header {
+                            background-image: url("/src/assets/about-tablet.jpg") !important;
+                        }
+                    }
+                    @media (min-width: 1024px) { 
+                        header {
+                            background-image: url("src/assets/about.jpg") !important;
+                        }
+                    }
+                `}
+            </style>
+
+            {/* Overlay for darker background */}
             <Box className="absolute inset-0 bg-black opacity-50"></Box>
 
-            
             <Container className="relative z-10 flex h-full px-4">
                 <Grid container justifyContent="center" alignItems="center">
                     <Grid item xs={12} md={10}>
                         {/* <Box className="text-center text-white">
                            
+                        <Box className="text-center text-white">
+                            {/* Main Heading */}
                             <Typography
                                 variant="h1"
                                 component="h1"
@@ -37,12 +63,19 @@ export const Header = () => {
                                     fontWeight: "bold",
                                     letterSpacing: "0.5rem",
                                     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+                                    fontSize: {
+                                        xs: '2.5rem',
+                                        sm: '4rem',
+                                        md: '5rem',
+                                        lg: '6rem',
+                                        xl: '7rem',
+                                    },
                                 }}
                             >
                                 BriskBold IT
                             </Typography>
 
-                            
+                            {/* Subtitle */}
                             <Typography
                                 variant="h5"
                                 className="mt-4 text-base sm:text-lg md:text-xl max-w-3xl mx-auto"
@@ -50,7 +83,7 @@ export const Header = () => {
                                 We are an emerging market disrupter with expertise in digital transformation, robotics, and automation, providing innovative solutions to drive your business to the future.
                             </Typography>
 
-                            
+                            {/* Button */}
                             <Box mt={4}>
                                 <Button
                                     variant="contained"
