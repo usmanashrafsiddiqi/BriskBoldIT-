@@ -16,9 +16,6 @@ import PageNotFound from "./pages/PageNotFound";
 import Footer from "./components/Footer";
 import Resources from "./pages/Resources";
 
-
-import Partners from "./pages/Partners";
-
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
@@ -47,8 +44,6 @@ const App = () => {
           <Route path="/software-development" element={<SoftwareDevelopment />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/resources" element={<Resources />} />
-
-         
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
