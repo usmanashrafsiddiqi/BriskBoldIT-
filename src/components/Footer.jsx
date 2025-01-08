@@ -44,10 +44,10 @@ const Footer = () => {
                             Contact Us
                         </Typography>
                         <Box>
-                            <Typography variant="body2">Email:hr@briskboldit.com</Typography>
-                            <Typography variant="body2">Phone: +971506243891</Typography>
-                            <Typography variant="body2">Address: Srinagar, Jammu & Kashmir
-                            India</Typography>
+                            <Typography variant="body2">Email: hr@briskboldit.com</Typography>
+                            <Typography variant="body2">Phone: (+971) 554372731</Typography>
+                            <Typography variant="body2">Address: Business Bay,Dubai,UAE,
+                            </Typography>
                         </Box>
                     </Grid>
 

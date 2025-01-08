@@ -6,7 +6,7 @@ import { faCogs, faThumbsUp, faPrint, faLanguage, faChild, faRobot } from "@fort
 
 
 export const Services = ({ data }) => {
-    
+
     const iconMapping = {
         "fa fa-cogs": faCogs,
         "fa fa-thumbs-up": faThumbsUp,
@@ -21,10 +21,16 @@ export const Services = ({ data }) => {
             <Container>
                 {/* Section Title */}
                 <Box textAlign="center" mb={6}>
-                    <Typography variant="h3" className="text-4xl font-bold text-gray-800">
+                    <Typography variant="h3" className="text-4xl font-bold text-black-800"
+                     sx={{ fontWeight: 500 }}
+                    >
                         Our Services
                     </Typography>
-                    <Typography variant="h5" className="text-lg text-gray-600 mt-4 font-meduim">
+                    <Typography variant="h5" className="text-lg text-gray-600 mt-4 font-meduim"
+                    style={{ background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
+                        WebkitBackgroundClip: 'text',
+                        color: 'transparent',
+                        fontWeight: 'bold'}}  >
                         We Build Robots. For a Better Future of Human Force.
                     </Typography>
                 </Box>
@@ -33,8 +39,8 @@ export const Services = ({ data }) => {
                 <Grid container spacing={4} justifyContent="center">
                     {data
                         ? data.map((service, i) => {
-                          
-                            const icon = iconMapping[service.icon] || faCogs; 
+
+                            const icon = iconMapping[service.icon] || faCogs;
 
                             return (
                                 <Grid item xs={12} sm={6} md={4} key={`${service.name}-${i}`}>
@@ -42,9 +48,9 @@ export const Services = ({ data }) => {
                                         sx={{
                                             borderRadius: "12px",
                                             boxShadow: 3,
-                                            height: "100%",  
+                                            height: "100%",
                                             display: "flex",
-                                            flexDirection: "column",  
+                                            flexDirection: "column",
                                             "&:hover": {
                                                 boxShadow: 6,
                                                 transform: "scale(1.05)",
@@ -58,16 +64,17 @@ export const Services = ({ data }) => {
                                                 <FontAwesomeIcon
                                                     icon={icon}
                                                     className="text-indigo-600 "
-                                                    style={{ fontSize: "3rem",color:"#0067A3" }}
+                                                    style={{ fontSize: "3rem", color: "#0067A3" }}
                                                 />
                                             </Box>
 
-                                           
-                                            <Typography variant="h6" className="text-xl font-medium text-gray-800 mb-2">
+
+                                            <Typography variant="h6" className="text-xl font-medium text-gray-800 mb-2"
+                                          style={{ color: "#0067A3" }}  >
                                                 {service.name}
                                             </Typography>
                                             <Typography variant="body2" className="text-gray-600"
-                                            style={{fontWeight:"500"}}>
+                                                style={{ fontWeight: "500" }}>
                                                 {service.text}
                                             </Typography>
                                         </CardContent>

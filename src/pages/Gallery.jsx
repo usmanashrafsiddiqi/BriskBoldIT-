@@ -15,21 +15,26 @@ export const Gallery = (props) => {
         >
             <Container>
                 <Box sx={{ textAlign: "center", marginBottom: "3rem" }}>
-                    <Typography variant="h4" sx={{ fontWeight: "bold", color: "#2d3748" }}>
-                        Gallery
+                    <Typography variant="h4" className="font-bold " 
+                    sx={{ fontWeight: "500", color:"#000" }}
+                  >
+                        Partners and Vendors
                     </Typography>
                     <Typography
                         variant="body1"
                         sx={{
-                            color: "#718096",
-                            maxWidth: "42rem",
+                            color: "black",
+                            maxWidth: "60rem",
                             margin: "auto",
                             marginTop: "1rem",
+                            fontWeight:"bold"
                         }}
+                        style={{ background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent',
+                            fontWeight: 'bold'}}
                     >
-                        Explore our AI Gallery, showcasing innovative projects that harness the
-                        power of artificial intelligence to transform industries. From automation
-                        to data analysis, see how AI is shaping the future.
+                       We are proud to collaborate with trusted partners and esteemed vendors who help us deliver exceptional solutions. Together, we drive innovation and provide top-notch products and services to our clients. Their expertise and commitment are key to making our vision a reality.
                     </Typography>
                 </Box>
 
@@ -58,7 +63,11 @@ export const Gallery = (props) => {
                                         width: "200px", 
                                         height: "auto",
                                         overflow: "hidden",
-                                        borderRadius: "12px", 
+                                        borderRadius: "8px", 
+                                        
+                                        backgroundColor:" #BBCDED"
+                                        // backgroundColor:" #DA7245"
+                                        
                                     }}
                                 >
                                     <Image

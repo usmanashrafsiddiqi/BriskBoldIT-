@@ -6,35 +6,38 @@ const HyperAutomation = () => {
     const data = {
         tabs: [
             {
-                label: "Tab 1",
-                title: "Hyper Automation",
+                label: "Discover Processes",
+                title: "Opportunity Identification",
                 content: [
-                    "Hyper automation refers to automating complex processes using artificial intelligence and machine learning.",
-                    "It improves efficiency and reduces human error in various business operations.",
+                    "Opportunity identification and prioritization is key in any RPA adoption. Our team of business analysts know where and how RPA can drive cost reduction, higher accuracy and improved customer satisfaction.",
                 ],
             },
             {
-                label: "Tab 2",
-                title: "Digital Transformation",
+                label: "Build Processes",
+                title: "Design & Development",
                 content: [
-                    "Digital transformation is the integration of digital technologies into all areas of business.",
-                    "It leads to fundamental changes in how businesses operate and deliver value to customers.",
+                    "From simple to advanced, we build automations quickly. Our solutions are designed and built in a component based models which are very fast to build and very easily to maintain.",
                 ],
             },
             {
-                label: "Tab 3",
-                title: "Software Development",
+                label: "Manage and Run",
+                title: "Implementation & Testing",
                 content: [
-                    "Software development involves writing, designing, and maintaining code for applications.",
-                    "It includes testing, debugging, and deploying software for different platforms.",
+                    "Deploy, manage and optimize processes. Testing stages of the process can be explained as  Component testing, System testing, Acceptance testing",
                 ],
             },
             {
-                label: "Tab 4",
-                title: "Consultation",
+                label: "Measure and Maintenance",
+                title: "Support & Maintenance",
                 content: [
-                    "Consultation services provide expert advice to businesses looking to improve their operations.",
-                    "Consultants guide organizations through complex business challenges and offer solutions.",
+                    "Measure operations and performance to align with business outcomes. We keep your processes and automation robots healthy and productive for better ROI(Return On Investement)",
+                ],
+            },
+            {
+                label: "Training",
+                title: "Training & Enablement",
+                content: [
+                    "We help companies to build their internal capabilities to adapt, scale and bring business value along with competitive advantages and continuous improvement of your internal Centre of Excellence.",
                 ],
             },
         ],

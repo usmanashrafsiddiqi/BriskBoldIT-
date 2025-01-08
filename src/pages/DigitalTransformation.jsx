@@ -5,16 +5,24 @@ const DigitalTransformation = () => {
     const data = {
         tabs: [
             {
+                label: "IT Transformation",
                 title: 'Introduction',
-                content: ['What is Digital Transformation?', 'Importance of Digital Transformation for businesses...', 'Key drivers for transformation...']
+                content: ["Business today needs secure IT environments for seamless internal and external communication. IT transformation optimizes existing systems to align with business goals and future growth, enabling a modern, automated, and agile infrastructure. This transformation enhances data quality, drives faster innovation, and provides valuable insights for better decision-making."]
             },
             {
-                title: 'Implementation',
-                content: ['How to implement Digital Transformation...', 'Stages of implementing Digital Transformation...', 'Challenges and solutions...']
+                label: "Data Transformation",
+                title: 'Transformation',
+                content: ["Organizations face data overload from various sources, making effective management crucial. Data transformation reorganizes data to make it more accessible and useful. We help convert data into valuable insights, enabling better decision-making, real-time information, and a competitive edge for faster results"]
             },
             {
-                title: 'Trends',
-                content: ['Latest trends in Digital Transformation...', 'Emerging technologies in Digital Transformation...']
+                label: "Business Process Transformation",
+                title: 'Transformation',
+                content: ["Business Process Transformation focuses on radically changing processes to meet new goals, often driven by digital transformation. It modernizes processes, incorporates new technologies, and improves system integration. Our experts help businesses automate tasks, enhance operations, and align processes with goals to boost efficiency and sustainability."]
+            },
+            {
+                label: "AI Transformation",
+                title: 'Transformation',
+                content: ["AI transformation is the next step in digital evolution, enabling businesses to stay competitive. It requires digital transformation to prepare data and processes for AI integration. Our experienced data engineers help incorporate AI into your business, enabling faster adaptation and achieving future objectives."]
             },
         ]
     };

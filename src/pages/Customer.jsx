@@ -37,6 +37,8 @@ const Customer = () => {
                         justifyContent: 'flex-start',
                         alignItems: 'center',
                         animation: 'scroll 20s linear infinite', // Continuous scroll animation
+                    
+                   
                     }}
                 >
                     {/* Duplicate images to ensure smooth looping */}
@@ -53,6 +55,7 @@ const Customer = () => {
                                     margin: '0 auto',
                                     display: 'block',
                                     objectFit: 'cover', // Make sure the image doesn't stretch
+                                // backgroundColor:" #BBCDED"
                                 }}
                             />
                         </div>

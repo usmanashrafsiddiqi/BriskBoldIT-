@@ -20,7 +20,7 @@ export const Header = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{
-          backgroundImage: 'url("src/assets/newmobile.jpg")', 
+            backgroundImage: `url(src/assets/newmobile.jpg)`,  
            
         }}
       ></div>

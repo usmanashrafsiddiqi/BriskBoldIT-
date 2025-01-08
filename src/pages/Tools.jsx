@@ -41,7 +41,7 @@ const Tools = () => {
     return (
         <Box sx={{ width: '100%', paddingBottom: '30px' }}>
             {/* Add Heading Above the Table */}
-            <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: '#000' }}>
+            <Typography variant="h4" component="h2" sx={{ fontWeight: '500', textAlign: 'center', marginBottom: '20px', color: '#000' }}>
             Expertise
             </Typography>
 
@@ -49,12 +49,12 @@ const Tools = () => {
             <TableContainer component={Paper} sx={{ marginBottom: '30px', display: { xs: 'none', sm: 'block' } }}>
                 <Table>
                     <TableHead>
-                        <TableRow>
-                            <TableCell align="center">Process Mining</TableCell>
-                            <TableCell align="center">RPA /AI Automation</TableCell>
-                            <TableCell align="center">Conversational AI</TableCell>
-                            <TableCell align="center">Intelligent Document Processing(IDP)</TableCell>
-                            <TableCell align="center">Insights</TableCell>
+                        <TableRow  >
+                            <TableCell style={{fontWeight:"bold"}} align="center">Process Mining</TableCell>
+                            <TableCell style={{fontWeight:"bold"}} align="center">RPA /AI Automation</TableCell>
+                            <TableCell style={{fontWeight:"bold"}} align="center">Conversational AI</TableCell>
+                            <TableCell style={{fontWeight:"bold"}} align="center">Intelligent Document Processing(IDP)</TableCell>
+                            <TableCell style={{fontWeight:"bold"}} align="center">Insights</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -68,8 +68,8 @@ const Tools = () => {
                                                     src={toolImage}
                                                     alt={`Tool ${imgIndex + 1}`}
                                                     style={{
-                                                        width: '120px',
-                                                        height: '100px',
+                                                        width: '125px',
+                                                        height: '110px',
                                                         objectFit: 'cover',
                                                         borderRadius: '8px',
                                                         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',

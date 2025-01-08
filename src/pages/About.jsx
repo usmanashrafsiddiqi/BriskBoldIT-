@@ -28,8 +28,8 @@ export const About = (props) => {
                             {/* About Us Title */}
                             <Typography
                                 variant="h4"
-                                className="font-bold text-gray-800"
-                                sx={{ fontWeight: 600 }}
+                                className="font-bold text-black-800"
+                                sx={{ fontWeight: 500 }}
                             >
                                 About Us
                             </Typography>
@@ -56,6 +56,10 @@ export const About = (props) => {
                                     fontWeight: 600,
                                     marginBottom: "1rem",
                                 }}
+                                style={{ background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                    fontWeight: 'bold'}}
                             >
                                 Why Choose Us?
                             </Typography>
