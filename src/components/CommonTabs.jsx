@@ -1,75 +1,52 @@
-import React, { useState } from 'react';
-import { Box, Tabs, Tab, Typography, Grid, Paper } from '@mui/material';
+import React from 'react';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 
 const CommonTabs = ({ data }) => {
-    const [selectedTab, setSelectedTab] = useState(0);
-
-    const handleTabChange = (event, newValue) => {
-        setSelectedTab(newValue);
-    };
-
     return (
         <Box sx={{ width: '100%', typography: 'body1', bgcolor: '#f4f6f8', paddingBottom: '30px' }}>
-            {/* Tabs Header */}
-            <Tabs
-                value={selectedTab}
-                onChange={handleTabChange}
-                aria-label="common tabs"
-                sx={{
-                    borderBottom: 2,
-                    borderColor: 'divider',
-                    marginBottom: '20px',
-                }}
-            >
-                {data.tabs.map((tab, index) => (
-                    <Tab
-                        label={tab.label}
-                        key={index}
-                        sx={{
-                            fontWeight: 'bold',
-                            fontSize: '1.1rem',
-                            textTransform: 'none',
-                            '&.Mui-selected': {
-                                color: '#3182ce',
-                            },
-                        }}
-                    />
-                ))}
-            </Tabs>
 
-          
-            <Grid container spacing={3}>
-                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Paper sx={{ padding: '20px', borderRadius: '8px', boxShadow: 3, width: '70%' }}>
-                        <Typography
-                            variant="h4"
+            <Grid container spacing={3} sx={{ maxWidth: '1200px', margin: '0 auto' }}>
+                {data.tabs.map((tab, index) => (
+                    <Grid item xs={12} md={6} key={index}>
+                        <Paper
                             sx={{
-                                marginBottom: '16px',
-                                fontWeight: 'bold',
-                                background: 'linear-gradient(45deg, #6a11cb 0%, #2575fc 100%)',
-                                WebkitBackgroundClip: 'text',
-                                color: 'transparent',
+                                padding: '20px',
+                                borderRadius: '8px',
+                                boxShadow: 3,
+                                bgcolor: '#fff',
+                                height: '100%',
                                 display: 'flex',
-                                justifyContent: 'center'
+                                flexDirection: 'column',
+                                justifyContent: 'space-between',
                             }}
                         >
-                            {data.tabs[selectedTab].title}
-                        </Typography>
-                        {data.tabs[selectedTab].content.map((content, index) => (
                             <Typography
-                                key={index}
-                                variant="body1"
+                                variant="h5"
                                 sx={{
-                                    paddingBottom: '10px',
-                                    color: '#333',
-                                    lineHeight: '1.6',
+                                    marginBottom: '12px',
+                                    fontWeight: 'bold',
+                                    color: '#3182ce',
+                                    textTransform: 'uppercase',
                                 }}
                             >
-                                {content}
+                                {tab.title}
                             </Typography>
-                        ))}
-                    </Paper>
-                </Grid>
+                            {tab.content.map((content, index) => (
+                                <Typography
+                                    key={index}
+                                    variant="body1"
+                                    sx={{
+                                        color: '#333',
+                                        lineHeight: '1.6',
+                                        marginBottom: '12px',
+                                    }}
+                                >
+                                    {content}
+                                </Typography>
+                            ))}
+                        </Paper>
+                    </Grid>
+                ))}
             </Grid>
         </Box>
     );
