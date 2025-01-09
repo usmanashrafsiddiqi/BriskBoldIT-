@@ -1,30 +1,38 @@
 import React from 'react';
 import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper } from '@mui/material';
-
+import automationanywhereimg from "../assets/automationanywhere.jpg";
+import uipathimg from "../assets/uipath.png";
+import softwareagimg from "../assets/softwareag.jpg";
+import powerautomateimg from "../assets/powerautomate.jpg";
+import druidimg from "../assets/druid1.png";
+import twixiorimg from "../assets/twix.png";
+import docaquireimg from "../assets/docaquire.png";
+import abbyimg from "../assets/abby.png";
+import powerbiimg from "../assets/powerbi.png"
 const toolsData = {
     ProcessMining: [
-        'src/assets/automationanywhere.jpg',
-        'src/assets/uipath.png',
-        'src/assets/softwareag.jpg'
+        automationanywhereimg,
+        uipathimg,
+        softwareagimg,
     ],
     RPAAIAutomation: [
-        'src/assets/uipath.png',
-        'src/assets/powerautomate.jpg',
-        'src/assets/automationanywhere.jpg',
+        uipathimg,
+        powerautomateimg,
+        automationanywhereimg,
     ],
     ConversationalAI: [
-        'src/assets/druid1.png',
-        'src/assets/twix.png',
+        druidimg,
+        twixiorimg,
     ],
     IntelligentDocumentProcessing: [
-        'src/assets/uipath.png',
-        'src/assets/docaquire.png',
-        'src/assets/abby.png',
+        uipathimg,
+        docaquireimg,
+        abbyimg,
     ],
     Insights: [
-        'src/assets/powerbi.png',
-        'src/assets/uipath.png',
-        'src/assets/automationanywhere.jpg',
+        powerbiimg,
+        uipathimg,
+        automationanywhereimg,
     ],
 };
 

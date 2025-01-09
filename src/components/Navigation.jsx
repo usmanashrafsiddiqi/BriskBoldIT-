@@ -21,6 +21,10 @@ const Navigation = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    const handleMenuItemClick = () => {
+        setMobileMenuOpen(false); 
+    };
+
     return (
         <AppBar position="sticky" sx={{ backgroundColor: '#2d3748', boxShadow: 3 }}>
             <Toolbar>
@@ -99,32 +103,37 @@ const Navigation = () => {
 
                 {/* Mobile Dropdown Menu */}
                 {mobileMenuOpen && (
-                    <Box sx={{ position: 'absolute', top: '64px', right: 0, backgroundColor: 'white', boxShadow: 3 }}>
-                        {/* <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: '#2d3748' }}> */}
-
-                        //aise sabko apne hisab se color dena mobile k liye
-                        <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
+                    <Box
+                        sx={{
+                            position: 'fixed', 
+                            top: '64px',
+                            left: '50%',
+                            transform: 'translateX(-50%)', 
+                            backgroundColor: 'white',
+                            boxShadow: 3,
+                            width: '80%', 
+                            maxWidth: '400px', 
+                        }}
+                    >
+                        <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }} onClick={handleMenuItemClick}>
                             Home
                         </Button>
-                        <Button component={Link} to="/about" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
+                        <Button component={Link} to="/about" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }} onClick={handleMenuItemClick}>
                             About
                         </Button>
                         <Button
                             color="inherit"
-                            sx={{ width: '100%', textAlign: 'left' , color: 'red'}}
+                            sx={{ width: '100%', textAlign: 'left', color: 'red' }}
                             onClick={handleServicesMenuClick}
                         >
                             Services
                             <ArrowDropDownIcon sx={{ marginLeft: 0 }} />
                         </Button>
-                        <Button component={Link} to="/customer" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red'}}>
-                            Customer
-                        </Button>
-                        <Button component={Link} to="/tools" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }}>
-                            Tools
-                        </Button>
-                        <Button component={Link} to="/resources" color="inherit" sx={{ width: '100%', textAlign: 'left' , color: 'red'}}>
+                        <Button component={Link} to="/resources" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }} onClick={handleMenuItemClick}>
                             Resources
+                        </Button>
+                        <Button component={Link} to="/contact" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }} onClick={handleMenuItemClick}>
+                            contact us
                         </Button>
                         <Menu
                             anchorEl={servicesAnchorEl}
@@ -145,7 +154,7 @@ const Navigation = () => {
                                 Consultation / Training
                             </MenuItem>
                         </Menu>
-                        <Button component={Link} to="/contact" color="inherit" sx={{ width: '100%', textAlign: 'left' }}>
+                        <Button component={Link} to="/contact" color="inherit" sx={{ width: '100%', textAlign: 'left' }} onClick={handleMenuItemClick}>
                             Contact Us
                         </Button>
                     </Box>

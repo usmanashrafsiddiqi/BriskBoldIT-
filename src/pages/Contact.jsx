@@ -1,7 +1,11 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import { Phone, WhatsApp } from "@mui/icons-material"; 
-
+import dubaiimg from "../assets/dubai.png";
+import canadaimg from "../assets/canada.png";
+import japanimg from "../assets/Japan.png";
+import indianimg from "../assets/India.png";
+import unitedimg from "../assets/Unitedstates.png";
 const locations = [
     {
         name: "Dubai",
@@ -12,7 +16,7 @@ const locations = [
         ],
         mobile: "(+971) 554372731",
         whatsapp: "+971554372731",
-        img: "src/assets/dubai.png",
+        img: dubaiimg,
     },
     {
         name: "Canada",
@@ -23,7 +27,7 @@ const locations = [
         ],
         mobile: "(+1647) 4463712",
         whatsapp: "(+1647) 4463712",
-        img: "src/assets/canada.png",
+        img: canadaimg,
     },
     {
         name: "Japan",
@@ -34,7 +38,7 @@ const locations = [
         ],
         mobile: "(+81) 8034365974",
         whatsapp: "(+81) 8034365974",
-        img: "src/assets/Japan.png",
+        img: japanimg,
     },
     {
         name: "India",
@@ -44,13 +48,13 @@ const locations = [
         ],
         mobile: "(+91)-9103163366",
         whatsapp: "(+91)-9103163366",
-        img: "src/assets/India.png",
+        img: indianimg,
     },
     {
         name: "United States",
         address: ["3400 COTTAGE WAY, STE G2 #24309", "Sacramento, CA 95825"],
         mobile: "(+1) 415 755 8939",
-        img: "src/assets/Unitedstates.png",
+        img: unitedimg,
     },
 ];
 
