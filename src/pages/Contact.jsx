@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import { Phone, WhatsApp } from "@mui/icons-material"; 
 
 const locations = [
     {
@@ -37,12 +38,12 @@ const locations = [
     },
     {
         name: "India",
-        address: [
+        address : [
             "Delhi",
             "Jammu & Kashmir",
         ],
-        mobile: "(+91) 8899912129",
-        whatsapp: "(+91) 8899912129",
+        mobile: "(+91)-9103163366",
+        whatsapp: "(+91)-9103163366",
         img: "src/assets/India.png",
     },
     {
@@ -83,7 +84,8 @@ export const Contact = () => {
                                 },
                                 fontWeight: "bold",
                                 borderRadius: 2,
-                                padding: "10px 20px",
+                                padding: "12px 30px", 
+                                boxShadow: 3, 
                             }}
                         >
                             Send Us an Email
@@ -107,15 +109,17 @@ export const Contact = () => {
                                         transform: "scale(1.05)",
                                         boxShadow: 6,
                                     },
+                                    padding: 2, 
+                                    backgroundColor: "#fff", 
                                 }}
                             >
-                                <Box sx={{ display: "flex", alignItems: "center", mb: 3, padding: 2 }}>
+                                <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
                                     <img
                                         src={location.img}
                                         alt={`${location.name} icon`}
-                                        width={40}
-                                        height={40}
-                                        
+                                        width={50} // Increased icon size
+                                        height={50}
+                                        // style={{ borderRadius: "50%" }} 
                                     />
                                     <Typography variant="h6" sx={{ fontWeight: "bold", ml: 2 }}>
                                         {location.name}
@@ -127,12 +131,16 @@ export const Contact = () => {
                                             <Box key={idx}>{line}</Box>
                                         ))}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ color: "#2d3748", fontWeight: "bold" }}>
-                                        Mobile: {location.mobile}
+
+                                    
+                                    <Typography variant="body2" sx={{ color: "#2d3748", fontWeight: "bold", display: "flex", alignItems: "center", mb: 1 }}>
+                                        <Phone sx={{ color: "black", mr: 1 }} /> {location.mobile}
                                     </Typography>
+
+                                    
                                     {location.whatsapp && (
-                                        <Typography variant="body2" sx={{ color: "#2d3748", fontWeight: "bold" }}>
-                                            WhatsApp: {location.whatsapp}
+                                        <Typography variant="body2" sx={{ color: "#2d3748", fontWeight: "bold", display: "flex", alignItems: "center", mb: 1 }}>
+                                            <WhatsApp sx={{ color: "#25D366", mr: 1 }} /> {location.whatsapp}
                                         </Typography>
                                     )}
                                 </Box>

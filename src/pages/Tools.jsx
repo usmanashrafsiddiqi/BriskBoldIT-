@@ -14,7 +14,7 @@ const toolsData = {
     ],
     ConversationalAI: [
         'src/assets/druid1.png',
-        'src/assets/twixor.png',
+        'src/assets/twix.png',
     ],
     IntelligentDocumentProcessing: [
         'src/assets/uipath.png',

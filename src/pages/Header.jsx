@@ -14,10 +14,11 @@ export const Header = () => {
         backgroundRepeat: "no-repeat",
         transition: "background-image 0.5s ease-in-out",
         "@media (max-width: 1200px)": {
-          backgroundImage: 'url("src/assets/tabletbanner.jpg")',
+          backgroundImage: 'url("src/assets/tabtwo.jpg")',
         },
         "@media (max-width: 768px)": {
-          backgroundImage: 'url("src/assets/mobilebanner.jpg")',
+          backgroundImage: 'url("src/assets/tabbbb.jpg")',
+          
         },
       }}
     >
