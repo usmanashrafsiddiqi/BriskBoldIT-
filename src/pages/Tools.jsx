@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper } from '@mui/material';
-import automationanywhereimg from "../assets/automationanywhere.jpg";
-import uipathimg from "../assets/uipath.png";
-import softwareagimg from "../assets/softwareag.jpg";
-import powerautomateimg from "../assets/powerautomate.jpg";
-import druidimg from "../assets/druid1.png";
-import twixiorimg from "../assets/twix.png";
-import docaquireimg from "../assets/docaquire.png";
-import abbyimg from "../assets/abby.png";
-import powerbiimg from "../assets/powerbi.png"
+import automationanywhereimg from "/assets/automationanywhere.jpg";
+import uipathimg from "/assets/uipath.png";
+import softwareagimg from "/assets/softwareag.jpg";
+import powerautomateimg from "/assets/powerautomate.jpg";
+import druidimg from "/assets/druid1.png";
+import twixiorimg from "/assets/twix.png";
+import docaquireimg from "/assets/docaquire.png";
+import abbyimg from "/assets/abby.png";
+import powerbiimg from "/assets/powerbi.png"
 const toolsData = {
     ProcessMining: [
         automationanywhereimg,

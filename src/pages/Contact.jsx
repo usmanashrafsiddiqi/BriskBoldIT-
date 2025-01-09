@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import { Phone, WhatsApp } from "@mui/icons-material"; 
-import dubaiimg from "../assets/dubai.png";
-import canadaimg from "../assets/canada.png";
-import japanimg from "../assets/Japan.png";
-import indianimg from "../assets/India.png";
-import unitedimg from "../assets/Unitedstates.png";
+import dubaiimg from "/assets/dubai.png";
+import canadaimg from "/assets/canada.png";
+import japanimg from "/assets/Japan.png";
+import indianimg from "/assets/India.png";
+import unitedimg from "/assets/Unitedstates.png";
 const locations = [
     {
         name: "Dubai",

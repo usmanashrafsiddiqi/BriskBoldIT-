@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import  nasdaqimg from "../assets/nasdaq.jpg";
-import abodeimg from "../assets/abode.jpg";
-import wabisabiimg from "../assets/wabisabi.jpg";
-import ucmimg from "../assets/ucm.jpg";
-import derimg from "../assets/der.jpg";
+import  nasdaqimg from "/assets/nasdaq.jpg";
+import abodeimg from "/assets/abode.jpg";
+import wabisabiimg from "/assets/wabisabi.jpg";
+import ucmimg from "/assets/ucm.jpg";
+import derimg from "/assets/der.jpg";
 const carouselImages = [
     nasdaqimg,
     abodeimg,

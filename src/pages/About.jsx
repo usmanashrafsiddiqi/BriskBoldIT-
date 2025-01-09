@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography, Box, List, ListItem, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import abouImage from "../assets/about.jpg";
+import abouImage from "/assets/about.jpg";
 
 export const About = (props) => {
     return (
