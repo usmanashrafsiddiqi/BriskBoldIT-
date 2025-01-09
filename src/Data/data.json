@@ -1,4 +1,10 @@
+
+
+
 {
+
+
+
   "Header": {
     "title": "Digital Transformation",
     "paragraph": "From simple to advanced, we build automations quickly. Our solutions are designed and built in a component based models which are very fast to build and very easily to maintain."
@@ -19,6 +25,7 @@
     ]
   },
   "Gallery": [
+    
     {
       "title": "Project Title",
       "largeImage": "src/assets/aitvendor.jpg",
