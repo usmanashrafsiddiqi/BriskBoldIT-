@@ -1,8 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Grid, Typography, Box, Card, CardContent } from "@mui/material";
-// Importing the required icons
-// import '@fontsource/montserrat/800.css';
+
 import { faCogs, faThumbsUp, faPrint, faLanguage, faChild, faRobot } from "@fortawesome/free-solid-svg-icons";
 
 export const Services = ({ data }) => {

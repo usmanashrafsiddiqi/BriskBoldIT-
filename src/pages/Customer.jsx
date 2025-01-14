@@ -21,7 +21,6 @@ const Customer = () => {
                 width: '100%',
                 padding: '30px',
                 backgroundImage: 'url(/assets/customerbg.png)',
-               
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
@@ -32,15 +31,13 @@ const Customer = () => {
                 variant="h4"
                 sx={{
                     textAlign: 'center',
-                    background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
-                    WebkitBackgroundClip: 'text',
-                    color: 'transparent',
-                    fontWeight: 'bold',
+                   
+                    color: 'white',
+                    fontWeight: 800,
                     marginBottom: '30px',
                     fontSize: '2rem',
                     letterSpacing: '1px',
-                    fontWeight:800,
-                    fontFamily:'"Montserrat", sans-serif',
+                    fontFamily: '"Montserrat", sans-serif',
                 }}
             >
                 Trusted by top analysts, loved by customers.
@@ -53,7 +50,7 @@ const Customer = () => {
                         display: 'flex',
                         justifyContent: 'flex-start',
                         alignItems: 'center',
-                        animation: 'scroll 20s linear infinite', // Continuous scroll animation
+                        animation: 'scroll 20s linear infinite', 
                     }}
                 >
                     {/* Duplicate images to ensure smooth looping */}
@@ -69,14 +66,13 @@ const Customer = () => {
                                     margin: '0 auto',
                                     display: 'block',
                                     objectFit: 'cover',
-                                    backgroundColor: "white", // Sets a white background to the image itself
-                                    // Enhanced Glass effect styling for the container
-                                    background: "rgba(255, 255, 255, 0.05)", 
-                                    backdropFilter: "blur(10px)", 
-                                    border: '3px solid rgba(255, 255, 255, 0.13)', 
-                                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)',
-                                }}
+                                    backgroundColor: "white",  
 
+                                 
+                                    backdropFilter: "blur(10px)", 
+                                    border: '3px solid rgb(240, 240, 240)', 
+                                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)', 
+                                }}
                             />
                         </div>
                     ))}

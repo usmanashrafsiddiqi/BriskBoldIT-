@@ -7,16 +7,19 @@ export const Gallery = (props) => {
         <div
             id="portfolio"
             style={{
-                backgroundColor: "#f7fafc",
+                backgroundImage: 'url(/assets/partnerbanner.png)',  // <-- Add your background image here
+                backgroundSize: "cover", // Ensures the background image covers the entire container
+                backgroundPosition: "center", // Centers the background image
                 paddingTop: "3rem",
                 paddingBottom: "3rem",
-                overflow: "hidden", 
+                overflow: "hidden",
+                backgroundRepeat: "no-repeat", // Prevents the image from repeating
             }}
         >
             <Container>
                 <Box sx={{ textAlign: "center", marginBottom: "3rem" }}>
                     <Typography variant="h4" className="font-bold " 
-                    sx={{ fontWeight: "500", color:"#000" }}
+                    sx={{ fontWeight: "800", color:"white" }}
                   >
                         Partners and Vendors
                     </Typography>
@@ -27,12 +30,11 @@ export const Gallery = (props) => {
                             maxWidth: "60rem",
                             margin: "auto",
                             marginTop: "1rem",
-                            fontWeight:"bold"
+                            
                         }}
-                        style={{ background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
-                            WebkitBackgroundClip: 'text',
-                            color: 'transparent',
-                            fontWeight: 'bold'}}
+                        style={{ 
+                            color: 'white',
+                            }}
                     >
                        We are proud to collaborate with trusted partners and esteemed vendors who help us deliver exceptional solutions. Together, we drive innovation and provide top-notch products and services to our clients. Their expertise and commitment are key to making our vision a reality.
                     </Typography>
@@ -64,10 +66,7 @@ export const Gallery = (props) => {
                                         height: "auto",
                                         overflow: "hidden",
                                         borderRadius: "8px", 
-                                        
-                                        backgroundColor:" #BBCDED"
-                                        // backgroundColor:" #DA7245"
-                                        
+                                        backgroundColor:"white"
                                     }}
                                 >
                                     <Image
@@ -76,6 +75,7 @@ export const Gallery = (props) => {
                                         smallImage={d.smallImage}
                                         sx={{
                                             borderRadius: "12px",
+                                            
                                             width: "100%",
                                             transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                             "&:hover": {

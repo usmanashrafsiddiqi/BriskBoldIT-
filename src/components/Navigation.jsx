@@ -39,7 +39,7 @@ const Navigation = () => {
                     <img
                         src={logo}
                         alt="Logo"
-                        style={{ width: 150, height: 51 }}
+                        style={{ width: 150, height: 41 }}
                     />
                 </Box>
 
