@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Grid, Typography, Box, Card, CardContent } from "@mui/material";
 // Importing the required icons
+// import '@fontsource/montserrat/800.css';
 import { faCogs, faThumbsUp, faPrint, faLanguage, faChild, faRobot } from "@fortawesome/free-solid-svg-icons";
 
 export const Services = ({ data }) => {
@@ -19,11 +20,11 @@ export const Services = ({ data }) => {
         <div
             id="services"
             style={{
-                marginBottom: '50px',
-                backgroundImage: `url("/assets/servicebantwo.jpg")`,
+                marginBottom: '0px',
+                backgroundImage: `url("/assets/servicelatest.jpg")`,
                 backgroundSize: 'cover',
                 padding: "20px",
-                minHeight: '100vh', 
+                minHeight: '100vh',
             }}
         >
             <Container>
@@ -31,8 +32,12 @@ export const Services = ({ data }) => {
                 <Box textAlign="center" mb={6}>
                     <Typography
                         variant="h3"
-                        className="text-4xl font-bold text-black-800"
-                        sx={{ fontWeight: 500 }}
+                        className="text-4xl font-bold text-white"
+
+                        sx={{
+                            fontWeight: 500, color: "white",
+                            fontFamily: '"Montserrat", sans-serif'
+                        }}
                     >
                         Our Services
                     </Typography>
@@ -40,7 +45,7 @@ export const Services = ({ data }) => {
                         variant="h5"
                         className="text-lg text-gray-600 mt-4 font-medium"
                         style={{
-                            background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
+                            background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                             WebkitBackgroundClip: 'text',
                             color: 'transparent',
                             fontWeight: 'bold'
@@ -54,71 +59,76 @@ export const Services = ({ data }) => {
                 <Grid container spacing={4} justifyContent="center">
                     {data
                         ? data.map((service, i) => {
-                              const icon = iconMapping[service.icon] || faCogs;
-                              return (
-                                  <Grid item xs={12} sm={6} md={4} key={`${service.name}-${i}`}>
-                                      <Card
-                                          sx={{
-                                              borderRadius: "12px",
-                                              boxShadow: 3,
-                                              height: "100%",
-                                              display: "flex",
-                                              flexDirection: "column",
-                                              // Hover effect to slightly scale the card
-                                              "&:hover": {
-                                                  transform: "scale(1.05)", 
-                                                  boxShadow: 6, 
-                                                  transition: "all 0.3s ease",
-                                              }
-                                          }}
-                                          style={{
-                                              // Transparent background for the card
-                                              background: "rgba(255, 255, 255, 0.1)", 
-                                              backdropFilter: "blur(10px)", 
-                                              border: "none", 
-                                          }}
-                                      >
-                                          <CardContent
-                                              className="text-center py-6 px-4 flex-grow"
-                                              style={{ color: 'white' }} 
-                                          >
-                                              {/* Icon */}
-                                              <Box mb={3}>
-                                                  <FontAwesomeIcon
-                                                      icon={icon}
-                                                      style={{
-                                                          fontSize: "3rem",
-                                                          color: "white", 
-                                                      }}
-                                                  />
-                                              </Box>
+                            const icon = iconMapping[service.icon] || faCogs;
+                            return (
+                                <Grid item xs={12} sm={6} md={4} key={`${service.name}-${i}`}>
+                                    <Card
+                                        sx={{
+                                            borderRadius: "12px",
+                                            boxShadow: 3,
+                                            height: "100%",
+                                            border: '2px solid white',
+                                            boxShadow: '0 0 10px rgba(255, 255, 255, 0.8)',
+                                            display: "flex",
+                                            flexDirection: "column",
+                                           
+                                            "&:hover": {
+                                                transform: "scale(1.05)",
+                                                boxShadow: 6,
+                                                transition: "all 0.3s ease",
+                                            }
+                                        }}
+                                        style={{
+                                            // Transparent background for the card
+                                            background: "rgba(255, 255, 255, 0.1)",
+                                            backdropFilter: "blur(10px)",
+                                            border: "none",
+                                        }}
+                                    >
+                                        <CardContent
+                                            className="text-center py-6 px-4 flex-grow"
+                                            style={{ color: 'white' }}
+                                        >
+                                            {/* Icon */}
+                                            <Box mb={3}>
+                                                <FontAwesomeIcon
+                                                    icon={icon}
+                                                    style={{
+                                                        fontSize: "3rem",
+                                                        color: "white",
+                                                    }}
+                                                />
+                                            </Box>
 
-                                              {/* Service Title */}
-                                              <Typography
-                                                  variant="h6"
-                                                  className="text-xl font-medium mb-2"
-                                                  style={{ color: 'white' }} 
-                                              >
-                                                  {service.name}
-                                              </Typography>
+                                            {/* Service Title */}
+                                            <Typography
+                                                variant="h6"
+                                                className="text-xl font-medium mb-2"
+                                                style={{
+                                                    background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                                    WebkitBackgroundClip: 'text',
+                                                    color: 'transparent',
+                                                    fontWeight: "500"
 
-                                              {/* Service Description */}
-                                              <Typography
-                                                  variant="body2"
-                                                  style={{
-                                                      background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
-                                                      WebkitBackgroundClip: 'text',
-                                                      color: 'transparent',
-                                                      fontWeight: "500"
-                                                  }}
-                                              >
-                                                  {service.text}
-                                              </Typography>
-                                          </CardContent>
-                                      </Card>
-                                  </Grid>
-                              );
-                          })
+                                                }}
+                                            >
+                                                {service.name}
+                                            </Typography>
+
+                                            {/* Service Description */}
+                                            <Typography
+                                                variant="body2"
+                                                style={{
+                                                    color: "white"
+                                                }}
+                                            >
+                                                {service.text}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Grid>
+                            );
+                        })
                         : "Loading..."}
                 </Grid>
             </Container>

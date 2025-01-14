@@ -12,11 +12,11 @@ const Homepage = ({ header, services, about, gallery, contact }) => {
         <div style={{ margin: 0, padding: 0 }}>
             <Header data={header} />
             <Services data={services} />
-            <About data={about} />
             <Customer />
             <Gallery data={gallery} />
             <Tools />
             <Contact data={contact} />
+            <About data={about} />
         </div>
     )
 }

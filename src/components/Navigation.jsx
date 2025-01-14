@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Box } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import logo from "/assets/logowebsite.jpg";
+import logo from "/assets/logofinal.png";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Navigation = () => {
@@ -26,14 +26,20 @@ const Navigation = () => {
     };
 
     return (
-        <AppBar position="sticky" sx={{ backgroundColor: '#2d3748', boxShadow: 3 }}>
+        <AppBar
+        position="sticky"
+        sx={{
+          backgroundImage: 'linear-gradient(to right, #10374e, #356683)', // Gradient background
+          boxShadow: 3,
+        }}
+      >
             <Toolbar>
                 {/* Logo */}
                 <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
                     <img
                         src={logo}
                         alt="Logo"
-                        style={{ width: 82, height: 61 }}
+                        style={{ width: 150, height: 51 }}
                     />
                 </Box>
 
