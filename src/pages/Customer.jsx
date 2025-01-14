@@ -39,6 +39,8 @@ const Customer = () => {
                     marginBottom: '30px',
                     fontSize: '2rem',
                     letterSpacing: '1px',
+                    fontWeight:800,
+                    fontFamily:'"Montserrat", sans-serif',
                 }}
             >
                 Trusted by top analysts, loved by customers.
@@ -64,17 +66,15 @@ const Customer = () => {
                                     width: '220px',
                                     height: '120px',
                                     borderRadius: '8px',
-                                    // boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
                                     margin: '0 auto',
                                     display: 'block',
                                     objectFit: 'cover',
-                                    backgroundColor:"white",
-
-                                    // Enhanced Glass effect styling
+                                    backgroundColor: "white", // Sets a white background to the image itself
+                                    // Enhanced Glass effect styling for the container
                                     background: "rgba(255, 255, 255, 0.05)", 
                                     backdropFilter: "blur(10px)", 
                                     border: '3px solid rgba(255, 255, 255, 0.13)', 
-                                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)', 
+                                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)',
                                 }}
 
                             />

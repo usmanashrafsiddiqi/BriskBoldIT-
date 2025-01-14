@@ -44,7 +44,7 @@ const Navigation = () => {
                 </Box>
 
                 {/* Navigation Buttons */}
-                <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center' }}>
+                <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', fontWeight:"800"}}>
                     <Button component={Link} to="/" color="inherit" sx={{ marginRight: 2 }}>
                         Home
                     </Button>

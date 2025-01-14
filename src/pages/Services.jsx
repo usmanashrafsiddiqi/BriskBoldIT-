@@ -35,8 +35,8 @@ export const Services = ({ data }) => {
                         className="text-4xl font-bold text-white"
 
                         sx={{
-                            fontWeight: 500, color: "white",
-                            fontFamily: '"Montserrat", sans-serif'
+                            fontWeight: 800, color: "white",
+                            fontFamily: '"Montserrat", sans-serif',
                         }}
                     >
                         Our Services
@@ -104,11 +104,13 @@ export const Services = ({ data }) => {
                                             <Typography
                                                 variant="h6"
                                                 className="text-xl font-medium mb-2"
+                                               
                                                 style={{
                                                     background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                                     WebkitBackgroundClip: 'text',
                                                     color: 'transparent',
-                                                    fontWeight: "500"
+                                                    fontWeight: "800",
+                                                     fontFamily: '"Montserrat", sans-serif'
 
                                                 }}
                                             >
