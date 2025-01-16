@@ -10,18 +10,15 @@
     "paragraph": "From simple to advanced, we build automations quickly. Our solutions are designed and built in a component based models which are very fast to build and very easily to maintain."
   },
   "About": {
-    "paragraph": "Welcome to BriskBold AI and Automation.We lead the charge in harnessing the transformative power of artificial intelligence and automation.Our mission is to create intelligent solutions that revolutionize industries,streamline operations,and drive innovation.With the foundation build on advanced AI algorithms and state-of-the-art automation technologies,we specialize in delivering customized,scalable systems tailored to meet the unique needs of businesses.By combining visionary thinking with cutting-edge technology,we are shaping a smarter,more connected future.",
+    "paragraph": "Welcome to BriskBold AI and Automation! We’re at the forefront of revolutionizing industries with powerful AI and automation. Our mission? To simplify operations, spark innovation, and deliver tailor-made, scalable solutions that push businesses forward. Let’s build a smarter, more connected future together!",
     "Why": [
-      "Over 20 years of expertise in digital transformation, robotics, and automation.",
-      "Agile methodologies for continuous improvement and flexibility.",
-      "Component-based processes that can be customized at any stage.",
-      "Full product life-cycle management to ensure comprehensive service."
+      { "title": "Expertise", "description": "20+ Years of Excellence" },
+      { "title": "Innovation", "description": "Cutting-Edge Solutions" },
+      { "title": "Agility", "description": "Flexible & Adaptive" }
     ],
     "Why2": [
-      "Innovative and ground-breaking solutions designed for efficiency and scalability.",
-      "Customer-first approach with a focus on satisfaction and long-term relationships.",
-      "Transparent and adaptable processes for continuous improvement.",
-      "Highly skilled team focused on delivering cutting-edge solutions."
+      { "title": "Adaptability", "description": "Customizable Processes" },
+      { "title": "Customer-Centric", "description": "Satisfaction First" }
     ]
   },
   "Gallery": [

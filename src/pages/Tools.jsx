@@ -8,7 +8,8 @@ import druidimg from "/assets/druid1.png";
 import twixiorimg from "/assets/twix.png";
 import docaquireimg from "/assets/docaquire.png";
 import abbyimg from "/assets/abby.png";
-import powerbiimg from "/assets/powerbi.png"
+import powerbiimg from "/assets/powerbi.png";
+
 const toolsData = {
     ProcessMining: [
         automationanywhereimg,
@@ -20,10 +21,6 @@ const toolsData = {
         powerautomateimg,
         automationanywhereimg,
     ],
-    ConversationalAI: [
-        druidimg,
-        twixiorimg,
-    ],
     IntelligentDocumentProcessing: [
         uipathimg,
         docaquireimg,
@@ -34,41 +31,135 @@ const toolsData = {
         uipathimg,
         automationanywhereimg,
     ],
+    ConversationalAI: [
+        druidimg,
+        twixiorimg,
+    ],
 };
-
-const QuestionsList = [
-    'Why Choose BriskBold for HyperAutomation?',
-    '• High quality Automatically Generated Documentation like PDDs and SDDs.',
-    '• Reusable Component-based models for Accelerated Process Development.',
-    '• Automated Quality Assurance lifecycle process.',
-    '• Personalized Support Packages offered for your RPA programs.',
-    '• Multi-Channel Support to achieve your automated business processes.',
-];
 
 const Tools = () => {
     return (
-        <Box sx={{ width: '100%', paddingBottom: '30px' }}>
-            {/* Add Heading Above the Table */}
-            <Typography variant="h4" component="h2" sx={{ fontWeight: '500', textAlign: 'center', marginBottom: '20px', color: '#000' }}>
-            Expertise
+        <Box
+            sx={{
+                width: '100%',
+                paddingBottom: '30px',
+                backgroundImage: 'url(/assets/servicelatest.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        >
+            <Typography
+                variant="h4"
+                component="h2"
+                sx={{
+                    fontFamily: 'Montserrat, sans-serif', 
+                    fontWeight: '800',
+                    color: 'white', 
+                    textAlign: 'center',
+                    marginBottom: '20px',
+                    paddingTop: '50px', 
+                }}
+            >
+                Expertise
             </Typography>
 
             {/* Table of Tools for Large Screens */}
-            <TableContainer component={Paper} sx={{ marginBottom: '30px', display: { xs: 'none', sm: 'block' } }}>
-                <Table>
+            <TableContainer
+                component={Paper}
+                sx={{
+                    marginBottom: '30px',
+                    display: { xs: 'none', sm: 'block' },
+                    background: 'transparent',
+                    boxShadow: 'none',
+                    border: 'none',  
+                    padding: 0,     
+                }}
+            >
+                <Table sx={{ backgroundColor: 'transparent' }}>
                     <TableHead>
-                        <TableRow  >
-                            <TableCell style={{fontWeight:"bold"}} align="center">Process Mining</TableCell>
-                            <TableCell style={{fontWeight:"bold"}} align="center">RPA /AI Automation</TableCell>
-                            <TableCell style={{fontWeight:"bold"}} align="center">Conversational AI</TableCell>
-                            <TableCell style={{fontWeight:"bold"}} align="center">Intelligent Document Processing(IDP)</TableCell>
-                            <TableCell style={{fontWeight:"bold"}} align="center">Insights</TableCell>
+                        <TableRow sx={{ backgroundColor: 'transparent' }}>
+                            <TableCell
+                                align="center"
+                                sx={{
+                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontWeight: 'bold',
+                                    borderBottom: 'none', 
+                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                }}
+                            >
+                                Process Mining
+                            </TableCell>
+                            <TableCell
+                                align="center"
+                                sx={{
+                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontWeight: 'bold', 
+                                    borderBottom: 'none', 
+                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                }}
+                            >
+                                RPA /AI Automation
+                            </TableCell>
+                            <TableCell
+                                align="center"
+                                sx={{
+                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontWeight: 'bold',
+                                    borderBottom: 'none', 
+                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                }}
+                            >
+                                Insights
+                            </TableCell>
+                            <TableCell
+                                align="center"
+                                sx={{
+                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontWeight: 'bold',
+                                    borderBottom: 'none', 
+                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                }}
+                            >
+                                Intelligent Document <br></br>Processing
+                            </TableCell>
+                            <TableCell
+                                align="center"
+                                sx={{
+                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontWeight: 'bold', 
+                                    borderBottom: 'none', 
+                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
+                                }}
+                            >
+                                Conversational AI
+                            </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        <TableRow sx={{ '&:hover': { backgroundColor: '#f1f1f1' } }}>
+                        <TableRow>
                             {Object.keys(toolsData).map((category, index) => (
-                                <TableCell key={index} align="center" sx={{ height: '400px', padding: '10px' }}>
+                                <TableCell
+                                    key={index}
+                                    align="center"
+                                    sx={{
+                                        height: '400px',
+                                        padding: '10px',
+                                        backgroundColor: 'transparent',
+                                        fontFamily: 'Montserrat, sans-serif', 
+                                        fontWeight: 'normal',
+                                        borderBottom: 'none', 
+                                    }}
+                                >
                                     <Grid container direction="column" alignItems="center" spacing={2} sx={{ height: '100%' }}>
                                         {toolsData[category].map((toolImage, imgIndex) => (
                                             <Grid item key={imgIndex} sx={{ flex: '1', display: 'flex', justifyContent: 'center' }}>
@@ -80,7 +171,11 @@ const Tools = () => {
                                                         height: '110px',
                                                         objectFit: 'cover',
                                                         borderRadius: '8px',
-                                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                                        boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
+                                                        backgroundColor: 'white',
+                                                        border: '2px solid rgba(255, 255, 255, 0.6)',
+                                                        
+                                                        marginTop: toolImage === twixiorimg ? '-64px' : '0',
                                                     }}
                                                 />
                                             </Grid>
@@ -103,26 +198,31 @@ const Tools = () => {
                                 sx={{
                                     fontWeight: 'bold',
                                     textAlign: 'center',
-                                    color: '#3182ce',
                                     marginBottom: '10px',
+                                    whiteSpace: 'nowrap', 
+                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    WebkitBackgroundClip: 'text',
+                                    color: 'transparent',
                                 }}
                             >
-                                {category.replace(/([A-Z])/g, ' $1').trim()}
+                                {category.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([a-zA-Z])\/([a-zA-Z])/g, '$1/$2').trim()}
                             </Typography>
 
-                            <Grid container direction="column" alignItems="center" spacing={2}>
+                            {/* Horizontal layout for images on small screens */}
+                            <Grid container direction="row" justifyContent="center" spacing={2}>
                                 {toolsData[category].map((toolImage, imgIndex) => (
-                                    <Grid item key={imgIndex} sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                                    <Grid item key={imgIndex} sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <img
                                             src={toolImage}
                                             alt={`Tool ${imgIndex + 1}`}
                                             style={{
-                                                width: '100%',
-                                                maxWidth: '120px',
+                                                width: '100px',  
                                                 height: 'auto',
                                                 objectFit: 'cover',
                                                 borderRadius: '8px',
-                                                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                                boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',  
+                                                backgroundColor: 'white', 
+                                                border: '2px solid rgba(255, 255, 255, 0.6)',
                                             }}
                                         />
                                     </Grid>
@@ -132,14 +232,6 @@ const Tools = () => {
                     ))}
                 </Grid>
             </Box>
-
-            {/* <Box sx={{ marginTop: '40px' }}>
-                {QuestionsList.map((question, index) => (
-                    <Typography key={index} variant="body1" sx={{ fontWeight: index === 0 ? 'bold' : 'normal', marginBottom: '10px', color: index === 0 ? '#3182ce' : '#333' }}>
-                        {question}
-                    </Typography>
-                ))}
-            </Box> */}
         </Box>
     );
 };

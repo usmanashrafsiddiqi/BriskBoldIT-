@@ -15,8 +15,8 @@ const Homepage = ({ header, services, about, gallery, contact }) => {
             <Customer />
             <Gallery data={gallery} />
             <Tools />
-            <Contact data={contact} />
             <About data={about} />
+            <Contact data={contact} />
         </div>
     )
 }

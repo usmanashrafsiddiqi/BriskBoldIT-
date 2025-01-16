@@ -1,35 +1,52 @@
 import React from "react";
-import { Container, Typography, Box, List, ListItem, Button } from "@mui/material";
-import Grid from "@mui/material/Grid";
-import abouImage from "/assets/about.jpg";
+import { Container, Typography, Box, Button, Grid } from "@mui/material";
 
 export const About = (props) => {
     return (
-        <div id="about" className="bg-gradient-to-r from-blue-50 via-gray-100 to-white py-20" style={{ marginBottom: '50px' }}>
-            <Container>
-                <Grid container spacing={4} alignItems="center" justifyContent="center">
-                    {/* Image Section */}
-                    <Grid item xs={12} md={6}>
-                        <Box
-                            sx={{
-                                backgroundImage: `url(${abouImage})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                height: "400px",
-                                borderRadius: "10px",
-                                boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                            }}
-                        ></Box>
-                    </Grid>
+        <div
+            id="about"
+            className="py-20"
+            style={{
+                backgroundImage: `url(/assets/aboutbgg.png)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+                backgroundAttachment: "scroll",
+                paddingRight: "50px",
+                paddingLeft: "50px",
+                backgroundRepeat: "no-repeat",
+                minHeight: "100vh",
+                paddingTop: "80px",
+                paddingBottom: "80px",
+            }}
+        >
+            {/* Media query to remove background image and apply gradient for medium and small screens */}
+            <style>
+                {`
+                    @media (max-width: 960px) {
+                        #about {
+                            background-image:linear-gradient(45deg, #a60961, #100c68) !important;
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                `}
+            </style>
 
-                    {/* Text Section */}
+            <Container>
+                <Grid container spacing={4} alignItems="flex-start" justifyContent="flex-start">
+                    {/* Text Section (Left side for larger screens) */}
                     <Grid item xs={12} md={6}>
-                        <Box className="about-text space-y-6">
+                        <Box className="about-text space-y-6" sx={{ textAlign: "left" }}>
                             {/* About Us Title */}
                             <Typography
                                 variant="h4"
-                                className="font-bold text-black-800"
-                                sx={{ fontWeight: 500 }}
+                                sx={{
+                                    fontFamily: "Montserrat, sans-serif",
+                                    fontWeight: 800,
+                                    color: "white",
+                                    fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem" },
+                                }}
                             >
                                 About Us
                             </Typography>
@@ -37,11 +54,12 @@ export const About = (props) => {
                             {/* Paragraph Text */}
                             <Typography
                                 variant="body1"
-                                className="text-gray-600"
                                 sx={{
+                                    fontFamily: "Montserrat, sans-serif",
+                                    fontWeight: "normal",
+                                    color: "white",
                                     lineHeight: 1.6,
-                                    color: "#333",
-                                    fontSize: "1.1rem",
+                                    fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
                                     marginBottom: "2rem",
                                 }}
                             >
@@ -51,53 +69,140 @@ export const About = (props) => {
                             {/* Why Choose Us Section */}
                             <Typography
                                 variant="h5"
-                                className="font-semibold text-gray-800"
                                 sx={{
-                                    fontWeight: 600,
+                                    fontFamily: "Montserrat, sans-serif",
+                                    fontWeight: "normal",
+                                    color: "white",
                                     marginBottom: "1rem",
+                                    fontWeight: "bold",
+                                    fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.8rem" },
                                 }}
-                                style={{ background: 'linear-gradient(45deg, #FF6F61, #6B5B95)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
-                                    fontWeight: 'bold'}}
                             >
                                 Why Choose Us?
                             </Typography>
 
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6}>
-                                    <List className="list-disc pl-6">
+                                {/* Render the points for 'Why' (3 boxes on the top) */}
+                                <Grid item xs={12} sm={4}>
+                                    <Grid container spacing={2}>
                                         {props.data
-                                            ? props.data.Why.map((d, i) => (
-                                                <ListItem
-                                                    key={`${d}-${i}`}
-                                                    className="text-gray-600"
-                                                    sx={{ fontSize: "1rem", lineHeight: 1.8 }}
-                                                >
-                                                    {d}
-                                                </ListItem>
+                                            ? props.data.Why.map((item, i) => (
+                                                <Grid item xs={12} key={`${item.title}-${i}`} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                                    <Box
+                                                        sx={{
+                                                            display: "flex",
+                                                            flexDirection: "column",
+                                                            justifyContent: "center",
+                                                            borderRadius: "8px",
+                                                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                                                            backdropFilter: "blur(10px)",
+                                                            boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
+                                                            padding: "16px",
+                                                            marginBottom: "16px",
+                                                            height: { xs: "120px", sm: "120px", md: "150px" },
+                                                            width: { xs: "100%", sm: "100%", md: "180px" },
+                                                            display: "flex",
+                                                            justifyContent: "space-between", 
+                                                            flexDirection: "column",
+                                                            "&:hover": {
+                                                                transform: "scale(1.05)",
+                                                                boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
+                                                                transition: "all 0.3s ease",
+                                                            },
+                                                        }}
+                                                    >
+                                                        {/* Title (heading) */}
+                                                        <Typography
+                                                            variant="h6"
+                                                            sx={{
+                                                                fontFamily: "Montserrat, sans-serif",
+                                                                fontWeight: "bold",
+                                                                color: "white",
+                                                                marginBottom: "8px",
+                                                            }}
+                                                        >
+                                                            {item.title}
+                                                        </Typography>
+                                                        {/* Description */}
+                                                        <Typography
+                                                            variant="body2"
+                                                            sx={{
+                                                                fontFamily: "Montserrat, sans-serif",
+                                                                fontWeight: "normal",
+                                                                color: "white",
+                                                                lineHeight: 1.8,
+                                                            }}
+                                                        >
+                                                            {item.description}
+                                                        </Typography>
+                                                    </Box>
+                                                </Grid>
                                             ))
                                             : "Loading..."}
-                                    </List>
+                                    </Grid>
                                 </Grid>
+
+                                {/* Render the points for 'Why2' (2 boxes on the bottom) */}
                                 <Grid item xs={12} sm={6}>
-                                    <List className="list-disc pl-6">
+                                    <Grid container spacing={2}>
                                         {props.data
-                                            ? props.data.Why2.map((d, i) => (
-                                                <ListItem
-                                                    key={`${d}-${i}`}
-                                                    className="text-gray-600"
-                                                    sx={{ fontSize: "1rem", lineHeight: 1.8 }}
-                                                >
-                                                    {d}
-                                                </ListItem>
+                                            ? props.data.Why2.map((item, i) => (
+                                                <Grid item xs={12} key={`${item.title}-${i}`} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                                    <Box
+                                                        sx={{
+                                                            display: "flex",
+                                                            flexDirection: "column",
+                                                            justifyContent: "center",
+                                                            borderRadius: "8px",
+                                                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                                                            backdropFilter: "blur(10px)",
+                                                            boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
+                                                            padding: "16px",
+                                                            marginBottom: "16px",
+                                                            height: { xs: "120px", sm: "120px", md: "150px" },
+                                                            width: { xs: "100%", sm: "100%", md: "180px" },   
+                                                            display: "flex",
+                                                            justifyContent: "space-between", 
+                                                            flexDirection: "column",
+                                                            "&:hover": {
+                                                                transform: "scale(1.05)",
+                                                                boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
+                                                                transition: "all 0.3s ease",
+                                                            },
+                                                        }}
+                                                    >
+                                                        {/* Title (heading) */}
+                                                        <Typography
+                                                            variant="h6"
+                                                            sx={{
+                                                                fontFamily: "Montserrat, sans-serif",
+                                                                fontWeight: "bold",
+                                                                color: "white",
+                                                                marginBottom: "8px",
+                                                            }}
+                                                        >
+                                                            {item.title}
+                                                        </Typography>
+                                                        {/* Description */}
+                                                        <Typography
+                                                            variant="body2"
+                                                            sx={{
+                                                                fontFamily: "Montserrat, sans-serif",
+                                                                fontWeight: "normal",
+                                                                color: "white",
+                                                                lineHeight: 1.8,
+                                                            }}
+                                                        >
+                                                            {item.description}
+                                                        </Typography>
+                                                    </Box>
+                                                </Grid>
                                             ))
                                             : "Loading..."}
-                                    </List>
+                                    </Grid>
                                 </Grid>
                             </Grid>
 
-                           
                             <Box mt={4}>
                                 <Button
                                     variant="contained"
@@ -106,12 +211,12 @@ export const About = (props) => {
                                     href="#contact"
                                     sx={{
                                         padding: "12px 30px",
-                                        fontSize: "18px",
+                                        fontSize: { xs: "14px", sm: "16px", md: "18px" },
                                         fontWeight: "bold",
                                         borderRadius: "5px",
                                         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                                         "&:hover": {
-                                            backgroundColor: "#1d4ed8", 
+                                            backgroundColor: "#1d4ed8",
                                         },
                                     }}
                                 >
