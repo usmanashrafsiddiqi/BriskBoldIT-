@@ -6,19 +6,51 @@ const Resources = () => {
     const videos = [
         { title: 'How to use AI in our daily lives', url: 'https://www.youtube.com/embed/b0Aj0EPE-_s?si=08hcepOydefAAokE' },
         { title: 'UiPath Vs Automation', url: 'https://www.youtube.com/embed/iBhJW1rpLww?si=Z29Gbfom_GrFVMCd' },
+        { title: 'Understanding Machine Learning', url: 'https://www.youtube.com/embed/NlQlzF1rYlY' },
+        { title: 'Automation Tools for the Future', url: 'https://www.youtube.com/embed/6UoFAdLg__A' },
     ];
 
     return (
-        <div sx={{ backgroundColor: '#f5f5f5', py: 6 }}>
+        <Box
+            sx={{
+                backgroundImage: `url('/assets/resourcesbg.jpg')`,  
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                py: 6,
+            }}
+        >
             <Container maxWidth="lg">
-                <Typography variant="h4" sx={{ textAlign: 'center', mb: 4 }}>
+                <Typography
+                    variant="h4"
+                    sx={{
+                        textAlign: 'center',
+                        mb: 4,
+                        color: 'white',  
+                        fontFamily: 'Montserrat, sans-serif',  
+                        fontWeight: 800,  
+                    }}
+                >
                     YouTube Resources
                 </Typography>
 
                 <Grid container spacing={4}>
                     {videos.map((video, index) => (
                         <Grid item xs={12} sm={6} md={3} key={index}>
-                            <Card sx={{ boxShadow: 3 }}>
+                            <Card
+                                sx={{
+                                    boxShadow: 3,
+                                    borderRadius: '8px',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',  
+                                    backdropFilter: 'blur(10px)',  
+                                    padding: '16px',
+                                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                    "&:hover": {
+                                        transform: 'scale(1.05)', 
+                                        boxShadow: '0 0 15px rgba(255, 255, 255, 0.7)',  
+                                    },
+                                }}
+                            >
                                 <CardContent>
                                     <Typography
                                         variant="h6"
@@ -29,6 +61,7 @@ const Resources = () => {
                                             overflow: 'hidden',
                                             whiteSpace: 'nowrap',
                                             textOverflow: 'ellipsis',
+                                            color: 'white',  
                                         }}
                                     >
                                         {video.title}
@@ -52,7 +85,7 @@ const Resources = () => {
                     ))}
                 </Grid>
             </Container>
-        </div>
+        </Box>
     );
 };
 

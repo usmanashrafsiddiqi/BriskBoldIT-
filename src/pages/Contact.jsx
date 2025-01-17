@@ -218,30 +218,31 @@ export const Contact = () => {
                 >
                     If you want to contact us, email us at
                     <br />
-                    <a href="mailto:hr@briskboldit.com" style={{ color: "#3182ce", fontWeight: "bold" }}>
-                        hr@briskboldit.com
+                    <a href="mailto:info@briskboldit.com" style={{ color: "#3182ce", fontWeight: "bold" }}>
+                        info@briskboldit.com
                     </a>
                 </Typography>
 
                 {/* Simple Contact Button */}
                 <Box mt={4}>
-                    <Button
-                        variant="contained"
-                        href="mailto: hr@briskboldit.com"
-                        sx={{
-                            backgroundColor: "#3182ce",
-                            color: "#fff",
-                            "&:hover": {
-                                backgroundColor: "#2b6cb0",
-                            },
-                            fontWeight: "bold",
-                            borderRadius: 2,
-                            padding: "12px 30px", 
-                            boxShadow: 3, 
-                        }}
-                    >
-                        Send Us an Email
-                    </Button>
+                <Button
+    variant="contained"
+    href="mailto: hr@briskboldit.com"
+    sx={{
+        background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Gradient background
+        color: "#fff",
+        "&:hover": {
+            background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Same gradient on hover
+        },
+        fontWeight: "bold",
+        borderRadius: 2,
+        padding: "12px 30px",
+        boxShadow: 3,
+    }}
+>
+    Send Us an Email
+</Button>
+
                 </Box>
             </Box>
         </Box>

@@ -10,15 +10,15 @@
     "paragraph": "From simple to advanced, we build automations quickly. Our solutions are designed and built in a component based models which are very fast to build and very easily to maintain."
   },
   "About": {
-    "paragraph": "Welcome to BriskBold AI and Automation! We’re at the forefront of revolutionizing industries with powerful AI and automation. Our mission? To simplify operations, spark innovation, and deliver tailor-made, scalable solutions that push businesses forward. Let’s build a smarter, more connected future together!",
+    "paragraph": "BriskBold AI & Automation: Pioneering the Future with Scalable, Tailor-Made Solutions Empowering Industries with Cutting-Edge AI and Automation to Simplify Operations, Ignite Innovation, and Drive Business Growth.",
     "Why": [
       { "title": "Expertise", "description": "20+ Years of Excellence" },
       { "title": "Innovation", "description": "Cutting-Edge Solutions" },
-      { "title": "Agility", "description": "Flexible & Adaptive" }
-    ],
-    "Why2": [
+      { "title": "Agility", "description": "Flexible & Adaptive" },
       { "title": "Adaptability", "description": "Customizable Processes" },
       { "title": "Customer-Centric", "description": "Satisfaction First" }
+    ],
+    "Why2": [
     ]
   },
   "Gallery": [

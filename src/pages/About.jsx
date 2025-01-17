@@ -15,19 +15,31 @@ export const About = (props) => {
                 paddingLeft: "50px",
                 backgroundRepeat: "no-repeat",
                 minHeight: "100vh",
-                paddingTop: "80px",
                 paddingBottom: "80px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
             }}
         >
-            {/* Media query to remove background image and apply gradient for medium and small screens */}
+            {/* Media query to apply correct styles for small and medium screens */}
             <style>
                 {`
+                    /* Apply padding only for large screens */
+                    @media (min-width: 960px) {
+                        #about {
+                            padding-top: 350px;  /* Larger padding for large screens */
+                        }
+                    }
+
+                    /* For medium and small screens, reduce padding-top or set to 0 */
                     @media (max-width: 960px) {
                         #about {
-                            background-image:linear-gradient(45deg, #a60961, #100c68) !important;
+                            padding-top: 20px;  /* Small padding for medium and small screens */
+                            background-image: linear-gradient(45deg, #a60961, #100c68) !important;
                             background-size: cover;
                             background-position: center center;
                             background-repeat: no-repeat;
+                            align-items: flex-start;  /* Align text to the top */
                         }
                     }
                 `}
@@ -36,8 +48,14 @@ export const About = (props) => {
             <Container>
                 <Grid container spacing={4} alignItems="flex-start" justifyContent="flex-start">
                     {/* Text Section (Left side for larger screens) */}
-                    <Grid item xs={12} md={6}>
-                        <Box className="about-text space-y-6" sx={{ textAlign: "left" }}>
+                    <Grid item xs={12} md={9}>
+                        <Box
+                            className="about-text space-y-6"
+                            sx={{
+                                textAlign: "left",
+                                paddingTop: { xs: "20px", sm: "20px", md: "50px" }, 
+                            }}
+                        >
                             {/* About Us Title */}
                             <Typography
                                 variant="h4"
@@ -81,129 +99,81 @@ export const About = (props) => {
                                 Why Choose Us?
                             </Typography>
 
-                            <Grid container spacing={2}>
-                                {/* Render the points for 'Why' (3 boxes on the top) */}
-                                <Grid item xs={12} sm={4}>
-                                    <Grid container spacing={2}>
-                                        {props.data
-                                            ? props.data.Why.map((item, i) => (
-                                                <Grid item xs={12} key={`${item.title}-${i}`} sx={{ display: 'flex', justifyContent: 'center' }}>
-                                                    <Box
-                                                        sx={{
-                                                            display: "flex",
-                                                            flexDirection: "column",
-                                                            justifyContent: "center",
-                                                            borderRadius: "8px",
-                                                            backgroundColor: "rgba(255, 255, 255, 0.1)",
-                                                            backdropFilter: "blur(10px)",
-                                                            boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
-                                                            padding: "16px",
-                                                            marginBottom: "16px",
-                                                            height: { xs: "120px", sm: "120px", md: "150px" },
-                                                            width: { xs: "100%", sm: "100%", md: "180px" },
-                                                            display: "flex",
-                                                            justifyContent: "space-between", 
-                                                            flexDirection: "column",
-                                                            "&:hover": {
-                                                                transform: "scale(1.05)",
-                                                                boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
-                                                                transition: "all 0.3s ease",
-                                                            },
-                                                        }}
-                                                    >
-                                                        {/* Title (heading) */}
-                                                        <Typography
-                                                            variant="h6"
-                                                            sx={{
-                                                                fontFamily: "Montserrat, sans-serif",
-                                                                fontWeight: "bold",
-                                                                color: "white",
-                                                                marginBottom: "8px",
-                                                            }}
-                                                        >
-                                                            {item.title}
-                                                        </Typography>
-                                                        {/* Description */}
-                                                        <Typography
-                                                            variant="body2"
-                                                            sx={{
-                                                                fontFamily: "Montserrat, sans-serif",
-                                                                fontWeight: "normal",
-                                                                color: "white",
-                                                                lineHeight: 1.8,
-                                                            }}
-                                                        >
-                                                            {item.description}
-                                                        </Typography>
-                                                    </Box>
-                                                </Grid>
-                                            ))
-                                            : "Loading..."}
-                                    </Grid>
-                                </Grid>
-
-                                {/* Render the points for 'Why2' (2 boxes on the bottom) */}
-                                <Grid item xs={12} sm={6}>
-                                    <Grid container spacing={2}>
-                                        {props.data
-                                            ? props.data.Why2.map((item, i) => (
-                                                <Grid item xs={12} key={`${item.title}-${i}`} sx={{ display: 'flex', justifyContent: 'center' }}>
-                                                    <Box
-                                                        sx={{
-                                                            display: "flex",
-                                                            flexDirection: "column",
-                                                            justifyContent: "center",
-                                                            borderRadius: "8px",
-                                                            backgroundColor: "rgba(255, 255, 255, 0.1)",
-                                                            backdropFilter: "blur(10px)",
-                                                            boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
-                                                            padding: "16px",
-                                                            marginBottom: "16px",
-                                                            height: { xs: "120px", sm: "120px", md: "150px" },
-                                                            width: { xs: "100%", sm: "100%", md: "180px" },   
-                                                            display: "flex",
-                                                            justifyContent: "space-between", 
-                                                            flexDirection: "column",
-                                                            "&:hover": {
-                                                                transform: "scale(1.05)",
-                                                                boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
-                                                                transition: "all 0.3s ease",
-                                                            },
-                                                        }}
-                                                    >
-                                                        {/* Title (heading) */}
-                                                        <Typography
-                                                            variant="h6"
-                                                            sx={{
-                                                                fontFamily: "Montserrat, sans-serif",
-                                                                fontWeight: "bold",
-                                                                color: "white",
-                                                                marginBottom: "8px",
-                                                            }}
-                                                        >
-                                                            {item.title}
-                                                        </Typography>
-                                                        {/* Description */}
-                                                        <Typography
-                                                            variant="body2"
-                                                            sx={{
-                                                                fontFamily: "Montserrat, sans-serif",
-                                                                fontWeight: "normal",
-                                                                color: "white",
-                                                                lineHeight: 1.8,
-                                                            }}
-                                                        >
-                                                            {item.description}
-                                                        </Typography>
-                                                    </Box>
-                                                </Grid>
-                                            ))
-                                            : "Loading..."}
-                                    </Grid>
-                                </Grid>
+                            {/* Render the points for 'Why' */}
+                            <Grid container spacing={6}>
+                                {props.data
+                                    ? props.data.Why.map((item, i) => (
+                                          <Grid
+                                              item
+                                              xs={12}
+                                              sm={12}
+                                              md={3}
+                                              key={`why-${i}`}
+                                          >
+                                              <Box
+                                                  className="about-box"
+                                                  sx={{
+                                                      display: "flex",
+                                                      flexDirection: "column",
+                                                      justifyContent: "center",
+                                                      borderRadius: "8px",
+                                                      backgroundColor: "rgba(255, 255, 255, 0.1)",
+                                                      backdropFilter: "blur(10px)",
+                                                      boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
+                                                      padding: "16px",
+                                                      marginBottom: "16px",
+                                                      height: { xs: "auto", sm: "auto", md: "150px" },
+                                                      display: "flex",
+                                                      justifyContent: "space-between",
+                                                      flexDirection: "column",
+                                                      "&:hover": {
+                                                          transform: "scale(1.05)",
+                                                          boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
+                                                          transition: "all 0.3s ease",
+                                                      },
+                                                  }}
+                                              >
+                                                  {/* Title (heading) */}
+                                                  <Typography
+                                                      variant="h6"
+                                                      sx={{
+                                                          fontFamily: "Montserrat, sans-serif",
+                                                          fontWeight: "bold",
+                                                          background: "linear-gradient(45deg, #177dea, #b22fe3)",
+                                                          WebkitBackgroundClip: "text",
+                                                          color: "transparent",
+                                                          marginBottom: "8px",
+                                                      }}
+                                                  >
+                                                      {item.title}
+                                                  </Typography>
+                                                  {/* Description */}
+                                                  <Typography
+                                                      variant="body2"
+                                                      sx={{
+                                                          fontFamily: "Montserrat, sans-serif",
+                                                          fontWeight: "normal",
+                                                          color: "white",
+                                                          lineHeight: 1.8,
+                                                      }}
+                                                  >
+                                                      {item.description}
+                                                  </Typography>
+                                              </Box>
+                                          </Grid>
+                                      ))
+                                    : "Loading..."}
                             </Grid>
 
-                            <Box mt={4}>
+                            {/* Button Section */}
+                            <Box
+                                sx={{
+                                    width: "100%",
+                                    display: "flex",
+                                    justifyContent: { xs: "center", md: "flex-start" },
+                                    marginTop: "40px",
+                                }}
+                            >
                                 <Button
                                     variant="contained"
                                     color="primary"
@@ -215,8 +185,9 @@ export const About = (props) => {
                                         fontWeight: "bold",
                                         borderRadius: "5px",
                                         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                                        background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
                                         "&:hover": {
-                                            backgroundColor: "#1d4ed8",
+                                            background: 'linear-gradient(45deg, #177dea, #b22fe3)',  
                                         },
                                     }}
                                 >
