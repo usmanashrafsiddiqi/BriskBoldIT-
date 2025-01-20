@@ -1,43 +1,50 @@
 import React from 'react';
 import CommonTabs from '../components/CommonTabs';
+import { Typography, Box } from '@mui/material';
 
 const SoftwareDevelopment = () => {
     const data = {
         tabs: [
             {
+                head:"Software Development",
                 label: "Analysis",
                 title: 'Analysis',
-                content: ["Detailed analysis of the software is performed to identify overall requirements of the client. This step is necessary to make adjustments and to ensure that software functions properly at the end."]
+                content: ["Insight-driven planning for smarter solutions.Work with our experts to identify the best strategies, ensuring your project starts with a clear path to success. We dive deep into your business needs to create a roadmap that guarantees successful outcomes."]
             },
             {
                 label: "Design",
                 title: 'Design',
-                content: ["Software design is a process to transform user requirements into some suitable form, which helps the user to understand the final outing as well as programmer in software coding and implementation. The software design process can be divided into the following three level of phases of design :Interface Design,Architectural Design,Detailed Design"]
+                content: ["Crafting user-centric, visually stunning designs.Engage us to create designs that not only look great but also deliver exceptional user experiences. Our design philosophy combines creativity with functionality, ensuring every project is a visual delight."]
             },
             {
                 label: "Development",
                 title: 'Development',
-                content: ["Development starts once the developer gets the design document which is translated into source code and then the development is divided in modules/units and actual coding is started. All the components of the software are implemented in this phase. This is the longest phase of the agile software development life cycle."]
+                content: ["Building robust, scalable applications.Choose our team to build applications that grow with your business, ensuring long-term success. We specialize in crafting solutions that are as flexible as they are powerful, adapting to your evolving needs."]
             },
             {
                 label: "Testing",
                 title: 'Testing',
-                content: ["All types of functional testing are performed in this phase like unit testing, integration testing, system testing, acceptance testing as well as non-functional testing to make sure that the product is actually solving the needs addressed and gathered during the requirements phase."]
+                content: ["Ensuring flawless performance, every time.Trust our thorough testing processes to deliver software that performs flawlessly under any condition. Our comprehensive testing ensures your software not only works but excels under all circumstances."]
             },
             {
                 label: "Implementation",
                 title: 'Implementation',
-                content: ["A replica of the production environment 'Staging' is created where they (Customer, BA) repeat the final testing. If the customer finds the application as expected, then it will go to the production for operations."]
+                content: ["Seamless integration for instant impact.Rely on us for smooth implementation, minimizing downtime and maximizing your investment’s impact. We ensure that every implementation is smooth, efficient, and fully aligned with your business goals."]
             },
             {
                 label: "Operations & Maintenance",
                 title: 'Operations & Maintenance',
-                content: ["After the deployment of a product into the production environment, the normal operations starts, then the actual problems might occur and it needs to be solved from time to time where our team stands with you. We provide a selection of support & maintenance packages that keep your softwares healthy and effective."]
+                content: ["Continuous support for lasting success.Partner with us for ongoing support, ensuring your systems remain reliable and up to date. Our proactive maintenance services keep your systems running smoothly, with minimal disruption."]
             },
         ]
     };
 
-    return <CommonTabs data={data} />;
+    return (
+      
+          
+            <CommonTabs data={data} />
+     
+    );
 };
 
 export default SoftwareDevelopment;

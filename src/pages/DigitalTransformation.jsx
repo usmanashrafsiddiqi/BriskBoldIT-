@@ -1,33 +1,40 @@
 import React from 'react';
 import CommonTabs from '../components/CommonTabs';
+import { Typography, Box } from '@mui/material';
 
 const DigitalTransformation = () => {
     const data = {
         tabs: [
             {
+                 head:"Digital Transformation",
                 label: "IT Transformation",
                 title: 'IT Transformation',
-                content: ["Business today needs secure IT environments for seamless internal and external communication. IT transformation optimizes existing systems to align with business goals and future growth, enabling a modern, automated, and agile infrastructure. This transformation enhances data quality, drives faster innovation, and provides valuable insights for better decision-making."]
+                content: ["Modernize IT, revolutionize your future.Choose us to modernize your IT infrastructure, ensuring future-ready solutions that drive success. We don’t just upgrade your IT; we future-proof your business with cutting-edge technology."]
             },
             {
                 label: "Data Transformation",
                 title: 'Data Transformation',
-                content: ["Organizations face data overload from various sources, making effective management crucial. Data transformation reorganizes data to make it more accessible and useful. We help convert data into valuable insights, enabling better decision-making, real-time information, and a competitive edge for faster results"]
+                content: ["Unlock the power of your data.Rely on us to harness your data’s full potential, turning it into a strategic asset for your business. Our advanced data transformation services ensure your data drives smarter, faster decisions."]
             },
             {
                 label: "Business Process Transformation",
                 title: 'Business Process Transformation',
-                content: ["Business Process Transformation focuses on radically changing processes to meet new goals, often driven by digital transformation. It modernizes processes, incorporates new technologies, and improves system integration. Our experts help businesses automate tasks, enhance operations, and align processes with goals to boost efficiency and sustainability."]
+                content: ["Streamline operations, boost performance.Collaborate with us to redesign your processes, unlocking greater efficiency and innovation. We help you reimagine your business processes for a more agile and resilient organization."]
             },
             {
                 label: "AI Transformation",
                 title: 'AI Transformation',
-                content: ["AI transformation is the next step in digital evolution, enabling businesses to stay competitive. It requires digital transformation to prepare data and processes for AI integration. Our experienced data engineers help incorporate AI into your business, enabling faster adaptation and achieving future objectives."]
+                content: ["Empower innovation with AI-driven solutions.Trust us to lead your AI transformation, unlocking new possibilities and driving business growth. Our AI solutions are crafted to seamlessly integrate into your operations, delivering exponential value."]
             },
         ]
     };
 
-    return <CommonTabs data={data} />;
+    return (
+       
+           
+            <CommonTabs data={data} />
+        
+    );
 };
 
 export default DigitalTransformation;

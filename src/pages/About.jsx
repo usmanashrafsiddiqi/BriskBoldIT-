@@ -7,27 +7,41 @@ export const About = (props) => {
             id="about"
             className="py-20"
             style={{
-                backgroundImage: `url(/assets/aboutbgg.png)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                backgroundAttachment: "scroll",
+                position: "relative",
                 paddingRight: "50px",
                 paddingLeft: "50px",
-                backgroundRepeat: "no-repeat",
                 minHeight: "100vh",
                 paddingBottom: "80px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
             }}
         >
+            {/* Background Image with a glass effect */}
+            <div
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundImage: `url(/assets/aboutbgg.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                    backgroundRepeat: "no-repeat",
+                    filter: "blur(1px)",
+                    zIndex: -1,
+                }}
+            ></div>
+
             {/* Media query to apply correct styles for small and medium screens */}
             <style>
                 {`
-                    /* Apply padding only for large screens */
+                    /* Apply padding-top to start from the top for large screens */
                     @media (min-width: 960px) {
                         #about {
-                            padding-top: 350px;  /* Larger padding for large screens */
+                            padding-top: 0px;  /* Remove large padding for large screens */
                         }
                     }
 
@@ -53,7 +67,7 @@ export const About = (props) => {
                             className="about-text space-y-6"
                             sx={{
                                 textAlign: "left",
-                                paddingTop: { xs: "20px", sm: "20px", md: "50px" }, 
+                                paddingTop: { xs: "20px", sm: "20px", md: "50px" },
                             }}
                         >
                             {/* About Us Title */}
@@ -102,66 +116,132 @@ export const About = (props) => {
                             {/* Render the points for 'Why' */}
                             <Grid container spacing={6}>
                                 {props.data
-                                    ? props.data.Why.map((item, i) => (
-                                          <Grid
-                                              item
-                                              xs={12}
-                                              sm={12}
-                                              md={3}
-                                              key={`why-${i}`}
-                                          >
-                                              <Box
-                                                  className="about-box"
-                                                  sx={{
-                                                      display: "flex",
-                                                      flexDirection: "column",
-                                                      justifyContent: "center",
-                                                      borderRadius: "8px",
-                                                      backgroundColor: "rgba(255, 255, 255, 0.1)",
-                                                      backdropFilter: "blur(10px)",
-                                                      boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
-                                                      padding: "16px",
-                                                      marginBottom: "16px",
-                                                      height: { xs: "auto", sm: "auto", md: "150px" },
-                                                      display: "flex",
-                                                      justifyContent: "space-between",
-                                                      flexDirection: "column",
-                                                      "&:hover": {
-                                                          transform: "scale(1.05)",
-                                                          boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
-                                                          transition: "all 0.3s ease",
-                                                      },
-                                                  }}
+                                    ? props.data.Why.map((item, i) => {
+                                          if (i < 3) {
+                                              return (
+                                                  <Grid
+                                                      item
+                                                      xs={12}
+                                                      sm={12}
+                                                      md={4} // For the first 3 boxes, make them take up 4 columns
+                                                      key={`why-${i}`}
+                                                  >
+                                                      <Box
+                                                          className="about-box"
+                                                          sx={{
+                                                              display: "flex",
+                                                              flexDirection: "column",
+                                                              justifyContent: "center",
+                                                              borderRadius: "8px",
+                                                              backgroundColor: "rgba(255, 255, 255, 0.1)", // Keep box transparency as is
+                                                              backdropFilter: "blur(10px)",
+                                                              boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
+                                                              padding: "16px",
+                                                              marginBottom: "16px",
+                                                              height: { xs: "auto", sm: "auto", md: "130px" },
+                                                              display: "flex",
+                                                              justifyContent: "space-between",
+                                                              flexDirection: "column",
+                                                              "&:hover": {
+                                                                  transform: "scale(1.05)",
+                                                                  boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
+                                                                  transition: "all 0.3s ease",
+                                                              },
+                                                          }}
+                                                      >
+                                                          {/* Title (heading) */}
+                                                          <Typography
+                                                              variant="h6"
+                                                              sx={{
+                                                                  fontFamily: "Montserrat, sans-serif",
+                                                                  fontWeight: "bold",
+                                                                  background: "linear-gradient(45deg, #177dea, #b22fe3)",
+                                                                  WebkitBackgroundClip: "text",
+                                                                  color: "transparent",
+                                                                  marginBottom: "8px",
+                                                              }}
+                                                          >
+                                                              {item.title}
+                                                          </Typography>
+                                                          {/* Description */}
+                                                          <Typography
+                                                              variant="body2"
+                                                              sx={{
+                                                                  fontFamily: "Montserrat, sans-serif",
+                                                                  fontWeight: "normal",
+                                                                  color: "white",
+                                                                  lineHeight: 1.8,
+                                                              }}
+                                                          >
+                                                              {item.description}
+                                                          </Typography>
+                                                      </Box>
+                                                  </Grid>
+                                              );
+                                          }
+
+                                          // For "Adaptability" and "Customer-Centric" box (index 3 and 4), they will go in the second row
+                                          return (
+                                              <Grid
+                                                  item
+                                                  xs={12}
+                                                  sm={12}
+                                                  md={4} 
+                                                  key={`why-${i}`}
                                               >
-                                                  {/* Title (heading) */}
-                                                  <Typography
-                                                      variant="h6"
+                                                  <Box
+                                                      className="about-box"
                                                       sx={{
-                                                          fontFamily: "Montserrat, sans-serif",
-                                                          fontWeight: "bold",
-                                                          background: "linear-gradient(45deg, #177dea, #b22fe3)",
-                                                          WebkitBackgroundClip: "text",
-                                                          color: "transparent",
-                                                          marginBottom: "8px",
+                                                          display: "flex",
+                                                          flexDirection: "column",
+                                                          justifyContent: "center",
+                                                          borderRadius: "8px",
+                                                          backgroundColor: "rgba(255, 255, 255, 0.1)",
+                                                          backdropFilter: "blur(10px)",
+                                                          boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
+                                                          padding: "16px",
+                                                          marginBottom: "16px",
+                                                          height: { xs: "auto", sm: "auto", md: "130px" },
+                                                          display: "flex",
+                                                          justifyContent: "space-between",
+                                                          flexDirection: "column",
+                                                          "&:hover": {
+                                                              transform: "scale(1.05)",
+                                                              boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
+                                                              transition: "all 0.3s ease",
+                                                          },
                                                       }}
                                                   >
-                                                      {item.title}
-                                                  </Typography>
-                                                  {/* Description */}
-                                                  <Typography
-                                                      variant="body2"
-                                                      sx={{
-                                                          fontFamily: "Montserrat, sans-serif",
-                                                          fontWeight: "normal",
-                                                          color: "white",
-                                                          lineHeight: 1.8,
-                                                      }}
-                                                  >
-                                                      {item.description}
-                                                  </Typography>
-                                              </Box>
-                                          </Grid>
-                                      ))
+                                                      {/* Title (heading) */}
+                                                      <Typography
+                                                          variant="h6"
+                                                          sx={{
+                                                              fontFamily: "Montserrat, sans-serif",
+                                                              fontWeight: "bold",
+                                                              background: "linear-gradient(45deg, #177dea, #b22fe3)",
+                                                              WebkitBackgroundClip: "text",
+                                                              color: "transparent",
+                                                              marginBottom: "8px",
+                                                          }}
+                                                      >
+                                                          {item.title}
+                                                      </Typography>
+                                                      {/* Description */}
+                                                      <Typography
+                                                          variant="body2"
+                                                          sx={{
+                                                              fontFamily: "Montserrat, sans-serif",
+                                                              fontWeight: "normal",
+                                                              color: "white",
+                                                              lineHeight: 1.8,
+                                                          }}
+                                                      >
+                                                          {item.description}
+                                                      </Typography>
+                                                  </Box>
+                                              </Grid>
+                                          );
+                                      })
                                     : "Loading..."}
                             </Grid>
 
@@ -185,9 +265,9 @@ export const About = (props) => {
                                         fontWeight: "bold",
                                         borderRadius: "5px",
                                         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                                        background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
+                                        background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                         "&:hover": {
-                                            background: 'linear-gradient(45deg, #177dea, #b22fe3)',  
+                                            background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                         },
                                     }}
                                 >

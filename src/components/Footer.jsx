@@ -12,7 +12,8 @@ const Footer = () => {
                 position: 'relative',
                 width: '100%',
                 bottom: 0,
-                mt: 'auto',
+                
+                mt: 0, 
             }}
         >
             <Container maxWidth="lg">
@@ -51,32 +52,31 @@ const Footer = () => {
 
                     {/* Contact Us */}
                     <Grid item xs={12} sm={6} md={3} sx={{ mr: 6 }}>
-    <Typography
-        variant="h6"
-        sx={{
-            fontWeight: '800',
-            mb: 2,
-            background: 'linear-gradient(45deg, #177dea, #b22fe3)',
-            WebkitBackgroundClip: 'text',
-            color: 'white',
-            fontFamily: '"Montserrat", sans-serif',
-        }}
-    >
-        Contact Us
-    </Typography>
-    <Box>
-        <Typography variant="body2" sx={{ fontFamily: 'Montserrat', fontWeight: 'normal', mb: 1 }}>
-            Email: hr@briskboldit.com
-        </Typography>
-        <Typography variant="body2" sx={{ fontFamily: 'Montserrat', fontWeight: 'normal', mb: 1 }}>
-            Phone: (+971) 554372731
-        </Typography>
-        <Typography variant="body2" sx={{ fontFamily: 'Montserrat', fontWeight: 'normal', mb: 1 }}>
-            Address: Business Bay, Dubai, UAE
-        </Typography>
-    </Box>
-</Grid>
-
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                fontWeight: '800',
+                                mb: 2,
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                WebkitBackgroundClip: 'text',
+                                color: 'white',
+                                fontFamily: '"Montserrat", sans-serif',
+                            }}
+                        >
+                            Contact Us
+                        </Typography>
+                        <Box>
+                            <Typography variant="body2" sx={{ fontFamily: 'Montserrat', fontWeight: 'normal', mb: 1 }}>
+                                Email: info@briskboldit.com
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontFamily: 'Montserrat', fontWeight: 'normal', mb: 1 }}>
+                                Phone: (+971) 554372731
+                            </Typography>
+                            <Typography variant="body2" sx={{ fontFamily: 'Montserrat', fontWeight: 'normal', mb: 1 }}>
+                                Address: Business Bay, Dubai, UAE
+                            </Typography>
+                        </Box>
+                    </Grid>
 
                     {/* Subscribe to Newsletter */}
                     <Grid item xs={12} sm={6} md={3} sx={{ mr: 6 }}>
@@ -135,7 +135,7 @@ const Footer = () => {
                                 </IconButton>
                             </a>
 
-                            <a href="https://x.com/bold_it" target="_blank" rel="noopener noreferrer">
+                            <a href="https://x.com/BriskBoldAI" target="_blank" rel="noopener noreferrer">
                                 <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
                                     <Twitter />
                                 </IconButton>
@@ -153,7 +153,7 @@ const Footer = () => {
                                 </IconButton>
                             </a>
 
-                            <a href="https://www.instagram.com/briskboldaiandautomation?igsh=MXgycjJoMTVseXdrbg==" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/briskbold_ai_automation/" target="_blank" rel="noopener noreferrer">
                                 <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
                                     <Instagram />
                                 </IconButton>

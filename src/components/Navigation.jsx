@@ -22,17 +22,19 @@ const Navigation = () => {
     };
 
     const handleMenuItemClick = () => {
+      
         setMobileMenuOpen(false); 
+        handleCloseServicesMenu();  
     };
 
     return (
         <AppBar
-        position="sticky"
-        sx={{
-          backgroundImage: 'linear-gradient(to right, #10374e, #356683)', // Gradient background
-          boxShadow: 3,
-        }}
-      >
+            position="sticky"
+            sx={{
+                backgroundImage: 'linear-gradient(to right, #10374e, #356683)', 
+                boxShadow: 3,
+            }}
+        >
             <Toolbar>
                 {/* Logo */}
                 <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
@@ -44,7 +46,7 @@ const Navigation = () => {
                 </Box>
 
                 {/* Navigation Buttons */}
-                <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', fontWeight:"800"}}>
+                <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', fontWeight: "800" }}>
                     <Button component={Link} to="/" color="inherit" sx={{ marginRight: 2 }}>
                         Home
                     </Button>
@@ -60,7 +62,7 @@ const Navigation = () => {
                             display: 'flex',
                             alignItems: 'center',
                             paddingRight: 0,
-                            paddingLeft: 1,
+                            paddingLeft: 1
                         }}
                         onClick={handleServicesMenuClick}
                     >
@@ -73,16 +75,16 @@ const Navigation = () => {
                         onClose={handleCloseServicesMenu}
                         sx={{ mt: 1 }}
                     >
-                        <MenuItem component={Link} to="/hyper-automation" onClick={handleCloseServicesMenu}>
+                        <MenuItem component={Link} to="/hyper-automation" onClick={handleMenuItemClick}>
                             Hyper Automation
                         </MenuItem>
-                        <MenuItem component={Link} to="/digital-transformation" onClick={handleCloseServicesMenu}>
+                        <MenuItem component={Link} to="/digital-transformation" onClick={handleMenuItemClick}>
                             Digital Transformation
                         </MenuItem>
-                        <MenuItem component={Link} to="/software-development" onClick={handleCloseServicesMenu}>
+                        <MenuItem component={Link} to="/software-development" onClick={handleMenuItemClick}>
                             Software/Web Design & Development
                         </MenuItem>
-                        <MenuItem component={Link} to="/consultation" onClick={handleCloseServicesMenu}>
+                        <MenuItem component={Link} to="/consultation" onClick={handleMenuItemClick}>
                             Consultation / Training
                         </MenuItem>
                     </Menu>
@@ -139,7 +141,7 @@ const Navigation = () => {
                             Resources
                         </Button>
                         <Button component={Link} to="/contact" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'red' }} onClick={handleMenuItemClick}>
-                            contact us
+                            Contact Us
                         </Button>
                         <Menu
                             anchorEl={servicesAnchorEl}
@@ -147,16 +149,16 @@ const Navigation = () => {
                             onClose={handleCloseServicesMenu}
                             sx={{ mt: 1 }}
                         >
-                            <MenuItem component={Link} to="/hyper-automation" onClick={handleCloseServicesMenu}>
+                            <MenuItem component={Link} to="/hyper-automation" onClick={handleMenuItemClick}>
                                 Hyper Automation
                             </MenuItem>
-                            <MenuItem component={Link} to="/digital-transformation" onClick={handleCloseServicesMenu}>
+                            <MenuItem component={Link} to="/digital-transformation" onClick={handleMenuItemClick}>
                                 Digital Transformation
                             </MenuItem>
-                            <MenuItem component={Link} to="/software-development" onClick={handleCloseServicesMenu}>
+                            <MenuItem component={Link} to="/software-development" onClick={handleMenuItemClick}>
                                 Software/Web Design & Development
                             </MenuItem>
-                            <MenuItem component={Link} to="/consultation" onClick={handleCloseServicesMenu}>
+                            <MenuItem component={Link} to="/consultation" onClick={handleMenuItemClick}>
                                 Consultation / Training
                             </MenuItem>
                         </Menu>

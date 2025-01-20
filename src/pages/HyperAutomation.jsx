@@ -1,50 +1,60 @@
 import React from 'react';
 import CommonTabs from '../components/CommonTabs';
-
+import { Typography, Box } from '@mui/material';
 
 const HyperAutomation = () => {
     const data = {
+
         tabs: [
+           
             {
+               head:"Hyperautomation",
                 label: "Discover Processes",
-                title: "Opportunity Identification",
+                title: "RPA/AI Automation",
                 content: [
-                    "Opportunity identification and prioritization is key in any RPA adoption. Our team of business analysts know where and how RPA can drive cost reduction, higher accuracy and improved customer satisfaction.",
+                    "Effortless automation, powered by AI. Experience unmatched efficiency with tailored automation solutions that evolve with your business needs. Our solutions are designed to not just automate but to innovate, helping you stay ahead in a competitive market.",
                 ],
             },
             {
                 label: "Build Processes",
-                title: "Design & Development",
+                title: "Process Mining",
                 content: [
-                    "From simple to advanced, we build automations quickly. Our solutions are designed and built in a component based models which are very fast to build and very easily to maintain.",
+                    "Uncover hidden efficiencies in your processes.Trust us to reveal the hidden potential in your operations, driving continuous improvement and cost savings. With our expertise, turn your process data into actionable insights that drive sustainable growth.",
                 ],
             },
             {
                 label: "Manage and Run",
-                title: "Implementation & Testing",
+                title: "Conversational AI",
                 content: [
-                    "Deploy, manage and optimize processes. Testing stages of the process can be explained as  Component testing, System testing, Acceptance testing",
+                    "Engage smarter with AI-driven conversations.Partner with us for cutting-edge conversational AI that enhances customer satisfaction and loyalty. Our conversational AI solutions ensure every interaction is meaningful, personal, and efficient.",
                 ],
             },
             {
                 label: "Measure and Maintenance",
-                title: "Support & Maintenance",
+                title: "Insights",
                 content: [
-                    "Measure operations and performance to align with business outcomes. We keep your processes and automation robots healthy and productive for better ROI(Return On Investement)",
+                    "Data-driven decisions, simplified.Let us turn your data into actionable insights, giving you a competitive edge in decision-making. We empower your business with predictive analytics, turning insights into foresight for better planning.",
                 ],
             },
             {
                 label: "Training",
-                title: "Training & Enablement",
+                title: "IDP (Intelligent Document Processing)",
                 content: [
-                    "We help companies to build their internal capabilities to adapt, scale and bring business value along with competitive advantages and continuous improvement of your internal Centre of Excellence.",
+                    "Transform documents into actionable insights.Count on our expertise to streamline your document workflows, saving time and boosting accuracy. Our solutions intelligently extract, process, and analyse data, transforming how you handle information.",
                 ],
             },
         ],
     };
 
+    return (
+       
+            
 
-    return <CommonTabs data={data} />;
+
+
+            <CommonTabs data={data} />
+       
+    );
 };
 
 export default HyperAutomation;
