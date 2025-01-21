@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import banner from "/assets/briskboldbanner.jpg";
+import banner from "/assets/newwebhello.jpg";
 import tabletbanner from "/assets/tabtwo.jpg";
 import mobilebanner from "/assets/tabbbb.jpg"
 export const Header = () => {
@@ -9,16 +9,16 @@ export const Header = () => {
       sx={{
         position: "relative",
         width: "100%",
-        height: { xs: "40vh", sm: "50vh", md: "60vh" },
+        height: { xs: "30vh", sm: "50vh", md: "50vh" },
         backgroundImage:  `url(${banner})`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         transition: "background-image 0.5s ease-in-out",
-        "@media (max-width: 1200px)": {
+        "@media (max-width: 700px)": {
           backgroundImage: `url(${tabletbanner})`,
         },
-        "@media (max-width: 768px)": {
+        "@media (max-width: 400px)": {
           backgroundImage: `url(${mobilebanner})`,
           
         },

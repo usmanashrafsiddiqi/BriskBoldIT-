@@ -26,8 +26,8 @@ const locations = [
             "Mississauga, Ontario",
             "Canada, L4Z4C4",
         ],
-        mobile: "(+1647) 4463712",
-        whatsapp: "(+1647) 4463712",
+        mobile: "(+1) 6474463712",
+        whatsapp: "(+1) 6474463712",
         img: canadaimg,
     },
     {

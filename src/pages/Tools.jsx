@@ -9,6 +9,7 @@ import twixiorimg from "/assets/twix.png";
 import docaquireimg from "/assets/docaquire.png";
 import abbyimg from "/assets/abby.png";
 import powerbiimg from "/assets/powerbi.png";
+import microsoftimg from "/assets/microsoft.jpg";
 
 const toolsData = {
     ProcessMining: [
@@ -34,6 +35,7 @@ const toolsData = {
     ConversationalAI: [
         druidimg,
         twixiorimg,
+        microsoftimg
     ],
 };
 
@@ -52,12 +54,12 @@ const Tools = () => {
                 variant="h4"
                 component="h2"
                 sx={{
-                    fontFamily: 'Montserrat, sans-serif', 
+                    fontFamily: 'Montserrat, sans-serif',
                     fontWeight: '800',
-                    color: 'white', 
+                    color: 'white',
                     textAlign: 'center',
                     marginBottom: '20px',
-                    paddingTop: '50px', 
+                    paddingTop: '50px',
                 }}
             >
                 Expertise
@@ -71,8 +73,8 @@ const Tools = () => {
                     display: { xs: 'none', sm: 'block' },
                     background: 'transparent',
                     boxShadow: 'none',
-                    border: 'none',  
-                    padding: 0,     
+                    border: 'none',
+                    padding: 0,
                 }}
             >
                 <Table sx={{ backgroundColor: 'transparent' }}>
@@ -81,9 +83,9 @@ const Tools = () => {
                             <TableCell
                                 align="center"
                                 sx={{
-                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontFamily: 'Montserrat, sans-serif',
                                     fontWeight: 'bold',
-                                    borderBottom: 'none', 
+                                    borderBottom: 'none',
                                     backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                     WebkitBackgroundClip: 'text',
                                     color: 'transparent',
@@ -94,9 +96,9 @@ const Tools = () => {
                             <TableCell
                                 align="center"
                                 sx={{
-                                    fontFamily: 'Montserrat, sans-serif', 
-                                    fontWeight: 'bold', 
-                                    borderBottom: 'none', 
+                                    fontFamily: 'Montserrat, sans-serif',
+                                    fontWeight: 'bold',
+                                    borderBottom: 'none',
                                     backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                     WebkitBackgroundClip: 'text',
                                     color: 'transparent',
@@ -107,9 +109,9 @@ const Tools = () => {
                             <TableCell
                                 align="center"
                                 sx={{
-                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontFamily: 'Montserrat, sans-serif',
                                     fontWeight: 'bold',
-                                    borderBottom: 'none', 
+                                    borderBottom: 'none',
                                     backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                     WebkitBackgroundClip: 'text',
                                     color: 'transparent',
@@ -120,9 +122,9 @@ const Tools = () => {
                             <TableCell
                                 align="center"
                                 sx={{
-                                    fontFamily: 'Montserrat, sans-serif', 
+                                    fontFamily: 'Montserrat, sans-serif',
                                     fontWeight: 'bold',
-                                    borderBottom: 'none', 
+                                    borderBottom: 'none',
                                     backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                     WebkitBackgroundClip: 'text',
                                     color: 'transparent',
@@ -133,9 +135,9 @@ const Tools = () => {
                             <TableCell
                                 align="center"
                                 sx={{
-                                    fontFamily: 'Montserrat, sans-serif', 
-                                    fontWeight: 'bold', 
-                                    borderBottom: 'none', 
+                                    fontFamily: 'Montserrat, sans-serif',
+                                    fontWeight: 'bold',
+                                    borderBottom: 'none',
                                     backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                     WebkitBackgroundClip: 'text',
                                     color: 'transparent',
@@ -155,9 +157,9 @@ const Tools = () => {
                                         height: '400px',
                                         padding: '10px',
                                         backgroundColor: 'transparent',
-                                        fontFamily: 'Montserrat, sans-serif', 
+                                        fontFamily: 'Montserrat, sans-serif',
                                         fontWeight: 'normal',
-                                        borderBottom: 'none', 
+                                        borderBottom: 'none',
                                     }}
                                 >
                                     <Grid container direction="column" alignItems="center" spacing={2} sx={{ height: '100%' }}>
@@ -174,8 +176,6 @@ const Tools = () => {
                                                         boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
                                                         backgroundColor: 'white',
                                                         border: '2px solid rgba(255, 255, 255, 0.6)',
-                                                        
-                                                        marginTop: toolImage === twixiorimg ? '-64px' : '0',
                                                     }}
                                                 />
                                             </Grid>
@@ -199,7 +199,7 @@ const Tools = () => {
                                     fontWeight: 'bold',
                                     textAlign: 'center',
                                     marginBottom: '10px',
-                                    whiteSpace: 'nowrap', 
+                                    whiteSpace: 'nowrap',
                                     backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                     WebkitBackgroundClip: 'text',
                                     color: 'transparent',
@@ -208,20 +208,20 @@ const Tools = () => {
                                 {category.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([a-zA-Z])\/([a-zA-Z])/g, '$1/$2').trim()}
                             </Typography>
 
-                            {/* Horizontal layout for images on small screens */}
-                            <Grid container direction="row" justifyContent="center" spacing={2}>
+                            {/* Column-wise layout for images on medium and small screens */}
+                            <Grid container direction="column" alignItems="center" spacing={2}>
                                 {toolsData[category].map((toolImage, imgIndex) => (
                                     <Grid item key={imgIndex} sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <img
                                             src={toolImage}
                                             alt={`Tool ${imgIndex + 1}`}
                                             style={{
-                                                width: '100px',  
+                                                width: '100px',
                                                 height: 'auto',
                                                 objectFit: 'cover',
                                                 borderRadius: '8px',
-                                                boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',  
-                                                backgroundColor: 'white', 
+                                                boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
+                                                backgroundColor: 'white',
                                                 border: '2px solid rgba(255, 255, 255, 0.6)',
                                             }}
                                         />

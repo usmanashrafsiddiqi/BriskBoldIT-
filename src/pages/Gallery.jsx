@@ -46,7 +46,7 @@ export const Gallery = (props) => {
                         display: "flex",
                         justifyContent: "flex-start",
                         alignItems: "center",
-                        animation: "scroll 20s linear infinite", 
+                        animation: "scroll 15s linear infinite", 
                     }}
                 >
                     {props.data ? (

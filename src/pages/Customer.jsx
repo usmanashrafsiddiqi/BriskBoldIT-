@@ -50,7 +50,7 @@ const Customer = () => {
                         display: 'flex',
                         justifyContent: 'flex-start',
                         alignItems: 'center',
-                        animation: 'scroll 20s linear infinite', 
+                        animation: 'scroll 15s linear infinite', 
                     }}
                 >
                     {/* Duplicate images to ensure smooth looping */}
