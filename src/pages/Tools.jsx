@@ -188,9 +188,9 @@ const Tools = () => {
                 </Table>
             </TableContainer>
 
-            {/* Column-wise Layout for Medium and Small Screens */}
+            {/* Horizontal Layout for Small Screens */}
             <Box sx={{ display: { xs: 'block', sm: 'none' }, marginBottom: '30px' }}>
-                <Grid container spacing={4}>
+                <Grid container spacing={2} justifyContent="center">
                     {Object.keys(toolsData).map((category, index) => (
                         <Grid item xs={12} key={index}>
                             <Typography
@@ -208,20 +208,20 @@ const Tools = () => {
                                 {category.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([a-zA-Z])\/([a-zA-Z])/g, '$1/$2').trim()}
                             </Typography>
 
-                            {/* Column-wise layout for images on medium and small screens */}
-                            <Grid container direction="column" alignItems="center" spacing={2}>
+                            {/* Horizontal layout for images on small screens */}
+                            <Grid container direction="row" justifyContent="center" spacing={2}>
                                 {toolsData[category].map((toolImage, imgIndex) => (
                                     <Grid item key={imgIndex} sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <img
                                             src={toolImage}
                                             alt={`Tool ${imgIndex + 1}`}
                                             style={{
-                                                width: '100px',
+                                                width: '100px',  
                                                 height: 'auto',
                                                 objectFit: 'cover',
                                                 borderRadius: '8px',
-                                                boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
-                                                backgroundColor: 'white',
+                                                boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',  
+                                                backgroundColor: 'white', 
                                                 border: '2px solid rgba(255, 255, 255, 0.6)',
                                             }}
                                         />
