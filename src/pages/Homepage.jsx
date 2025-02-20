@@ -6,6 +6,8 @@ import { Gallery } from './Gallery'
 import { Contact } from './Contact'
 import Tools from './Tools'
 import Customer from './Customer'
+import Software from './Software'
+import LowCode from './LowCode'
 
 const Homepage = ({ header, services, about, gallery, contact }) => {
     return (
@@ -14,6 +16,8 @@ const Homepage = ({ header, services, about, gallery, contact }) => {
             <Services data={services} />
             <Customer />
             <Gallery data={gallery} />
+            <Software/>
+            <LowCode/>
             <Tools />
             <About data={about} />
             <Contact data={contact} />

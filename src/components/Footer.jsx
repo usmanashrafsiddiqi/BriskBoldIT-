@@ -6,13 +6,12 @@ const Footer = () => {
     return (
         <Box
             sx={{
-                backgroundImage: 'linear-gradient(140deg, #000000 0%, #4d2a14 35%, #af4213 65%, #e78a28 100%)',
-                color: '#fff',
+                background: 'transparent', // Set the background to transparent
+                color: '#fff', // Keep the text color white
                 py: 4,
                 position: 'relative',
                 width: '100%',
                 bottom: 0,
-                
                 mt: 0, 
             }}
         >
@@ -26,9 +25,9 @@ const Footer = () => {
                             sx={{
                                 fontWeight: '800',
                                 mb: 2,
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
                                 WebkitBackgroundClip: 'text',
-                                color: 'white',
+                                color: 'transparent',
                                 fontFamily: '"Montserrat", sans-serif',
                             }}
                         >
@@ -57,9 +56,9 @@ const Footer = () => {
                             sx={{
                                 fontWeight: '800',
                                 mb: 2,
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
                                 WebkitBackgroundClip: 'text',
-                                color: 'white',
+                                color: 'transparent',
                                 fontFamily: '"Montserrat", sans-serif',
                             }}
                         >
@@ -85,9 +84,9 @@ const Footer = () => {
                             sx={{
                                 fontWeight: '800',
                                 mb: 2,
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
                                 WebkitBackgroundClip: 'text',
-                                color: 'white',
+                                color: 'transparent',
                                 fontFamily: '"Montserrat", sans-serif',
                                 whiteSpace: 'nowrap', 
                             }}

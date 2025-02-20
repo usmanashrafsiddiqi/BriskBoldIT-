@@ -7,13 +7,10 @@ export const Gallery = (props) => {
         <div
             id="portfolio"
             style={{
-                backgroundImage: 'url(/assets/partnerbanner.png)',  // <-- Add your background image here
-                backgroundSize: "cover", // Ensures the background image covers the entire container
-                backgroundPosition: "center", // Centers the background image
+                background: 'transparent',  // <-- Set the background to transparent
                 paddingTop: "3rem",
                 paddingBottom: "3rem",
                 overflow: "hidden",
-                backgroundRepeat: "no-repeat", // Prevents the image from repeating
             }}
         >
             <Container>
@@ -30,11 +27,10 @@ export const Gallery = (props) => {
                             maxWidth: "60rem",
                             margin: "auto",
                             marginTop: "1rem",
-                            
                         }}
                         style={{ 
                             color: 'white',
-                            }}
+                        }}
                     >
                        We are proud to collaborate with trusted partners and esteemed vendors who help us deliver exceptional solutions. Together, we drive innovation and provide top-notch products and services to our clients. Their expertise and commitment are key to making our vision a reality.
                     </Typography>
@@ -75,7 +71,6 @@ export const Gallery = (props) => {
                                         smallImage={d.smallImage}
                                         sx={{
                                             borderRadius: "12px",
-                                            
                                             width: "100%",
                                             transition: "transform 0.3s ease, box-shadow 0.3s ease",
                                             "&:hover": {

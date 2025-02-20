@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import automationanywhereimg from "/assets/automationanywhere.jpg";
 import uipathimg from "/assets/uipath.png";
 import softwareagimg from "/assets/softwareag.jpg";
@@ -11,45 +11,31 @@ import abbyimg from "/assets/abby.png";
 import powerbiimg from "/assets/powerbi.png";
 import microsoftimg from "/assets/microsoft.jpg";
 
-const toolsData = {
-    ProcessMining: [
-        automationanywhereimg,
-        uipathimg,
-        softwareagimg,
-    ],
-    RPAAIAutomation: [
-        uipathimg,
-        powerautomateimg,
-        automationanywhereimg,
-    ],
-    IntelligentDocumentProcessing: [
-        uipathimg,
-        docaquireimg,
-        abbyimg,
-    ],
-    Insights: [
-        powerbiimg,
-        uipathimg,
-        automationanywhereimg,
-    ],
-    ConversationalAI: [
-        druidimg,
-        twixiorimg,
-        microsoftimg
-    ],
-};
+// Combine all images into a single array
+const toolImages = [
+    automationanywhereimg,
+    uipathimg,
+    softwareagimg,
+    powerautomateimg,
+    druidimg,
+    twixiorimg,
+    docaquireimg,
+    abbyimg,
+    powerbiimg,
+    microsoftimg
+];
 
 const Tools = () => {
     return (
         <Box
             sx={{
                 width: '100%',
-                paddingBottom: '30px',
-                backgroundImage: 'url(/assets/servicelatest.jpg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                padding: '30px',
+                background: 'transparent',  // Set background to transparent
+                color: 'white',
             }}
         >
+            {/* Expertise Heading */}
             <Typography
                 variant="h4"
                 component="h2"
@@ -58,180 +44,78 @@ const Tools = () => {
                     fontWeight: '800',
                     color: 'white',
                     textAlign: 'center',
-                    marginBottom: '20px',
-                    paddingTop: '50px',
+                    marginBottom: '30px',  // Increased bottom margin for spacing
                 }}
             >
-                Expertise
+                HyperAutomation
             </Typography>
 
-            {/* Table of Tools for Large Screens */}
-            <TableContainer
-                component={Paper}
-                sx={{
-                    marginBottom: '30px',
-                    display: { xs: 'none', sm: 'block' },
-                    background: 'transparent',
-                    boxShadow: 'none',
-                    border: 'none',
-                    padding: 0,
-                }}
-            >
-                <Table sx={{ backgroundColor: 'transparent' }}>
-                    <TableHead>
-                        <TableRow sx={{ backgroundColor: 'transparent' }}>
-                            <TableCell
-                                align="center"
-                                sx={{
-                                    fontFamily: 'Montserrat, sans-serif',
-                                    fontWeight: 'bold',
-                                    borderBottom: 'none',
-                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
+            {/* Wrapper to make the images responsive */}
+            <Box sx={{ overflow: 'hidden', width: '100%' }}>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        alignItems: 'center',
+                        animation: 'scroll 15s linear infinite', // Set animation speed
+                    }}
+                >
+                    {/* Duplicate images to ensure smooth looping */}
+                    {[...toolImages, ...toolImages].map((image, index) => (
+                        <div key={index} style={{ marginRight: '20px' }}>
+                            <img
+                                src={image}
+                                alt={`Tool ${index}`}
+                                style={{
+                                    width: '180px', // Default size for larger screens
+                                    height: '180px', // Maintain square shape
+                                    objectFit: 'cover',
+                                    borderRadius: '8px',
+                                    boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
+                                    backgroundColor: 'white',
+                                    border: '2px solid rgba(255, 255, 255, 0.6)',
                                 }}
-                            >
-                                Process Mining
-                            </TableCell>
-                            <TableCell
-                                align="center"
-                                sx={{
-                                    fontFamily: 'Montserrat, sans-serif',
-                                    fontWeight: 'bold',
-                                    borderBottom: 'none',
-                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
-                                }}
-                            >
-                                RPA /AI Automation
-                            </TableCell>
-                            <TableCell
-                                align="center"
-                                sx={{
-                                    fontFamily: 'Montserrat, sans-serif',
-                                    fontWeight: 'bold',
-                                    borderBottom: 'none',
-                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
-                                }}
-                            >
-                                Insights
-                            </TableCell>
-                            <TableCell
-                                align="center"
-                                sx={{
-                                    fontFamily: 'Montserrat, sans-serif',
-                                    fontWeight: 'bold',
-                                    borderBottom: 'none',
-                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
-                                }}
-                            >
-                                Intelligent Document <br></br>Processing
-                            </TableCell>
-                            <TableCell
-                                align="center"
-                                sx={{
-                                    fontFamily: 'Montserrat, sans-serif',
-                                    fontWeight: 'bold',
-                                    borderBottom: 'none',
-                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
-                                }}
-                            >
-                                Conversational AI
-                            </TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        <TableRow>
-                            {Object.keys(toolsData).map((category, index) => (
-                                <TableCell
-                                    key={index}
-                                    align="center"
-                                    sx={{
-                                        height: '400px',
-                                        padding: '10px',
-                                        backgroundColor: 'transparent',
-                                        fontFamily: 'Montserrat, sans-serif',
-                                        fontWeight: 'normal',
-                                        borderBottom: 'none',
-                                    }}
-                                >
-                                    <Grid container direction="column" alignItems="center" spacing={2} sx={{ height: '100%' }}>
-                                        {toolsData[category].map((toolImage, imgIndex) => (
-                                            <Grid item key={imgIndex} sx={{ flex: '1', display: 'flex', justifyContent: 'center' }}>
-                                                <img
-                                                    src={toolImage}
-                                                    alt={`Tool ${imgIndex + 1}`}
-                                                    style={{
-                                                        width: '125px',
-                                                        height: '110px',
-                                                        objectFit: 'cover',
-                                                        borderRadius: '8px',
-                                                        boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
-                                                        backgroundColor: 'white',
-                                                        border: '2px solid rgba(255, 255, 255, 0.6)',
-                                                    }}
-                                                />
-                                            </Grid>
-                                        ))}
-                                    </Grid>
-                                </TableCell>
-                            ))}
-                        </TableRow>
-                    </TableBody>
-                </Table>
-            </TableContainer>
-
-            {/* Horizontal Layout for Small Screens */}
-            <Box sx={{ display: { xs: 'block', sm: 'none' }, marginBottom: '30px' }}>
-                <Grid container spacing={2} justifyContent="center">
-                    {Object.keys(toolsData).map((category, index) => (
-                        <Grid item xs={12} key={index}>
-                            <Typography
-                                variant="h6"
-                                sx={{
-                                    fontWeight: 'bold',
-                                    textAlign: 'center',
-                                    marginBottom: '10px',
-                                    whiteSpace: 'nowrap',
-                                    backgroundImage: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                    WebkitBackgroundClip: 'text',
-                                    color: 'transparent',
-                                }}
-                            >
-                                {category.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([a-zA-Z])\/([a-zA-Z])/g, '$1/$2').trim()}
-                            </Typography>
-
-                            {/* Horizontal layout for images on small screens */}
-                            <Grid container direction="row" justifyContent="center" spacing={2}>
-                                {toolsData[category].map((toolImage, imgIndex) => (
-                                    <Grid item key={imgIndex} sx={{ display: 'flex', justifyContent: 'center' }}>
-                                        <img
-                                            src={toolImage}
-                                            alt={`Tool ${imgIndex + 1}`}
-                                            style={{
-                                                width: '100px',  
-                                                height: 'auto',
-                                                objectFit: 'cover',
-                                                borderRadius: '8px',
-                                                boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',  
-                                                backgroundColor: 'white', 
-                                                border: '2px solid rgba(255, 255, 255, 0.6)',
-                                            }}
-                                        />
-                                    </Grid>
-                                ))}
-                            </Grid>
-                        </Grid>
+                            />
+                        </div>
                     ))}
-                </Grid>
+                </div>
             </Box>
+
+            {/* CSS for continuous scrolling */}
+            <style>
+                {`
+                    @keyframes scroll {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-100%);
+                        }
+                    }
+
+                    /* Media Queries for Responsiveness */
+                    @media (max-width: 1024px) {
+                        img {
+                            width: 160px;  // Smaller size for medium screens
+                            height: 160px;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        img {
+                            width: 130px;  // Further reduce for smaller screens
+                            height: 130px;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        img {
+                            width: 100px;  // Even smaller size for very small screens
+                            height: 100px;
+                        }
+                    }
+                `}
+            </style>
         </Box>
     );
 };

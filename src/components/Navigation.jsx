@@ -1,36 +1,21 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Box } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Button, Box } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import logo from "/assets/logofinal.png";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Navigation = () => {
-    const [servicesAnchorEl, setServicesAnchorEl] = useState(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-    const handleServicesMenuClick = (event) => {
-        setServicesAnchorEl(event.currentTarget);
-    };
-
-    const handleCloseServicesMenu = () => {
-        setServicesAnchorEl(null);
-    };
 
     const handleMobileMenuToggle = () => {
         setMobileMenuOpen(!mobileMenuOpen);
-    };
-
-    const handleMenuItemClick = () => {
-        setMobileMenuOpen(false); 
-        handleCloseServicesMenu(); 
     };
 
     return (
         <AppBar
             position="sticky"
             sx={{
-                backgroundImage: 'linear-gradient(to right, #10374e, #356683)', 
+                backgroundImage: 'linear-gradient(to right, #10374e, #356683)',
                 boxShadow: 3,
             }}
         >
@@ -44,7 +29,7 @@ const Navigation = () => {
                     />
                 </Box>
 
-                {/* Navigation Buttons */}
+                {/* Navigation Buttons for larger screens */}
                 <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', fontWeight: "800" }}>
                     <Button component={Link} to="/" color="inherit" sx={{ marginRight: 2 }}>
                         Home
@@ -53,107 +38,14 @@ const Navigation = () => {
                         About
                     </Button>
 
-                    {/* Services Dropdown with Down Arrow Icon */}
-                    <Button
-                        color="inherit"
-                        sx={{
-                            marginRight: 2,
-                            display: 'flex',
-                            alignItems: 'center',
-                            paddingRight: 0,
-                            paddingLeft: 1,
-                        }}
-                        onClick={handleServicesMenuClick}
-                    >
+                    <Button component={Link} to="/service-page" color="inherit" sx={{ marginRight: 2 }}>
                         Services
-                        <ArrowDropDownIcon sx={{ marginLeft: 0.5 }} />
                     </Button>
-                    <Menu
-                        anchorEl={servicesAnchorEl}
-                        open={Boolean(servicesAnchorEl)}
-                        onClose={handleCloseServicesMenu}
-                        sx={{
-                            mt: 1,
-                            '& .MuiPaper-root': {
-                                background: 'rgba(255, 255, 255, 0.1)', 
-                                backdropFilter: 'blur(5px)', 
-                                borderRadius: '8px', 
-                                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
-                            }
-                        }}
-                    >
-                        <MenuItem
-                            component={Link}
-                            to="/hyper-automation"
-                            onClick={handleMenuItemClick}
-                            sx={{
-                                color: 'white', 
-                                fontFamily: 'Montserrat', 
-                                fontWeight: 400,
-                                '&:hover': {
-                                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                                    color: '#00aaff', 
-                                }
-                            }}
-                        >
-                            Hyper Automation
-                        </MenuItem>
-                        <MenuItem
-                            component={Link}
-                            to="/digital-transformation"
-                            onClick={handleMenuItemClick}
-                            sx={{
-                                color: 'white',
-                                fontFamily: 'Montserrat',
-                                fontWeight: 400,
-                                '&:hover': {
-                                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                                    color: '#00aaff', 
-                                }
-                            }}
-                        >
-                            Digital Transformation
-                        </MenuItem>
-                        <MenuItem
-                            component={Link}
-                            to="/software-development"
-                            onClick={handleMenuItemClick}
-                            sx={{
-                                color: 'white',
-                                fontFamily: 'Montserrat',
-                                fontWeight: 400,
-                                '&:hover': {
-                                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                                    color: '#00aaff', 
-                                }
-                            }}
-                        >
-                            Software/Web Design & Development
-                        </MenuItem>
-                        <MenuItem
-                            component={Link}
-                            to="/consultation"
-                            onClick={handleMenuItemClick}
-                            sx={{
-                                color: 'white',
-                                fontFamily: 'Montserrat',
-                                fontWeight: 400,
-                                '&:hover': {
-                                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                                    color: '#00aaff', // Change text color on hover
-                                }
-                            }}
-                        >
-                            Consultation / Training
-                        </MenuItem>
-                    </Menu>
 
-                    {/* Resources Link */}
                     <Button component={Link} to="/resources" color="inherit" sx={{ marginRight: 2 }}>
                         Resources
                     </Button>
 
-                    {/* Other buttons */}
                     <Button component={Link} to="/contact" color="inherit">
                         Contact Us
                     </Button>
@@ -162,7 +54,7 @@ const Navigation = () => {
                 {/* Mobile Menu Icon */}
                 <IconButton
                     color="inherit"
-                    sx={{ display: { xs: 'block', lg: 'none' } }}
+                    sx={{ display: { xs: 'block', lg: 'none' } }} // Only show on small and medium screens
                     onClick={handleMobileMenuToggle}
                 >
                     <MenuIcon />
@@ -173,62 +65,91 @@ const Navigation = () => {
                     <Box
                         sx={{
                             position: 'fixed',
-                            top: '64px',
+                            top: '64px', // Keep it below the AppBar
                             left: '50%',
-                            transform: 'translateX(-50%)',
+                            transform: mobileMenuOpen ? 'translateX(-50%)' : 'translateX(-100%)', // Ensure it slides in from left to center
                             backgroundColor: 'white',
                             boxShadow: 3,
                             width: '80%',
                             maxWidth: '400px',
-                            background: 'rgba(255, 255, 255, 0.1)',
-                            backdropFilter: 'blur(5px)',           
-                            borderRadius: '8px',                     
-                            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                            padding: '8px',                    
+                            background: 'rgba(255, 255, 255, 0.9)', // Slight transparency for the background
+                            backdropFilter: 'blur(5px)', // Frosted effect
+                            borderRadius: '8px',
+                            padding: '8px',
+                            opacity: 1,
+                            transition: 'transform 0.5s ease-in-out', // Smooth transition
+                            zIndex: 9999, // Ensure it's on top
                         }}
                     >
-                        <Button component={Link} to="/" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }} onClick={handleMenuItemClick}>
+                        {/* All Navigation Links with Black Text */}
+                        <Button
+                            component={Link}
+                            to="/"
+                            sx={{
+                                width: '100%',
+                                textAlign: 'left',
+                                color: 'black',  // Black text color
+                                fontFamily: 'Montserrat',
+                                fontWeight: 400,
+                            }}
+                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                        >
                             Home
                         </Button>
-                        <Button component={Link} to="/about" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }} onClick={handleMenuItemClick}>
+                        <Button
+                            component={Link}
+                            to="/about"
+                            sx={{
+                                width: '100%',
+                                textAlign: 'left',
+                                color: 'black',  // Black text color
+                                fontFamily: 'Montserrat',
+                                fontWeight: 400,
+                            }}
+                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                        >
                             About
                         </Button>
                         <Button
-                            color="inherit"
-                            sx={{ width: '100%', textAlign: 'left', color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }}
-                            onClick={handleServicesMenuClick}
+                            component={Link}
+                            to="/service-page"
+                            sx={{
+                                width: '100%',
+                                textAlign: 'left',
+                                color: 'black',  // Black text color
+                                fontFamily: 'Montserrat',
+                                fontWeight: 400,
+                            }}
+                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
                         >
                             Services
-                            <ArrowDropDownIcon sx={{ marginLeft: 0 }} />
                         </Button>
-                        <Menu
-                            anchorEl={servicesAnchorEl}
-                            open={Boolean(servicesAnchorEl)}
-                            onClose={handleCloseServicesMenu}
+                        <Button
+                            component={Link}
+                            to="/resources"
                             sx={{
-                                mt: 1,
-                                '& .MuiPaper-root': {
-                                    background: 'rgba(255, 255, 255, 0.1)', 
-                                    backdropFilter: 'blur(5px)', 
-                                    borderRadius: '8px', 
-                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
-                                }
+                                width: '100%',
+                                textAlign: 'left',
+                                color: 'black',  // Black text color
+                                fontFamily: 'Montserrat',
+                                fontWeight: 400,
                             }}
+                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
                         >
-                            <MenuItem component={Link} to="/hyper-automation" onClick={handleMenuItemClick} sx={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }}>
-                                Hyper Automation
-                            </MenuItem>
-                            <MenuItem component={Link} to="/digital-transformation" onClick={handleMenuItemClick} sx={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }}>
-                                Digital Transformation
-                            </MenuItem>
-                            <MenuItem component={Link} to="/software-development" onClick={handleMenuItemClick} sx={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }}>
-                                Software/Web Design & Development
-                            </MenuItem>
-                            <MenuItem component={Link} to="/consultation" onClick={handleMenuItemClick} sx={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }}>
-                                Consultation / Training
-                            </MenuItem>
-                        </Menu>
-                        <Button component={Link} to="/contact" color="inherit" sx={{ width: '100%', textAlign: 'left', color: 'white', fontFamily: 'Montserrat', fontWeight: 400 }} onClick={handleMenuItemClick}>
+                            Resources
+                        </Button>
+                        <Button
+                            component={Link}
+                            to="/contact"
+                            sx={{
+                                width: '100%',
+                                textAlign: 'left',
+                                color: 'black',  // Black text color
+                                fontFamily: 'Montserrat',
+                                fontWeight: 400,
+                            }}
+                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                        >
                             Contact Us
                         </Button>
                     </Box>

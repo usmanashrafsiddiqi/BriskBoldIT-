@@ -15,25 +15,10 @@ export const About = (props) => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                background: 'transparent', // This will allow the body background to show through
             }}
         >
-            {/* Background Image with a glass effect */}
-            <div
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundImage: `url(/assets/aboutbgg.png)`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",
-                    filter: "blur(1px)",
-                    zIndex: -1,
-                }}
-            ></div>
+            {/* Removed Background Image */}
 
             {/* Media query to apply correct styles for small and medium screens */}
             <style>

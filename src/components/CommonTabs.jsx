@@ -1,124 +1,103 @@
 import React from 'react';
-import { Box, Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const CommonTabs = ({ data }) => {
-    return (
-        <Box
-            sx={{
-                width: '100%',
-                typography: 'body1',
-                bgcolor: '#f4f6f8',
-                position: 'relative',
-                backgroundImage: `url('/assets/hyperbg.jpg')`, 
-                backgroundSize: 'cover',
-                backgroundPosition: 'center', 
-                backgroundRepeat: 'no-repeat', 
-                minHeight: "100vh",
-                height: "100%",
-                margin: 0, 
-                padding: 0,  
-                marginBottom: 0,
-            }}
+  return (
+    <Box
+      sx={{
+        width: '100%',
+        typography: 'body1',
+        position: 'relative',
+        // minHeight: '100vh',
+        height: '100%',
+        margin: 0, // Remove margin
+        padding: 0, // Remove padding
+        backgroundColor: 'transparent', // Set background to transparent
+      }}
+    >
+      {/* Title Header */}
+      <Box sx={{ textAlign: 'center', marginBottom: '30px' }}>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: '800',
+            color: 'white',
+            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3rem' }, // Adjust font size based on screen size
+          }}
         >
-            {/* Loop through the data and render the headings */}
-            <Grid container justifyContent="center" sx={{ marginBottom: '20px' }}>
-                {data.tabs.map((tab, index) => (
-                    <Grid item xs={12} key={index}>
-                        <Typography
-                            variant="h3"
-                            sx={{
-                               color:"white",
-                                textAlign: 'center', 
-                                fontFamily: 'Montserrat, sans-serif', 
-                                fontWeight:"800"
-                            }}
-                        >
-                            {tab.head}
-                        </Typography>
-                    </Grid>
-                ))}
-            </Grid>
+          {data.tabs[0]?.head} {/* Display heading from data */}
+        </Typography>
+      </Box>
 
-            {/* Render the content of the tabs */}
-            <Grid 
-                container 
-                spacing={3} 
-                sx={{ 
-                    maxWidth: '1200px', 
-                    margin: '0 auto', 
-                    justifyContent: { xs: 'flex-start', sm: 'center' }, 
-                    alignItems: 'stretch',  
-                }}
+      {/* Accordion Container */}
+      <Grid container justifyContent="center" spacing={2}>
+        {data.tabs.map((tab, index) => (
+          <Grid item xs={12} md={8} key={index} sx={{ width: '100%' }}>
+            {/* Accordion Item */}
+            <Accordion
+              sx={{
+                boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)',
+                borderRadius: '10px',
+                background: 'linear-gradient(135deg, #1c2057, #0b0b37)', // Apply gradient to background
+                '&:hover': {
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+                },
+                width: '100%',
+                maxWidth: '800px',
+                margin: '0 auto',
+              }}
             >
-                {data.tabs.map((tab, index) => (
-                    <Grid 
-                        item 
-                        xs={12}  
-                        sm={6}    
-                        md={6}    
-                        key={index}
-                        sx={{ 
-                            display: 'flex', 
-                            justifyContent: 'flex-start', 
-                            alignItems: 'stretch',  
-                            marginBottom: '40px',  
-                        }}
-                    >
-                        <Paper
-                            sx={{
-                                padding: '20px',
-                                borderRadius: '12px', 
-                                boxShadow: 6, 
-                                height: '100%',  
-                                width: { xs: '90%', sm: '80%' },  
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'flex-start', 
-                                border: '2px solid rgba(255, 255, 255, 0.3)',
-                                backdropFilter: 'blur(10px)', 
-                                background: 'rgba(255, 255, 255, 0.1)', 
-                                transition: 'all 0.3s ease', 
-                                '&:hover': {
-                                    boxShadow: 12, 
-                                    transform: 'scale(1.05)', 
-                                },
-                            }}
-                        >
-                            {/* Title of each box with gradient style */}
-                            <Typography
-                                variant="h5"
-                                sx={{
-                                    marginBottom: '12px',
-                                    fontWeight: 'bold',
-                                    background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
-                                    WebkitBackgroundClip: 'text', 
-                                    color: 'transparent', 
-                                    textTransform: 'uppercase',
-                                }}
-                            >
-                                {tab.title}
-                            </Typography>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls={`panel${index}-content`}
+                id={`panel${index}-header`}
+                sx={{
+                  backgroundColor: 'transparent', // Make summary transparent to let gradient show
+                  color: 'white',
+                  fontWeight: 'bold',
+                  padding: '15px',
+                  '& .MuiAccordionSummary-expandIcon': {
+                    color: 'white',
+                  },
+                  transition: '0.3s',
+                }}
+              >
+                <Typography
+                  sx={{
+                    textTransform: 'uppercase',
+                    fontSize: '1.2rem',
+                    color: 'white', // Keep text white for good contrast on dark background
+                    width: '100%',
+                    textAlign: 'left',
+                  }}
+                >
+                  {tab.label} {/* Accordion Label */}
+                </Typography>
+              </AccordionSummary>
 
-                            {/* Content Text */}
-                            {tab.content.map((content, index) => (
-                                <Typography
-                                    key={index}
-                                    variant="body1"
-                                    sx={{
-                                        color: 'white',
-                                        lineHeight: '1.6',
-                                        marginBottom: '12px', 
-                                    }}
-                                >
-                                    {content}
-                                </Typography>
-                            ))}
-                        </Paper>
-                    </Grid>
-                ))}
-            </Grid>
-        </Box>
-    );
+              <AccordionDetails
+                sx={{
+                  backgroundColor: 'transparent', // Transparent to keep gradient visible
+                  padding: '15px',
+                  borderRadius: '0px 0px 10px 10px',
+                  color: 'white', // White text for good contrast on dark background
+                  fontSize: '1rem',
+                }}
+              >
+                <Typography variant="body1">
+                  {tab.content[0]} {/* Accordion Content */}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
 };
 
 export default CommonTabs;
+
+
+

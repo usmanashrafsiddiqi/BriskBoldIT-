@@ -1,26 +1,26 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import nasdaqimg from "/assets/nasdaq.jpg";
-import abodeimg from "/assets/abode.jpg";
-import wabisabiimg from "/assets/wabisabi.jpg";
-import ucmimg from "/assets/ucm.jpg";
-import derimg from "/assets/der.jpg";
+import low1 from "/assets/13.jpg";
+import low2 from "/assets/14.jpg";
+import low3 from "/assets/15.jpg";
+import low4 from "/assets/16.jpg";
+import low5 from "/assets/17.jpg";
 
 const carouselImages = [
-    nasdaqimg,
-    abodeimg,
-    wabisabiimg,
-    ucmimg,
-    derimg
+    low1,
+    low2,
+    low3,
+    low4,
+    low5
 ];
 
-const Customer = () => {
+const LowCode = () => {
     return (
         <Box
             sx={{
                 width: '100%',
                 padding: '30px',
-                background: 'transparent',  // Set the background to transparent
+                background: 'transparent',  // <-- Set background to transparent
                 color: 'white',
             }}
         >
@@ -36,7 +36,7 @@ const Customer = () => {
                     fontFamily: '"Montserrat", sans-serif',
                 }}
             >
-                Trusted by top analysts, loved by customers.
+                Low Code Expertise
             </Typography>
 
             {/* Wrapper to make the images responsive */}
@@ -46,7 +46,7 @@ const Customer = () => {
                         display: 'flex',
                         justifyContent: 'flex-start',
                         alignItems: 'center',
-                        animation: 'scroll 15s linear infinite', 
+                        animation: 'scroll 15s linear infinite',
                     }}
                 >
                     {/* Duplicate images to ensure smooth looping */}
@@ -54,18 +54,18 @@ const Customer = () => {
                         <div key={index} style={{ marginRight: '20px' }}>
                             <img
                                 src={image}
-                                alt={`Customer ${index}`}
+                                alt={`Low Code ${index}`}
                                 style={{
-                                    width: '220px',  // Default size for larger screens
-                                    height: '120px',  // Default height
+                                    width: '220px',
+                                    height: '120px',
                                     borderRadius: '8px',
                                     margin: '0 auto',
                                     display: 'block',
                                     objectFit: 'cover',
-                                    backgroundColor: "white",  
-                                    backdropFilter: "blur(10px)", 
-                                    border: '3px solid rgb(240, 240, 240)', 
-                                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)', 
+                                    backgroundColor: "white",
+                                    backdropFilter: "blur(10px)",
+                                    border: '3px solid rgb(240, 240, 240)',
+                                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)',
                                 }}
                             />
                         </div>
@@ -88,22 +88,31 @@ const Customer = () => {
                     /* Media Queries for Responsiveness */
                     @media (max-width: 1024px) {
                         img {
-                            width: 150px;  // Reduce size for medium screens
+                            width: 150px;
                             height: 150px;
+                        }
+                        .scroll {
+                            animation: scroll 15s linear infinite;
                         }
                     }
 
                     @media (max-width: 768px) {
                         img {
-                            width: 120px;  // Reduce size further for smaller screens
-                            height: 120px;
+                            width: 100px;
+                            height: 100px;
+                        }
+                        .scroll {
+                            animation: scroll 12s linear infinite;
                         }
                     }
 
                     @media (max-width: 480px) {
                         img {
-                            width: 100px;  // Even smaller size for very small screens
-                            height: 100px;
+                            width: 80px;
+                            height: 80px;
+                        }
+                        .scroll {
+                            animation: scroll 10s linear infinite;
                         }
                     }
                 `}
@@ -112,4 +121,4 @@ const Customer = () => {
     );
 };
 
-export default Customer;
+export default LowCode;

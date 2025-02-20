@@ -1,10 +1,10 @@
 import React from "react"; 
-import { Box, Container, Typography, Grid, Button, Card, CardContent } from "@mui/material";
+import { Box, Container, Typography, Grid, Button, Card, CardContent } from "@mui/material"; 
 import { Phone, WhatsApp } from "@mui/icons-material"; 
-import dubaiimg from "/assets/dubai.png";
-import canadaimg from "/assets/canada.png";
-import japanimg from "/assets/japan.png";
-import indianimg from "/assets/india.png";
+import dubaiimg from "/assets/dubai.png"; 
+import canadaimg from "/assets/canada.png"; 
+import japanimg from "/assets/japan.png"; 
+import indianimg from "/assets/india.png"; 
 import unitedimg from "/assets/united.png";
 
 const locations = [
@@ -64,15 +64,11 @@ export const Contact = () => {
         <Box 
             id="contact" 
             sx={{ 
-                backgroundColor: "#f7fafc", 
+                backgroundColor: "transparent",  // Set background color to transparent
                 py: 5,  
                 display: "flex", 
                 flexDirection: "column", 
                 minHeight: "100vh", 
-                backgroundImage: "url(/assets/contactbg.jpg)", 
-                backgroundSize: "cover", 
-                backgroundPosition: "center", 
-                backgroundRepeat: "no-repeat" 
             }}
         >
             <Container sx={{ flexGrow: 1 }}>
@@ -110,9 +106,8 @@ export const Contact = () => {
                                     }
                                 }}
                                 style={{
-                        
-                                    background: "rgba(255, 255, 255, 0.1)",
-                                    backdropFilter: "blur(10px)",
+                                    background: "rgba(255, 255, 255, 0.1)", // Keep transparency on the cards
+                                    backdropFilter: "blur(10px)", // Blur effect
                                     border: "none",
                                 }}
                             >
@@ -225,24 +220,23 @@ export const Contact = () => {
 
                 {/* Simple Contact Button */}
                 <Box mt={4}>
-                <Button
-    variant="contained"
-    href="mailto: hr@briskboldit.com"
-    sx={{
-        background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Gradient background
-        color: "#fff",
-        "&:hover": {
-            background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Same gradient on hover
-        },
-        fontWeight: "bold",
-        borderRadius: 2,
-        padding: "12px 30px",
-        boxShadow: 3,
-    }}
->
-    Send Us an Email
-</Button>
-
+                    <Button
+                        variant="contained"
+                        href="mailto: hr@briskboldit.com"
+                        sx={{
+                            background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Gradient background
+                            color: "#fff",
+                            "&:hover": {
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Same gradient on hover
+                            },
+                            fontWeight: "bold",
+                            borderRadius: 2,
+                            padding: "12px 30px",
+                            boxShadow: 3,
+                        }}
+                    >
+                        Send Us an Email
+                    </Button>
                 </Box>
             </Box>
         </Box>

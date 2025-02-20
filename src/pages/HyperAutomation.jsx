@@ -6,7 +6,7 @@ const HyperAutomation = () => {
     const data = {
 
         tabs: [
-           
+            
             {
                head:"Hyperautomation",
                 label: "Discover Processes",

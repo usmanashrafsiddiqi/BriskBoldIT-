@@ -13,10 +13,7 @@ const Resources = () => {
     return (
         <Box
             sx={{
-                backgroundImage: `url('/assets/resourcesbg.jpg')`,  
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
+                background: 'transparent', // Background gradient color
                 py: 6,
             }}
         >
