@@ -9,7 +9,7 @@ const CommonTabs = ({ data }) => {
         width: '100%',
         typography: 'body1',
         position: 'relative',
-        // minHeight: '100vh',
+        minHeight: '100vh',
         height: '100%',
         margin: 0, // Remove margin
         padding: 0, // Remove padding
@@ -98,6 +98,3 @@ const CommonTabs = ({ data }) => {
 };
 
 export default CommonTabs;
-
-
-
