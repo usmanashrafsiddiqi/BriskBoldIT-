@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Box, Grid, Typography, Paper } from '@mui/material';
 
 const CommonTabs = ({ data }) => {
   return (
@@ -30,12 +29,12 @@ const CommonTabs = ({ data }) => {
         </Typography>
       </Box>
 
-      {/* Accordion Container */}
+      {/* Tabs Container */}
       <Grid container justifyContent="center" spacing={2}>
         {data.tabs.map((tab, index) => (
           <Grid item xs={12} md={8} key={index} sx={{ width: '100%' }}>
-            {/* Accordion Item */}
-            <Accordion
+            {/* Paper (simulating accordion behavior without the toggle) */}
+            <Paper
               sx={{
                 boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)',
                 borderRadius: '10px',
@@ -48,19 +47,14 @@ const CommonTabs = ({ data }) => {
                 margin: '0 auto',
               }}
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls={`panel${index}-content`}
-                id={`panel${index}-header`}
+              {/* Title (previously AccordionSummary) */}
+              <Box
                 sx={{
                   backgroundColor: 'transparent', // Make summary transparent to let gradient show
                   color: 'white',
                   fontWeight: 'bold',
                   padding: '15px',
-                  '& .MuiAccordionSummary-expandIcon': {
-                    color: 'white',
-                  },
-                  transition: '0.3s',
+                  textAlign: 'left',
                 }}
               >
                 <Typography
@@ -69,14 +63,14 @@ const CommonTabs = ({ data }) => {
                     fontSize: '1.2rem',
                     color: 'white', // Keep text white for good contrast on dark background
                     width: '100%',
-                    textAlign: 'left',
                   }}
                 >
                   {tab.label} {/* Accordion Label */}
                 </Typography>
-              </AccordionSummary>
+              </Box>
 
-              <AccordionDetails
+              {/* Content (previously AccordionDetails) */}
+              <Box
                 sx={{
                   backgroundColor: 'transparent', // Transparent to keep gradient visible
                   padding: '15px',
@@ -88,8 +82,8 @@ const CommonTabs = ({ data }) => {
                 <Typography variant="body1">
                   {tab.content[0]} {/* Accordion Content */}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
+              </Box>
+            </Paper>
           </Grid>
         ))}
       </Grid>
