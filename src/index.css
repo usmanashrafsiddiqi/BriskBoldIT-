@@ -17,9 +17,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background: url('/assets/bodybg.jpg'); 
-  background-size: cover; /* Ensures the image covers the whole screen */
-  background-position: center; /* Centers the image */
+  background: linear-gradient(to right,  #0a032d 50%, #082551 105%);
+
   color: #ffffff; 
   min-height: 100vh;
   overflow-x: hidden;
@@ -57,16 +56,16 @@ h6 {
   font-size: 1.25rem;
 }
 
-a {
+/* a {
   color: #DA7245; 
   text-decoration: none;
-}
+} */
 
-a:hover,
+/* a:hover,
 a:focus {
   color: #C45037;
   text-decoration: underline;
-}
+} */
 
 button {
   background-color: #DA7245; 
@@ -80,9 +79,9 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+/* button:hover {
   background-color: #C45037; 
-}
+} */
 
 .container {
   max-width: 1200px;
@@ -185,13 +184,13 @@ footer {
   text-align: center;
 }
 
-footer a {
+/* footer a {
   color: #DA7245; 
 }
 
 footer a:hover {
   color: #C45037; 
-}
+} */
 
 @media screen and (max-width: 768px) {
   body {

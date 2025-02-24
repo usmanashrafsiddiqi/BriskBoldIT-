@@ -1,8 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
-import banner from "/assets/newestmain.jpg";
-import tabletbanner from "/assets/newesttab.jpg";
-import mobilebanner from "/assets/newestmob.jpg"
+import banner from "/assets/large2.png";
+import tabletbanner from "/assets/tab1.jpg";
+import mobilebanner from "/assets/mob1.jpg"
 export const Header = () => {
   return (
     <Box

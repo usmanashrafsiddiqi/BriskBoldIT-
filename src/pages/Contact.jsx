@@ -1,10 +1,10 @@
-import React from "react"; 
-import { Box, Container, Typography, Grid, Button, Card, CardContent } from "@mui/material"; 
-import { Phone, WhatsApp } from "@mui/icons-material"; 
-import dubaiimg from "/assets/dubai.png"; 
-import canadaimg from "/assets/canada.png"; 
-import japanimg from "/assets/japan.png"; 
-import indianimg from "/assets/india.png"; 
+import React from "react";
+import { Box, Container, Typography, Grid, Button, Card, CardContent } from "@mui/material";
+import { Phone, WhatsApp } from "@mui/icons-material";
+import dubaiimg from "/assets/dubai.png";
+import canadaimg from "/assets/canada.png";
+import japanimg from "/assets/japan.png";
+import indianimg from "/assets/india.png";
 import unitedimg from "/assets/united.png";
 
 const locations = [
@@ -61,26 +61,26 @@ const locations = [
 
 export const Contact = () => {
     return (
-        <Box 
-            id="contact" 
-            sx={{ 
+        <Box
+            id="contact"
+            sx={{
                 backgroundColor: "transparent",  // Set background color to transparent
-                py: 5,  
-                display: "flex", 
-                flexDirection: "column", 
-                minHeight: "100vh", 
+                py: 5,
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100vh",
             }}
         >
             <Container sx={{ flexGrow: 1 }}>
                 {/* Contact Us Heading */}
-                <Typography 
-                    variant="h4" 
-                    sx={{ 
-                        fontWeight: 800, 
-                        color: "white",  
-                        fontFamily: "Montserrat, sans-serif", 
-                        textAlign: "center", 
-                        mb: 4 
+                <Typography
+                    variant="h4"
+                    sx={{
+                        fontWeight: 800,
+                        color: "white",
+                        fontFamily: "Montserrat, sans-serif",
+                        textAlign: "center",
+                        mb: 4
                     }}
                 >
                     Contact Us
@@ -116,34 +116,34 @@ export const Contact = () => {
                                         <img
                                             src={location.img}
                                             alt={`${location.name} icon`}
-                                            width={50} 
+                                            width={50}
                                             height={50}
                                         />
                                     </Box>
 
                                     {/* Location Name with Gradient Effect */}
-                                    <Typography 
-                                        variant="h6" 
-                                        sx={{ 
-                                            fontWeight: "800", 
-                                            fontFamily: "Montserrat, sans-serif", 
+                                    <Typography
+                                        variant="h6"
+                                        sx={{
+                                            fontWeight: "800",
+                                            fontFamily: "Montserrat, sans-serif",
                                             background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                             WebkitBackgroundClip: 'text',
                                             color: 'transparent',
-                                            mb: 2 
+                                            mb: 2
                                         }}
                                     >
                                         {location.name}
                                     </Typography>
 
                                     {/* Location Address */}
-                                    <Typography 
-                                        variant="body2" 
-                                        sx={{ 
-                                            color: "#fff", 
-                                            fontFamily: "Montserrat, sans-serif", 
-                                            fontWeight: "normal", 
-                                            mb: 2 
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            color: "#fff",
+                                            fontFamily: "Montserrat, sans-serif",
+                                            fontWeight: "normal",
+                                            mb: 2
                                         }}
                                     >
                                         {location.address.map((line, idx) => (
@@ -152,15 +152,15 @@ export const Contact = () => {
                                     </Typography>
 
                                     {/* Mobile Number */}
-                                    <Typography 
-                                        variant="body2" 
-                                        sx={{ 
-                                            color: "#fff", 
-                                            fontFamily: "Montserrat, sans-serif", 
-                                            fontWeight: "normal", 
-                                            display: "flex", 
-                                            alignItems: "center", 
-                                            mb: 1 
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            color: "#fff",
+                                            fontFamily: "Montserrat, sans-serif",
+                                            fontWeight: "normal",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            mb: 1
                                         }}
                                     >
                                         <Phone sx={{ color: "white", mr: 1 }} /> {location.mobile}
@@ -168,15 +168,15 @@ export const Contact = () => {
 
                                     {/* WhatsApp */}
                                     {location.whatsapp && (
-                                        <Typography 
-                                            variant="body2" 
-                                            sx={{ 
-                                                color: "#fff", 
-                                                fontFamily: "Montserrat, sans-serif", 
-                                                fontWeight: "normal", 
-                                                display: "flex", 
-                                                alignItems: "center", 
-                                                mb: 1 
+                                        <Typography
+                                            variant="body2"
+                                            sx={{
+                                                color: "#fff",
+                                                fontFamily: "Montserrat, sans-serif",
+                                                fontWeight: "normal",
+                                                display: "flex",
+                                                alignItems: "center",
+                                                mb: 1
                                             }}
                                         >
                                             <WhatsApp sx={{ color: "#25D366", mr: 1 }} /> {location.whatsapp}
@@ -191,24 +191,24 @@ export const Contact = () => {
 
             {/* "Get In Touch" Section at the bottom */}
             <Box sx={{ mt: "auto", textAlign: "center", padding: 4 }}>
-                <Typography 
-                    variant="h4" 
-                    sx={{ 
-                        fontWeight: 800, 
-                        color: "white",  
+                <Typography
+                    variant="h4"
+                    sx={{
+                        fontWeight: 800,
+                        color: "white",
                         fontFamily: "Montserrat, sans-serif",
-                        mb: 2 
+                        mb: 2
                     }}
                 >
                     Get In Touch
                 </Typography>
-                <Typography 
-                    variant="body1" 
-                    sx={{ 
+                <Typography
+                    variant="body1"
+                    sx={{
                         color: "#fff",
                         mb: 4,
                         fontFamily: "Montserrat, sans-serif",
-                        fontWeight: "normal" 
+                        fontWeight: "normal"
                     }}
                 >
                     If you want to contact us, email us at
@@ -219,15 +219,16 @@ export const Contact = () => {
                 </Typography>
 
                 {/* Simple Contact Button */}
+                {/* Simple Contact Button */}
                 <Box mt={4}>
                     <Button
                         variant="contained"
                         href="mailto: hr@briskboldit.com"
                         sx={{
-                            background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Gradient background
+                            background: 'linear-gradient(45deg, #18b4e7, #2de9e8)', // Apply the gradient
                             color: "#fff",
                             "&:hover": {
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', // Same gradient on hover
+                                background: 'linear-gradient(45deg, #18b4e7, #2de9e8)', // Keep the gradient on hover
                             },
                             fontWeight: "bold",
                             borderRadius: 2,
@@ -238,6 +239,7 @@ export const Contact = () => {
                         Send Us an Email
                     </Button>
                 </Box>
+
             </Box>
         </Box>
     );

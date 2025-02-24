@@ -6,18 +6,18 @@ const Footer = () => {
     return (
         <Box
             sx={{
-                background: 'transparent', // Set the background to transparent
+                background: '#0a032d', // Set the background color to #0a032d
                 color: '#fff', // Keep the text color white
                 py: 4,
                 position: 'relative',
                 width: '100%',
                 bottom: 0,
-                mt: 0, 
+                mt: 0,
             }}
         >
             <Container maxWidth="lg">
                 {/* Center the first row */}
-                <Grid container spacing={6} justifyContent="center"> 
+                <Grid container spacing={6} justifyContent="center">
                     {/* Quick Links */}
                     <Grid item xs={12} sm={6} md={3} sx={{ mr: 6 }}>
                         <Typography
@@ -25,7 +25,7 @@ const Footer = () => {
                             sx={{
                                 fontWeight: '800',
                                 mb: 2,
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
                                 fontFamily: '"Montserrat", sans-serif',
@@ -40,7 +40,7 @@ const Footer = () => {
                             <Link href="/about" color="inherit" sx={{ display: 'block', mb: 1 }}>
                                 About Us
                             </Link>
-                            <Link href="/services" color="inherit" sx={{ display: 'block', mb: 1 }}>
+                            <Link href="/service-page" color="inherit" sx={{ display: 'block', mb: 1 }}>
                                 Services
                             </Link>
                             <Link href="/contact" color="inherit" sx={{ display: 'block', mb: 1 }}>
@@ -56,7 +56,7 @@ const Footer = () => {
                             sx={{
                                 fontWeight: '800',
                                 mb: 2,
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
                                 fontFamily: '"Montserrat", sans-serif',
@@ -84,11 +84,11 @@ const Footer = () => {
                             sx={{
                                 fontWeight: '800',
                                 mb: 2,
-                                background: 'linear-gradient(45deg, #177dea, #b22fe3)', 
+                                background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
                                 fontFamily: '"Montserrat", sans-serif',
-                                whiteSpace: 'nowrap', 
+                                whiteSpace: 'nowrap',
                             }}
                         >
                             Subscribe to Our Newsletter
@@ -109,11 +109,11 @@ const Footer = () => {
                             />
                             <button
                                 style={{
-                                    background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                    background: 'linear-gradient(to right, #18b4e7, #2de9e8)', // Apply the gradient here
                                     color: '#fff',
                                     border: 'none',
                                     padding: '10px 20px',
-                                    borderRadius: '4px',
+                                    borderRadius: '1px',
                                     cursor: 'pointer',
                                     transition: 'background 0.3s ease',
                                 }}
@@ -127,41 +127,98 @@ const Footer = () => {
                 {/* Follow Us Section */}
                 <Grid container justifyContent="center" sx={{ mt: 4 }}>
                     <Grid item xs={12} sm={6} md={3}>
-                        <Box className="flex justify-center space-x-4">
+                        <Box
+                            className="flex justify-center"
+                            sx={{ gap: 2 }} // Adding gap between the icon boxes
+                        >
                             <a href="https://www.facebook.com/BriskBoldIT" target="_blank" rel="noopener noreferrer">
-                                <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
-                                    <Facebook />
+                                <IconButton
+                                    sx={{
+                                        backgroundColor: '#0a2260',
+                                        '&:hover': {
+                                            background: 'linear-gradient(to right, #18b4e7, #2de9e8)',
+                                        },
+                                        padding: 1,
+                                        borderRadius: '8px',
+                                    }}
+                                >
+                                    <Facebook sx={{ color: 'white' }} />
                                 </IconButton>
                             </a>
 
                             <a href="https://x.com/BriskBoldAI" target="_blank" rel="noopener noreferrer">
-                                <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
-                                    <Twitter />
+                                <IconButton
+                                    sx={{
+                                        backgroundColor: '#0a2260',
+                                        '&:hover': {
+                                            background: 'linear-gradient(to right, #18b4e7, #2de9e8)',
+                                        },
+                                        padding: 1,
+                                        borderRadius: '8px',
+                                    }}
+                                >
+                                    <Twitter sx={{ color: 'white' }} />
                                 </IconButton>
                             </a>
 
                             <a href="https://www.linkedin.com/company/briskbold/" target="_blank" rel="noopener noreferrer">
-                                <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
-                                    <LinkedIn />
+                                <IconButton
+                                    sx={{
+                                        backgroundColor: '#0a2260',
+                                        '&:hover': {
+                                            background: 'linear-gradient(to right, #18b4e7, #2de9e8)',
+                                        },
+                                        padding: 1,
+                                        borderRadius: '8px',
+                                    }}
+                                >
+                                    <LinkedIn sx={{ color: 'white' }} />
                                 </IconButton>
                             </a>
 
                             <a href="https://www.youtube.com/@BriskBoldAIAutomation" target="_blank" rel="noopener noreferrer">
-                                <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
-                                    <YouTube />
+                                <IconButton
+                                    sx={{
+                                        backgroundColor: '#0a2260',
+                                        '&:hover': {
+                                            background: 'linear-gradient(to right, #18b4e7, #2de9e8)',
+                                        },
+                                        padding: 1,
+                                        borderRadius: '8px',
+                                    }}
+                                >
+                                    <YouTube sx={{ color: 'white' }} />
                                 </IconButton>
                             </a>
 
                             <a href="https://www.instagram.com/briskbold_ai_automation/" target="_blank" rel="noopener noreferrer">
-                                <IconButton style={{ color: 'white' }} className="p-2 hover:text-blue-500 transition-colors duration-200">
-                                    <Instagram />
+                                <IconButton
+                                    sx={{
+                                        backgroundColor: '#0a2260',
+                                        '&:hover': {
+                                            background: 'linear-gradient(to right, #18b4e7, #2de9e8)',
+                                        },
+                                        padding: 1,
+                                        borderRadius: '8px',
+                                    }}
+                                >
+                                    <Instagram sx={{ color: 'white' }} />
                                 </IconButton>
                             </a>
 
                             {/* WhatsApp Icon */}
                             <a href="https://whatsapp.com/channel/0029VaBneGqLI8YX7LAQHs1k" target="_blank" rel="noopener noreferrer">
-                                <IconButton style={{ color: 'white' }} className="p-2 hover:text-green-500 transition-colors duration-200">
-                                    <WhatsApp />
+                                <IconButton
+                                    sx={{
+                                        backgroundColor: '#0a2260',
+                                        '&:hover': {
+                                            background: 'linear-gradient(to right, #18b4e7, #2de9e8)',
+                                        },
+                                        padding: 1,
+                                        borderRadius: '8px',
+                                    }}
+                                >
+                                    <WhatsApp sx={{ color: 'white' }} />
                                 </IconButton>
                             </a>
                         </Box>

@@ -6,16 +6,32 @@ import logo from "/assets/logofinal.png";
 
 const Navigation = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeButton, setActiveButton] = useState(null);  // Track the active button
 
     const handleMobileMenuToggle = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    const handleButtonClick = (buttonName) => {
+        setActiveButton(buttonName);
+    };
+
+    const buttonStyle = (buttonName) => ({
+        borderRadius:3,
+        marginRight: 2,
+        background: activeButton === buttonName ? "linear-gradient(to right, #18b4e7, #2de9e8)" : "transparent",
+        color: activeButton === buttonName ? "#fff" : "inherit",
+        "&:hover": {
+            background: "linear-gradient(to left, #18b4e7, #2de9e8)",
+            color: "#fff"
+        }
+    });
+
     return (
         <AppBar
             position="sticky"
             sx={{
-                backgroundImage: 'linear-gradient(to right, #10374e, #356683)',
+                background: 'transparent',
                 boxShadow: 3,
             }}
         >
@@ -31,24 +47,55 @@ const Navigation = () => {
 
                 {/* Navigation Buttons for larger screens */}
                 <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', fontWeight: "800" }}>
-                    <Button component={Link} to="/" color="inherit" sx={{ marginRight: 2 }}>
+                    <Button
+                        component={Link}
+                        to="/"
+                        color="inherit"
+                        sx={buttonStyle('Home')}
+                        onClick={() => handleButtonClick('Home')}
+                    >
                         Home
                     </Button>
-                    <Button component={Link} to="/about" color="inherit" sx={{ marginRight: 2 }}>
+                    <Button
+                        component={Link}
+                        to="/about"
+                        color="inherit"
+                        sx={buttonStyle('About')}
+                        onClick={() => handleButtonClick('About')}
+                    >
                         About
                     </Button>
 
-                    <Button component={Link} to="/service-page" color="inherit" sx={{ marginRight: 2 }}>
+                    <Button
+                        component={Link}
+                        to="/service-page"
+                        color="inherit"
+                        sx={buttonStyle('Services')}
+                        onClick={() => handleButtonClick('Services')}
+                    >
                         Services
                     </Button>
 
-                    <Button component={Link} to="/resources" color="inherit" sx={{ marginRight: 2 }}>
+                    <Button
+                        component={Link}
+                        to="/resources"
+                        color="inherit"
+                        sx={buttonStyle('Resources')}
+                        onClick={() => handleButtonClick('Resources')}
+                    >
                         Resources
                     </Button>
 
-                    <Button component={Link} to="/contact" color="inherit">
+                    <Button
+                        component={Link}
+                        to="/contact"
+                        color="inherit"
+                        sx={buttonStyle('Contact')}
+                        onClick={() => handleButtonClick('Contact')}
+                    >
                         Contact Us
                     </Button>
+
                 </Box>
 
                 {/* Mobile Menu Icon */}
@@ -81,18 +128,20 @@ const Navigation = () => {
                             zIndex: 9999, // Ensure it's on top
                         }}
                     >
-                        {/* All Navigation Links with Black Text */}
                         <Button
                             component={Link}
                             to="/"
                             sx={{
                                 width: '100%',
                                 textAlign: 'left',
-                                color: 'black',  // Black text color
+                                color: 'black',
                                 fontFamily: 'Montserrat',
                                 fontWeight: 400,
                             }}
-                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                            onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveButton('Home');
+                            }} // Close and mark as active
                         >
                             Home
                         </Button>
@@ -102,11 +151,14 @@ const Navigation = () => {
                             sx={{
                                 width: '100%',
                                 textAlign: 'left',
-                                color: 'black',  // Black text color
+                                color: 'black',
                                 fontFamily: 'Montserrat',
                                 fontWeight: 400,
                             }}
-                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                            onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveButton('About');
+                            }} // Close and mark as active
                         >
                             About
                         </Button>
@@ -116,11 +168,14 @@ const Navigation = () => {
                             sx={{
                                 width: '100%',
                                 textAlign: 'left',
-                                color: 'black',  // Black text color
+                                color: 'black',
                                 fontFamily: 'Montserrat',
                                 fontWeight: 400,
                             }}
-                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                            onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveButton('Services');
+                            }} // Close and mark as active
                         >
                             Services
                         </Button>
@@ -130,11 +185,14 @@ const Navigation = () => {
                             sx={{
                                 width: '100%',
                                 textAlign: 'left',
-                                color: 'black',  // Black text color
+                                color: 'black',
                                 fontFamily: 'Montserrat',
                                 fontWeight: 400,
                             }}
-                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                            onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveButton('Resources');
+                            }} // Close and mark as active
                         >
                             Resources
                         </Button>
@@ -144,11 +202,14 @@ const Navigation = () => {
                             sx={{
                                 width: '100%',
                                 textAlign: 'left',
-                                color: 'black',  // Black text color
+                                color: 'black',
                                 fontFamily: 'Montserrat',
                                 fontWeight: 400,
                             }}
-                            onClick={() => setMobileMenuOpen(false)} // Close the menu on click
+                            onClick={() => {
+                                setMobileMenuOpen(false);
+                                setActiveButton('Contact');
+                            }} // Close and mark as active
                         >
                             Contact Us
                         </Button>
