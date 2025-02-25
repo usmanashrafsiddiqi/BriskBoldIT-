@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Typography, Box, Button, Grid } from "@mui/material";
+import { School, Lightbulb, Speed, Loop, PeopleAlt, Verified } from "@mui/icons-material";  // Imported new icons
 
 export const About = (props) => {
     return (
@@ -15,38 +16,11 @@ export const About = (props) => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                background: 'transparent', // This will allow the body background to show through
+                background: 'transparent',
             }}
         >
-            {/* Removed Background Image */}
-
-            {/* Media query to apply correct styles for small and medium screens */}
-            <style>
-                {`
-                    /* Apply padding-top to start from the top for large screens */
-                    @media (min-width: 960px) {
-                        #about {
-                            padding-top: 0px;  /* Remove large padding for large screens */
-                        }
-                    }
-
-                    /* For medium and small screens, reduce padding-top or set to 0 */
-                    @media (max-width: 960px) {
-                        #about {
-                            padding-top: 20px;  /* Small padding for medium and small screens */
-                            background-image: linear-gradient(45deg, #a60961, #100c68) !important;
-                            background-size: cover;
-                            background-position: center center;
-                            background-repeat: no-repeat;
-                            align-items: flex-start;  /* Align text to the top */
-                        }
-                    }
-                `}
-            </style>
-
             <Container>
                 <Grid container spacing={4} alignItems="flex-start" justifyContent="flex-start">
-                    {/* Text Section (Left side for larger screens) */}
                     <Grid item xs={12} md={9}>
                         <Box
                             className="about-text space-y-6"
@@ -55,12 +29,11 @@ export const About = (props) => {
                                 paddingTop: { xs: "20px", sm: "20px", md: "50px" },
                             }}
                         >
-                            {/* About Us Title */}
                             <Typography
                                 variant="h4"
                                 sx={{
-                                    fontFamily: "Montserrat, sans-serif",
-                                    fontWeight: 800,
+                                    fontFamily: "font-comic, sans-serif",
+                                    fontWeight: 500,
                                     color: "white",
                                     fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem" },
                                 }}
@@ -68,7 +41,6 @@ export const About = (props) => {
                                 About Us
                             </Typography>
 
-                            {/* Paragraph Text */}
                             <Typography
                                 variant="body1"
                                 sx={{
@@ -83,154 +55,99 @@ export const About = (props) => {
                                 {props.data ? props.data.paragraph : "Loading..."}
                             </Typography>
 
-                            {/* Why Choose Us Section */}
                             <Typography
                                 variant="h5"
                                 sx={{
-                                    fontFamily: "Montserrat, sans-serif",
+                                    fontFamily: "font-comic, sans-serif",
                                     fontWeight: "normal",
                                     color: "white",
                                     marginBottom: "1rem",
-                                    fontWeight: "bold",
+                                    fontWeight: "300",
                                     fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.8rem" },
                                 }}
                             >
                                 Why Choose Us?
                             </Typography>
 
-                            {/* Render the points for 'Why' */}
-                            <Grid container spacing={6}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexWrap: "wrap",
+                                    border: "2px solid white",
+                                    backgroundColor: "transparent",
+                                    width: "100%",
+                                    marginBottom: "2rem",
+                                    flexDirection: { xs: "column", sm: "row" }, // Stack boxes on small devices
+                                }}
+                            >
                                 {props.data
                                     ? props.data.Why.map((item, i) => {
-                                        if (i < 3) {
-                                            return (
-                                                <Grid
-                                                    item
-                                                    xs={12}
-                                                    sm={12}
-                                                    md={4} // For the first 3 boxes, make them take up 4 columns
-                                                    key={`why-${i}`}
-                                                >
-                                                    <Box
-                                                        className="about-box"
-                                                        sx={{
-                                                            display: "flex",
-                                                            flexDirection: "column",
-                                                            justifyContent: "center",
-                                                            borderRadius: "8px",
-                                                            backgroundColor: "rgba(255, 255, 255, 0.1)", // Keep box transparency as is
-                                                            backdropFilter: "blur(10px)",
-                                                            boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
-                                                            padding: "16px",
-                                                            marginBottom: "16px",
-                                                            height: { xs: "auto", sm: "auto", md: "100px" },
-                                                            display: "flex",
-                                                            justifyContent: "space-between",
-                                                            flexDirection: "column",
-                                                            "&:hover": {
-                                                                transform: "scale(1.05)",
-                                                                boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
-                                                                transition: "all 0.3s ease",
-                                                            },
-                                                        }}
-                                                    >
-                                                        {/* Title (heading) */}
-                                                        <Typography
-                                                            variant="h6"
-                                                            sx={{
-                                                                fontFamily: "Montserrat, sans-serif",
-                                                                fontWeight: "bold",
-                                                                background: "linear-gradient(45deg, #177dea, #b22fe3)",
-                                                                WebkitBackgroundClip: "text",
-                                                                color: "transparent",
-                                                                marginBottom: "8px",
-                                                            }}
-                                                        >
-                                                            {item.title}
-                                                        </Typography>
-                                                        {/* Description */}
-                                                        <Typography
-                                                            variant="body2"
-                                                            sx={{
-                                                                fontFamily: "Montserrat, sans-serif",
-                                                                fontWeight: "normal",
-                                                                color: "white",
-                                                                lineHeight: 1.8,
-                                                            }}
-                                                        >
-                                                            {item.description}
-                                                        </Typography>
-                                                    </Box>
-                                                </Grid>
-                                            );
-                                        }
-
-                                        // For "Adaptability" and "Customer-Centric" box (index 3 and 4), they will go in the second row
-                                        return (
-                                            <Grid
-                                                item
-                                                xs={12}
-                                                sm={12}
-                                                md={4}
-                                                key={`why-${i}`}
-                                            >
-                                                <Box
-                                                    className="about-box"
-                                                    sx={{
-                                                        display: "flex",
-                                                        flexDirection: "column",
-                                                        justifyContent: "center",
-                                                        borderRadius: "8px",
-                                                        backgroundColor: "rgba(255, 255, 255, 0.1)",
-                                                        backdropFilter: "blur(10px)",
-                                                        boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
-                                                        padding: "16px",
-                                                        marginBottom: "16px",
-                                                        height: { xs: "auto", sm: "auto", md: "100px" },
-                                                        display: "flex",
-                                                        justifyContent: "space-between",
-                                                        flexDirection: "column",
-                                                        "&:hover": {
-                                                            transform: "scale(1.05)",
-                                                            boxShadow: "0 0 15px rgba(255, 255, 255, 0.9)",
-                                                            transition: "all 0.3s ease",
-                                                        },
-                                                    }}
-                                                >
-                                                    {/* Title (heading) */}
-                                                    <Typography
-                                                        variant="h6"
-                                                        sx={{
-                                                            fontFamily: "Montserrat, sans-serif",
-                                                            fontWeight: "bold",
-                                                            background: "linear-gradient(45deg, #177dea, #b22fe3)",
-                                                            WebkitBackgroundClip: "text",
-                                                            color: "transparent",
-                                                            marginBottom: "8px",
-                                                        }}
-                                                    >
-                                                        {item.title}
-                                                    </Typography>
-                                                    {/* Description */}
-                                                    <Typography
-                                                        variant="body2"
-                                                        sx={{
-                                                            fontFamily: "Montserrat, sans-serif",
-                                                            fontWeight: "normal",
-                                                            color: "white",
-                                                            lineHeight: 1.8,
-                                                        }}
-                                                    >
-                                                        {item.description}
-                                                    </Typography>
-                                                </Box>
-                                            </Grid>
-                                        );
-                                    })
+                                          if (i < 6) {  // Ensure we have 6 sections
+                                              // Icon selection based on the section name
+                                              const icons = [
+                                                  <School sx={{ fontSize: 30, color: "#177dea" }} />,       // Expertise
+                                                  <Lightbulb sx={{ fontSize: 30, color: "#177dea" }} />,    // Innovation
+                                                  <Speed sx={{ fontSize: 30, color: "#177dea" }} />,        // Agility
+                                                  <Loop sx={{ fontSize: 30, color: "#177dea" }} />,         // Adaptability
+                                                  <PeopleAlt sx={{ fontSize: 30, color: "#177dea" }} />,    // Customer-Centric
+                                                  <Verified sx={{ fontSize: 30, color: "#177dea" }} />,     // Empty section with an icon (or can be left empty)
+                                              ];
+                                              
+                                              return (
+                                                  <Box
+                                                      key={`why-${i}`}
+                                                      sx={{
+                                                          display: "flex",
+                                                          flexDirection: "column",
+                                                          justifyContent: "center",
+                                                          alignItems: "center",
+                                                          border: "1px solid white",
+                                                          width: { xs: "100%", sm: "33.33%" }, // 100% width for small devices, 33.33% for larger devices
+                                                          padding: { xs: "8px", sm: "16px" }, // Padding adjustment for small devices
+                                                          boxSizing: "border-box",
+                                                          ...(i === 5 && { border: "none" }), // No border for the last section
+                                                      }}
+                                                  >
+                                                      {/* Icon */}
+                                                      <Box sx={{ marginBottom: "8px" }}>
+                                                          {icons[i]} {/* Display the corresponding icon */}
+                                                      </Box>
+                                                      
+                                                      {/* Title (heading) */}
+                                                      <Typography
+                                                          variant="h6"
+                                                          sx={{
+                                                              fontFamily: "Montserrat, sans-serif",
+                                                              fontWeight: "bold",
+                                                              background: "linear-gradient(45deg, #177dea, #b22fe3)",
+                                                              WebkitBackgroundClip: "text",
+                                                              color: "transparent",
+                                                              marginBottom: { xs: "4px", sm: "8px" }, // Adjust margin for small devices
+                                                          }}
+                                                      >
+                                                          {item.title}
+                                                      </Typography>
+                                                      
+                                                      {/* Description */}
+                                                      <Typography
+                                                          variant="body2"
+                                                          sx={{
+                                                              fontFamily: "Montserrat, sans-serif",
+                                                              fontWeight: "normal",
+                                                              color: "white",
+                                                              lineHeight: 1.8,
+                                                              fontSize: { xs: "0.8rem", sm: "1rem" }, // Smaller font size for small devices
+                                                          }}
+                                                      >
+                                                          {item.description}
+                                                      </Typography>
+                                                  </Box>
+                                              );
+                                          }
+                                          return null;
+                                      })
                                     : "Loading..."}
-                            </Grid>
-
-                            {/* Button Section */}
+                            </Box>
 
                             <Box
                                 sx={{
@@ -251,16 +168,15 @@ export const About = (props) => {
                                         fontWeight: "bold",
                                         borderRadius: "5px",
                                         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                                        background: 'linear-gradient(45deg, #18b4e7, #2de9e8)',  // Updated gradient
+                                        background: 'linear-gradient(45deg, #18b4e7, #2de9e8)',
                                         "&:hover": {
-                                            background: 'linear-gradient(45deg, #18b4e7, #2de9e8)',  // Keep same gradient on hover
+                                            background: 'linear-gradient(45deg, #18b4e7, #2de9e8)',
                                         },
                                     }}
                                 >
                                     Get In Touch
                                 </Button>
                             </Box>
-
                         </Box>
                     </Grid>
                 </Grid>

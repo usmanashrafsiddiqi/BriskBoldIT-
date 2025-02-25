@@ -76,9 +76,9 @@ export const Contact = () => {
                 <Typography
                     variant="h4"
                     sx={{
-                        fontWeight: 800,
+                        fontWeight: 500,
                         color: "white",
-                        fontFamily: "Montserrat, sans-serif",
+                        fontFamily: '"font-comic", "Montserrat","sans-serif"',
                         textAlign: "center",
                         mb: 4
                     }}
@@ -125,8 +125,8 @@ export const Contact = () => {
                                     <Typography
                                         variant="h6"
                                         sx={{
-                                            fontWeight: "800",
-                                            fontFamily: "Montserrat, sans-serif",
+                                            fontWeight: "500",
+                                            fontFamily: '"font-comic", "Montserrat","sans-serif"',
                                             background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                             WebkitBackgroundClip: 'text',
                                             color: 'transparent',
@@ -194,9 +194,9 @@ export const Contact = () => {
                 <Typography
                     variant="h4"
                     sx={{
-                        fontWeight: 800,
+                        fontWeight: 500,
                         color: "white",
-                        fontFamily: "Montserrat, sans-serif",
+                        fontFamily: '"font-comic", "Montserrat","sans-serif"',
                         mb: 2
                     }}
                 >

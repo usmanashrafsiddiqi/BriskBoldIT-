@@ -34,7 +34,7 @@ export const Services = ({ data }) => {
                         className="text-4xl font-bold text-white"
                         sx={{
                             fontWeight: 500, color: "white",
-                            fontFamily: '"Montserrat", sans-serif',
+                            fontFamily: '"font-comic", "Montserrat","sans-serif"',
                         }}
                     >
                         Our Services
@@ -45,6 +45,7 @@ export const Services = ({ data }) => {
                         style={{
                             background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                             WebkitBackgroundClip: 'text',
+                            fontFamily: '"font-comic", "Montserrat","sans-serif"',
                             color: 'white',
                             fontWeight: '300',
                             marginTop: '20px'  // Adjust this value to move it lower
@@ -76,15 +77,14 @@ export const Services = ({ data }) => {
                                             sx={{
                                                 borderRadius: "12px", // Round corners of individual card
                                                 height: 230, // Fixed height for all cards
-                                                width: 300,  // Increased width of cards
+                                                width: 350,  // Increased width of cards
                                                 display: "flex",
                                                 flexDirection: "column",
                                                 boxShadow: "none", // No box shadow to keep it simple
                                                 border: "0.25px solid white",// Remove border
                                             }}
                                             style={{
-                                                background: "rgba(255, 255, 255, 0.1)", // Light background
-                                                backdropFilter: "blur(8px)", // Frosted glass effect with a blur
+                                                background: 'transparent',
                                             }}
                                         >
                                             <CardContent
@@ -109,7 +109,7 @@ export const Services = ({ data }) => {
                                                     style={{
                                                         color: 'white', // Heading color changed to white
                                                         fontWeight: "800",
-                                                        fontFamily: '"Montserrat", sans-serif'
+                                                        fontFamily: '"font-comic", "Montserrat","sans-serif"',
                                                     }}
                                                 >
                                                     {service.name}

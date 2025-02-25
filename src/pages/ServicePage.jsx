@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import HyperAutomation from './HyperAutomation';  // Import each service component
+import HyperAutomation from './HyperAutomation';
 import DigitalTransformation from './DigitalTransformation';
 import SoftwareDevelopment from './SoftwareDevelopment';
 import Consultation from './Consultation';
@@ -9,31 +9,29 @@ const ServicePage = () => {
     return (
         <Box
             sx={{
-                padding: '20px',
+                margin: 0, // Remove all margins
+                padding: 0, // Remove all padding
                 background: 'transparent', // Apply gradient background
-                // minHeight: '100vh', // Remove this to stop forcing full viewport height
-                // Add marginBottom if necessary to reduce gap
-                marginBottom: '20px', // Optional, if you want to reduce any space at the bottom
             }}
         >
             {/* HyperAutomation Section */}
-            <Box sx={{ marginBottom: '2px' }}>
-                <HyperAutomation />  {/* This will show the HyperAutomation component */}
+            <Box sx={{ marginBottom: 0, padding: 0 }}>
+                <HyperAutomation />
             </Box>
 
             {/* DigitalTransformation Section */}
-            <Box sx={{ marginBottom: '2px' }}>
-                <DigitalTransformation />  {/* This will show the DigitalTransformation component */}
+            <Box sx={{ marginBottom: 0, padding: 0 }}>
+                <DigitalTransformation />
             </Box>
 
             {/* SoftwareDevelopment Section */}
-            <Box sx={{ marginBottom: '2px' }}>
-                <SoftwareDevelopment />  {/* This will show the SoftwareDevelopment component */}
+            <Box sx={{ marginBottom: 0, padding: 0 }}>
+                <SoftwareDevelopment />
             </Box>
 
             {/* Consultation Section */}
-            <Box sx={{ marginBottom: '0' }}>
-                <Consultation />  {/* This will show the Consultation component */}
+            <Box sx={{ marginBottom: 0, padding: 0 }}>
+                <Consultation />
             </Box>
         </Box>
     );

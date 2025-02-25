@@ -169,7 +169,7 @@ const Navigation = () => {
                                 width: '100%',
                                 textAlign: 'left',
                                 color: 'black',
-                                fontFamily: 'Montserrat',
+                                fontFamily: ' font-comic', 
                                 fontWeight: 400,
                             }}
                             onClick={() => {
@@ -186,7 +186,7 @@ const Navigation = () => {
                                 width: '100%',
                                 textAlign: 'left',
                                 color: 'black',
-                                fontFamily: 'Montserrat',
+                                fontFamily: ' font-comic',
                                 fontWeight: 400,
                             }}
                             onClick={() => {

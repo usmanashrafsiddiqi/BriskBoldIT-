@@ -15,7 +15,7 @@ const Partners = () => {
   };
 
   return (
-    <Box sx={{ padding: '20px' }}>
+    <Box sx={{ padding: '20px'}}>
       <h2>Our Partners</h2>
       <p>Explore our offerings for our partners below.</p>
 

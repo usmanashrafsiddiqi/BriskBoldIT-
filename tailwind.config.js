@@ -1,5 +1,3 @@
-
-
 module.exports = {
   content: [
     "./index.html",
@@ -8,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],  
+        comic: ['"Comic Sans MS"',"Montserrat" ,'sans-serif'],
       },
     },
   },

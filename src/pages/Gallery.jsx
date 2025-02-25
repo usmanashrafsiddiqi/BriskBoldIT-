@@ -16,7 +16,7 @@ export const Gallery = (props) => {
             <Container>
                 <Box sx={{ textAlign: "center", marginBottom: "3rem" }}>
                     <Typography variant="h4" className="font-bold " 
-                    sx={{ fontWeight: "800", color:"white" }}
+                    sx={{ fontWeight: "500", color:"white" ,  fontFamily: '"font-comic", "Montserrat","sans-serif"',}}
                   >
                         Partners and Vendors
                     </Typography>
@@ -27,6 +27,7 @@ export const Gallery = (props) => {
                             maxWidth: "60rem",
                             margin: "auto",
                             marginTop: "1rem",
+                            fontFamily: '"font-comic", "Montserrat","sans-serif"',
                         }}
                         style={{ 
                             color: 'white',

@@ -40,8 +40,8 @@ const Tools = () => {
                 variant="h4"
                 component="h2"
                 sx={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: '800',
+                    fontFamily: '"font-comic", "Montserrat","sans-serif"',
+                    fontWeight: '500',
                     color: 'white',
                     textAlign: 'center',
                     marginBottom: '30px',  // Increased bottom margin for spacing

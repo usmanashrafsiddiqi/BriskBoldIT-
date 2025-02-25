@@ -43,11 +43,11 @@ const Software = () => {
                 sx={{
                     textAlign: 'center',
                     color: 'white',
-                    fontWeight: 800,
+                    fontWeight: 500,
                     marginBottom: '30px',
                     fontSize: '2rem',
                     letterSpacing: '1px',
-                    fontFamily: '"Montserrat", sans-serif',
+                    fontFamily: '"font-comic", "Montserrat","sans-serif"',
                 }}
             >
                 Software Development

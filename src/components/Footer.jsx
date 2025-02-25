@@ -23,12 +23,12 @@ const Footer = () => {
                         <Typography
                             variant="h6"
                             sx={{
-                                fontWeight: '800',
+                                fontWeight: '500',
                                 mb: 2,
                                 background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                 WebkitBackgroundClip: 'text',
-                                color: 'transparent',
-                                fontFamily: '"Montserrat", sans-serif',
+                                color: 'white',
+                                fontFamily: '"font-comic", "Montserrat","sans-serif"',
                             }}
                         >
                             Quick Links
@@ -54,12 +54,12 @@ const Footer = () => {
                         <Typography
                             variant="h6"
                             sx={{
-                                fontWeight: '800',
+                                fontWeight: '500',
                                 mb: 2,
                                 background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                 WebkitBackgroundClip: 'text',
-                                color: 'transparent',
-                                fontFamily: '"Montserrat", sans-serif',
+                                color: 'white',
+                                fontFamily: '"font-comic", "Montserrat","sans-serif"',
                             }}
                         >
                             Contact Us
@@ -82,12 +82,12 @@ const Footer = () => {
                         <Typography
                             variant="h6"
                             sx={{
-                                fontWeight: '800',
+                                fontWeight: '500',
                                 mb: 2,
                                 background: 'linear-gradient(45deg, #177dea, #b22fe3)',
                                 WebkitBackgroundClip: 'text',
-                                color: 'transparent',
-                                fontFamily: '"Montserrat", sans-serif',
+                                color: 'white',
+                                fontFamily: '"font-comic", "Montserrat","sans-serif"',
                                 whiteSpace: 'nowrap',
                             }}
                         >
