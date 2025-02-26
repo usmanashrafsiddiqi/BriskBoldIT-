@@ -73,79 +73,82 @@ export const About = (props) => {
                                 sx={{
                                     display: "flex",
                                     flexWrap: "wrap",
-                                    border: "2px solid white",
+                                    border: "1px solid white", // Thinner border
                                     backgroundColor: "transparent",
                                     width: "100%",
                                     marginBottom: "2rem",
                                     flexDirection: { xs: "column", sm: "row" }, // Stack boxes on small devices
+                                    justifyContent: { md: "flex-start" }, // Start from the left on larger screens
+                                    maxWidth: { md: "100%" }, // Increased width for large devices
+                                    marginLeft: { md: "100px" }, // Move the box towards the right on larger screens
                                 }}
                             >
                                 {props.data
                                     ? props.data.Why.map((item, i) => {
-                                          if (i < 6) {  // Ensure we have 6 sections
-                                              // Icon selection based on the section name
-                                              const icons = [
-                                                  <School sx={{ fontSize: 30, color: "#177dea" }} />,       // Expertise
-                                                  <Lightbulb sx={{ fontSize: 30, color: "#177dea" }} />,    // Innovation
-                                                  <Speed sx={{ fontSize: 30, color: "#177dea" }} />,        // Agility
-                                                  <Loop sx={{ fontSize: 30, color: "#177dea" }} />,         // Adaptability
-                                                  <PeopleAlt sx={{ fontSize: 30, color: "#177dea" }} />,    // Customer-Centric
-                                                  <Verified sx={{ fontSize: 30, color: "#177dea" }} />,     // Empty section with an icon (or can be left empty)
-                                              ];
-                                              
-                                              return (
-                                                  <Box
-                                                      key={`why-${i}`}
-                                                      sx={{
-                                                          display: "flex",
-                                                          flexDirection: "column",
-                                                          justifyContent: "center",
-                                                          alignItems: "center",
-                                                          border: "1px solid white",
-                                                          width: { xs: "100%", sm: "33.33%" }, // 100% width for small devices, 33.33% for larger devices
-                                                          padding: { xs: "8px", sm: "16px" }, // Padding adjustment for small devices
-                                                          boxSizing: "border-box",
-                                                          ...(i === 5 && { border: "none" }), // No border for the last section
-                                                      }}
-                                                  >
-                                                      {/* Icon */}
-                                                      <Box sx={{ marginBottom: "8px" }}>
-                                                          {icons[i]} {/* Display the corresponding icon */}
-                                                      </Box>
-                                                      
-                                                      {/* Title (heading) */}
-                                                      <Typography
-                                                          variant="h6"
-                                                          sx={{
-                                                              fontFamily: "Montserrat, sans-serif",
-                                                              fontWeight: "bold",
-                                                              background: "linear-gradient(45deg, #177dea, #b22fe3)",
-                                                              WebkitBackgroundClip: "text",
-                                                              color: "transparent",
-                                                              marginBottom: { xs: "4px", sm: "8px" }, // Adjust margin for small devices
-                                                          }}
-                                                      >
-                                                          {item.title}
-                                                      </Typography>
-                                                      
-                                                      {/* Description */}
-                                                      <Typography
-                                                          variant="body2"
-                                                          sx={{
-                                                              fontFamily: "Montserrat, sans-serif",
-                                                              fontWeight: "normal",
-                                                              color: "white",
-                                                              lineHeight: 1.8,
-                                                              fontSize: { xs: "0.8rem", sm: "1rem" }, // Smaller font size for small devices
-                                                          }}
-                                                      >
-                                                          {item.description}
-                                                      </Typography>
-                                                  </Box>
-                                              );
-                                          }
-                                          return null;
-                                      })
+                                        if (i < 6) {  // Ensure we have 6 sections
+                                            // Icon selection based on the section name
+                                            const icons = [
+                                                <School sx={{ fontSize: 30, color: "#177dea" }} />,       // Expertise
+                                                <Lightbulb sx={{ fontSize: 30, color: "#177dea" }} />,    // Innovation
+                                                <Speed sx={{ fontSize: 30, color: "#177dea" }} />,        // Agility
+                                                <Loop sx={{ fontSize: 30, color: "#177dea" }} />,         // Adaptability
+                                                <PeopleAlt sx={{ fontSize: 30, color: "#177dea" }} />,    // Customer-Centric
+                                                <Verified sx={{ fontSize: 30, color: "#177dea" }} />,     // Empty section with an icon (or can be left empty)
+                                            ];
+
+                                            return (
+                                                <Box
+                                                    key={`why-${i}`}
+                                                    sx={{
+                                                        display: "flex",
+                                                        flexDirection: "column",
+                                                        justifyContent: "center",
+                                                        alignItems: "center",
+                                                        border: "1px solid white",
+                                                        width: { xs: "100%", sm: "33.33%" }, // 100% width for small devices, 33.33% for larger devices
+                                                        padding: { xs: "8px", sm: "16px" }, // Padding adjustment for small devices
+                                                        boxSizing: "border-box",
+                                                        ...(i === 5 && { border: "none" }), // No border for the last section
+                                                    }}
+                                                >
+                                                    {/* Icon */}
+                                                    <Box sx={{ marginBottom: "8px" }}>
+                                                        {icons[i]} {/* Display the corresponding icon */} 
+                                                    </Box>
+
+                                                    {/* Title (heading) */}
+                                                    <Typography
+                                                        variant="h6"
+                                                        sx={{
+                                                            fontFamily: "Montserrat, sans-serif",
+                                                            fontWeight: "bold",
+                                                            background: "linear-gradient(45deg, #177dea, #b22fe3)",
+                                                            WebkitBackgroundClip: "text",
+                                                            color: "transparent",
+                                                            marginBottom: { xs: "4px", sm: "8px" }, // Adjust margin for small devices
+                                                        }}
+                                                    >
+                                                        {item.title}
+                                                    </Typography>
+
+                                                    {/* Description */}
+                                                    <Typography
+                                                        variant="body2"
+                                                        sx={{
+                                                            fontFamily: "Montserrat, sans-serif",
+                                                            fontWeight: "normal",
+                                                            color: "white",
+                                                            lineHeight: 1.8,
+                                                            fontSize: { xs: "0.8rem", sm: "1rem" }, // Smaller font size for small devices
+                                                        }}
+                                                    >
+                                                        {item.description}
+                                                    </Typography>
+                                                </Box>
+                                            );
+                                        }
+                                        return null;
+                                    })
                                     : "Loading..."}
                             </Box>
 
