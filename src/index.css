@@ -12,17 +12,28 @@
 }
 
 
-
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to right,  #0a032d 50%, #082551 105%);
-
-  color: #ffffff; 
+  
+  /* Set up only the image as background */
+  background: url('/assets/bg 1.jpg');
+  
+  /* Ensure the image fits without zooming or distortion */
+  background-size: contain;  /* Prevents zooming and cropping */
+  background-position: center;
+  background-repeat: repeat;  /* This will prevent the image from repeating */
+  
+  color: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+
+
+
+
 
 
 h1, h2, h3, h4, h5, h6 {

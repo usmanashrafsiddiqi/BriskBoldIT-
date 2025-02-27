@@ -8,8 +8,8 @@ export const Gallery = (props) => {
             id="portfolio"
             style={{
                 background: 'transparent',  // <-- Set the background to transparent
-                paddingTop: "3rem",
-                paddingBottom: "3rem",
+                paddingTop: "2rem",
+                paddingBottom: "2rem",
                 overflow: "hidden",
             }}
         >

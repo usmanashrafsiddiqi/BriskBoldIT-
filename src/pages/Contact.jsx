@@ -127,9 +127,9 @@ export const Contact = () => {
                                         sx={{
                                             fontWeight: "500",
                                             fontFamily: '"font-comic", "Montserrat","sans-serif"',
-                                            background: 'linear-gradient(45deg, #177dea, #b22fe3)',
-                                            WebkitBackgroundClip: 'text',
-                                            color: 'transparent',
+                                            // background: 'linear-gradient(45deg, #177dea, #b22fe3)',
+                                            // WebkitBackgroundClip: 'text',
+                                            color: 'white',
                                             mb: 2
                                         }}
                                     >

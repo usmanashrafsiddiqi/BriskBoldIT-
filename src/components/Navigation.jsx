@@ -17,7 +17,7 @@ const Navigation = () => {
     };
 
     const buttonStyle = (buttonName) => ({
-        borderRadius:3,
+        borderRadius: 3,
         marginRight: 2,
         background: activeButton === buttonName ? "linear-gradient(to right, #18b4e7, #2de9e8)" : "transparent",
         color: activeButton === buttonName ? "#fff" : "inherit",
@@ -38,11 +38,17 @@ const Navigation = () => {
             <Toolbar>
                 {/* Logo */}
                 <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                    <img
+                 <Link to={'/'}>
+                 <img
                         src={logo}
                         alt="Logo"
                         style={{ width: 150, height: 41 }}
+                        sx={buttonStyle('Home')}
+                        onClick={() => handleButtonClick('Home')}
                     />
+
+                 </Link>    
+
                 </Box>
 
                 {/* Navigation Buttons for larger screens */}
@@ -169,7 +175,7 @@ const Navigation = () => {
                                 width: '100%',
                                 textAlign: 'left',
                                 color: 'black',
-                                fontFamily: ' font-comic', 
+                                fontFamily: ' font-comic',
                                 fontWeight: 400,
                             }}
                             onClick={() => {

@@ -6,7 +6,11 @@ const Footer = () => {
     return (
         <Box
             sx={{
-                background: '#0a032d', // Set the background color to #0a032d
+                backgroundColor: '#0a032d', // Keep the background color as it was
+                backgroundImage: 'url(/assets/footer1.png)', // Replace with your PNG image URL
+                backgroundPosition: 'center', // Position the image in the center
+                backgroundRepeat: 'repeat', // Ensure the image doesn't repeat
+                backgroundSize: 'contain', // Adjust image size to fit (you can change to 'cover' if you want it to cover the area)
                 color: '#fff', // Keep the text color white
                 py: 4,
                 position: 'relative',

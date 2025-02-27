@@ -12,7 +12,7 @@ export const About = (props) => {
                 paddingRight: "50px",
                 paddingLeft: "50px",
                 minHeight: "100vh",
-                paddingBottom: "80px",
+                paddingBottom: "50px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
@@ -73,7 +73,7 @@ export const About = (props) => {
                                 sx={{
                                     display: "flex",
                                     flexWrap: "wrap",
-                                    border: "1px solid white", // Thinner border
+                                    border: "0.1px solid white", // Thinner border
                                     backgroundColor: "transparent",
                                     width: "100%",
                                     marginBottom: "2rem",
@@ -124,7 +124,7 @@ export const About = (props) => {
                                                             fontWeight: "bold",
                                                             background: "linear-gradient(45deg, #177dea, #b22fe3)",
                                                             WebkitBackgroundClip: "text",
-                                                            color: "transparent",
+                                                            color: "white",
                                                             marginBottom: { xs: "4px", sm: "8px" }, // Adjust margin for small devices
                                                         }}
                                                     >

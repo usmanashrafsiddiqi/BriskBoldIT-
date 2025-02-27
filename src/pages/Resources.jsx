@@ -7,7 +7,7 @@ const Resources = () => {
         { title: 'How to use AI in our daily lives', url: 'https://www.youtube.com/embed/b0Aj0EPE-_s?si=08hcepOydefAAokE' },
         { title: 'UiPath Vs Automation', url: 'https://www.youtube.com/embed/iBhJW1rpLww?si=Z29Gbfom_GrFVMCd' },
         { title: 'Conversational AI and Use Cases', url: 'https://www.youtube.com/embed/0jPwLVZ7nSQ?si=m-mZMkAuQASy-1Lw' },
-        { title: 'Automation Tools for the Future', url: 'https://www.youtube.com/embed/6UoFAdLg__A' },
+        { title: 'The Future Of Low Code #joget #Briskbold' , url: "https://www.youtube.com/embed/h5ZR06KgfjM?si=YQxVlwzN_jSPwulh"  },
     ];
 
     return (
