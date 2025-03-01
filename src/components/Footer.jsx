@@ -7,16 +7,22 @@ const Footer = () => {
         <Box
             sx={{
                 backgroundColor: '#0a032d', // Keep the background color as it was
-                backgroundImage: 'url(/assets/footer1.png)', // Replace with your PNG image URL
+                backgroundImage: 'url(/assets/footer1.png)', // Your design image URL
                 backgroundPosition: 'center', // Position the image in the center
-                backgroundRepeat: 'repeat', // Ensure the image doesn't repeat
-                backgroundSize: 'contain', // Adjust image size to fit (you can change to 'cover' if you want it to cover the area)
+                backgroundRepeat: {
+                    xs: 'no-repeat',  // For screens below 750px, prevent repeat
+                    sm: 'repeat',     // For screens 750px and above, allow repeat
+                },
+                backgroundSize: {
+                    xs: 'cover',       // For smaller screens, make sure image covers the area
+                    sm: 'contain',     // For larger screens, keep image contained
+                },
                 color: '#fff', // Keep the text color white
                 py: 4,
-                position: 'relative',
-                width: '100%',
-                bottom: 0,
-                mt: 0,
+                position: 'relative', // Make sure the box stays relative
+                width: '100%', // Full width to make sure it stretches across the screen
+                bottom: 0, // Place it at the bottom
+                mt: 0, // No margin on top
             }}
         >
             <Container maxWidth="lg">

@@ -15,17 +15,17 @@ export const About = (props) => {
                 paddingBottom: "50px",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
+                alignItems: "center", // Center everything
                 background: 'transparent',
             }}
         >
             <Container>
-                <Grid container spacing={4} alignItems="flex-start" justifyContent="flex-start">
+                <Grid container spacing={4} alignItems="center" justifyContent="center"> {/* Center content for medium and above */}
                     <Grid item xs={12} md={9}>
                         <Box
                             className="about-text space-y-6"
                             sx={{
-                                textAlign: "left",
+                                textAlign: "center", // Center text for large screens
                                 paddingTop: { xs: "20px", sm: "20px", md: "50px" },
                             }}
                         >
@@ -33,7 +33,7 @@ export const About = (props) => {
                                 variant="h4"
                                 sx={{
                                     fontFamily: "font-comic, sans-serif",
-                                    fontWeight: 500,
+                                    fontWeight: 800,
                                     color: "white",
                                     fontSize: { xs: "1.5rem", sm: "2rem", md: "3rem" },
                                 }}
@@ -62,25 +62,29 @@ export const About = (props) => {
                                     fontWeight: "normal",
                                     color: "white",
                                     marginBottom: "1rem",
-                                    fontWeight: "300",
+                                    fontWeight: "500",
                                     fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.8rem" },
                                 }}
                             >
                                 Why Choose Us?
                             </Typography>
 
+                            {/* Box around the "Why Choose Us" section with frosted glass effect */}
                             <Box
                                 sx={{
                                     display: "flex",
                                     flexWrap: "wrap",
-                                    border: "0.1px solid white", // Thinner border
-                                    backgroundColor: "transparent",
+                                    border: "1px solid white", // Add border to box
+                                    backgroundColor: "rgba(255, 255, 255, 0.1)", // Light white background with transparency
+                                    backdropFilter: "blur(-20px)", // Apply frosted glass blur effect
                                     width: "100%",
                                     marginBottom: "2rem",
                                     flexDirection: { xs: "column", sm: "row" }, // Stack boxes on small devices
-                                    justifyContent: { md: "flex-start" }, // Start from the left on larger screens
+                                    justifyContent: "center", // Center for medium and large screens
                                     maxWidth: { md: "100%" }, // Increased width for large devices
-                                    marginLeft: { md: "100px" }, // Move the box towards the right on larger screens
+                                    marginLeft: { md: "0" }, // Center for large screens
+                                    borderRadius: "20px", // Rounded corners for the box
+                                    padding: "20px",
                                 }}
                             >
                                 {props.data
@@ -88,12 +92,12 @@ export const About = (props) => {
                                         if (i < 6) {  // Ensure we have 6 sections
                                             // Icon selection based on the section name
                                             const icons = [
-                                                <School sx={{ fontSize: 30, color: "#177dea" }} />,       // Expertise
-                                                <Lightbulb sx={{ fontSize: 30, color: "#177dea" }} />,    // Innovation
-                                                <Speed sx={{ fontSize: 30, color: "#177dea" }} />,        // Agility
-                                                <Loop sx={{ fontSize: 30, color: "#177dea" }} />,         // Adaptability
-                                                <PeopleAlt sx={{ fontSize: 30, color: "#177dea" }} />,    // Customer-Centric
-                                                <Verified sx={{ fontSize: 30, color: "#177dea" }} />,     // Empty section with an icon (or can be left empty)
+                                                <School sx={{ fontSize: 30, color: "white" }} />,       // Expertise
+                                                <Lightbulb sx={{ fontSize: 30, color: "white" }} />,    // Innovation
+                                                <Speed sx={{ fontSize: 30, color: "white" }} />,        // Agility
+                                                <Loop sx={{ fontSize: 30, color: "white" }} />,         // Adaptability
+                                                <PeopleAlt sx={{ fontSize: 30, color: "white" }} />,    // Customer-Centric
+                                                <Verified sx={{ fontSize: 30, color: "white" }} />,     // Empty section with an icon (or can be left empty)
                                             ];
 
                                             return (
@@ -108,7 +112,6 @@ export const About = (props) => {
                                                         width: { xs: "100%", sm: "33.33%" }, // 100% width for small devices, 33.33% for larger devices
                                                         padding: { xs: "8px", sm: "16px" }, // Padding adjustment for small devices
                                                         boxSizing: "border-box",
-                                                        ...(i === 5 && { border: "none" }), // No border for the last section
                                                     }}
                                                 >
                                                     {/* Icon */}
@@ -156,7 +159,7 @@ export const About = (props) => {
                                 sx={{
                                     width: "100%",
                                     display: "flex",
-                                    justifyContent: { xs: "center", md: "flex-start" },
+                                    justifyContent: "center", // Center the button for all screen sizes
                                     marginTop: "40px",
                                 }}
                             >

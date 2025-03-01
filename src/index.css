@@ -18,17 +18,16 @@ body {
   line-height: 1.6;
   
   /* Set up only the image as background */
-  background: url('/assets/bg 1.jpg');
+  background: url('/assets/backgg.jpg') no-repeat center center fixed;
   
-  /* Ensure the image fits without zooming or distortion */
-  background-size: contain;  /* Prevents zooming and cropping */
-  background-position: center;
-  background-repeat: repeat;  /* This will prevent the image from repeating */
+  /* Ensure the image covers the entire viewport */
+  background-size: cover;  /* Ensures the image covers the full viewport */
   
   color: #ffffff;
-  min-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100vh;  /* Ensure the body takes the full height */
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
+
 
 
 

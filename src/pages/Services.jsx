@@ -33,12 +33,15 @@ export const Services = ({ data }) => {
                         variant="h3"
                         className="text-4xl font-bold text-white"
                         sx={{
-                            fontWeight: 500, color: "white",
+                            fontWeight: 500,
+                            color: "white",
                             fontFamily: '"font-comic", "Montserrat","sans-serif"',
+                            marginTop: "25px",  // Add space above the component
                         }}
                     >
                         Our Services
                     </Typography>
+
                     <Typography
                         variant="h5"
                         className="text-lg text-gray-600 mt-6 font-medium"
@@ -56,14 +59,16 @@ export const Services = ({ data }) => {
 
                 </Box>
 
-                {/* Box around the service cards with thin border and transparent background */}
+                {/* Box around the service cards with frosted glass effect */}
                 <Box
                     sx={{
                         border: "0.25px solid white", // Thinner border around the box
                         borderRadius: "25px", // Increased border-radius to make the box more rounded
                         padding: "20px", // Padding around the box to ensure spacing from edges
-                        background: "transparent", // Transparent background for the box
+                        background: "rgba(255, 255, 255, 0.1)", // Light white background with transparency
+                        backdropFilter: "blur(-20px)", // Frosted glass effect
                         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)", // Light shadow to make the box stand out
+                        position: "relative", // Ensure the content inside is positioned correctly
                     }}
                 >
                     {/* Service Cards */}
@@ -81,10 +86,8 @@ export const Services = ({ data }) => {
                                                 display: "flex",
                                                 flexDirection: "column",
                                                 boxShadow: "none", // No box shadow to keep it simple
-                                                border: "0.25px solid white",// Remove border
-                                            }}
-                                            style={{
-                                                background: 'transparent',
+                                                border: "0.25px solid white", // Border for each card
+                                                background: 'transparent', // Transparent background for individual cards
                                             }}
                                         >
                                             <CardContent

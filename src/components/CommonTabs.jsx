@@ -26,15 +26,13 @@ const CommonTabs = ({ data }) => {
         position: "relative",
         minHeight: "50vh",
         height: "100%",
-        margin: 0, // Remove margin here
-        padding: 0, // Remove padding here
-        backgroundColor: "transparent",
+        margin: 0,
+        padding: 0,
+        backgroundColor: "transparent", // Ensure no background color is set
         display: "flex",
-        flexDirection: "column", // Stack header and content vertically
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        paddingTop: 0, // Removed top padding
-        paddingBottom: 0, // Removed bottom padding
       }}
     >
       {/* Title Header */}
@@ -47,7 +45,7 @@ const CommonTabs = ({ data }) => {
             fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem", lg: "3rem" },
           }}
         >
-          {data.tabs[0]?.head} {/* Display heading from data */}
+          {data.tabs[0]?.head}
         </Typography>
       </Box>
 
@@ -66,7 +64,7 @@ const CommonTabs = ({ data }) => {
             height: "110%", // Increased height a little
             display: "flex",
             flexDirection: "column",
-            transition: "transform 5s ease-in-out", // Increased duration to 4 seconds
+            transition: "transform 5s ease-in-out",
             transform: `rotateY(${flip ? 180 : 0}deg)`, // Flip only if flip is true
           }}
         >
@@ -74,13 +72,16 @@ const CommonTabs = ({ data }) => {
           <Paper
             sx={{
               boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
-              borderRadius: "10px",
-              background: "linear-gradient(135deg, #1c2057, #0b0b37)", // Apply gradient to background
+              borderRadius: "12px",
               padding: "15px",
               color: "white",
               transform: flip ? "rotateY(180deg)" : "rotateY(0deg)", // Apply rotation effect
-              transition: "transform 5s ease-in-out", // Increased duration to 4 seconds
+              transition: "transform 5s ease-in-out",
               backfaceVisibility: "hidden", // Hide the backside
+              backdropFilter: "blur(-20px)", // Frosted glass effect
+              backgroundColor: "rgba(255, 255, 255, 0.1)", // Slight transparency for the frosted effect
+              border: "1px solid rgba(255, 255, 255, 0.9)", // Shiny white border
+              boxShadow: "0 4px 10px rgba(255, 255, 255, 0.3)", // Add subtle glowing effect
             }}
           >
             {/* Title (Tab Label) */}
@@ -96,25 +97,26 @@ const CommonTabs = ({ data }) => {
                 sx={{
                   textTransform: "uppercase",
                   fontSize: "1.2rem",
+                  fontWeight: "bold",
                   color: "white",
                   width: "100%",
                 }}
               >
-                {data.tabs[currentTab]?.label} {/* Accordion Label */}
+                {data.tabs[currentTab]?.label}
               </Typography>
             </Box>
 
             {/* Content */}
             <Box
               sx={{
-                backgroundColor: "transparent",
+                backgroundColor: "transparent", // Transparent background so background image shows through
                 padding: "15px",
                 borderRadius: "0px 0px 10px 10px",
                 fontSize: "1rem",
               }}
             >
               <Typography variant="body1">
-                {data.tabs[currentTab]?.content[0]} {/* Accordion Content */}
+                {data.tabs[currentTab]?.content[0]}
               </Typography>
             </Box>
           </Paper>

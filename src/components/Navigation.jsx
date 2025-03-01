@@ -32,23 +32,25 @@ const Navigation = () => {
             position="sticky"
             sx={{
                 background: 'transparent',
-                boxShadow: 3,
+                boxShadow: 0, // Remove default shadow
+                backdropFilter: 'blur(10px)', // Apply the blur effect
+                backgroundColor: 'rgba(255, 255, 255, 0.1)', // Slight transparency for the frosted look
+                zIndex: 1200, // Ensure it stays on top
+                transition: 'background-color 0.3s ease', // Smooth background color transition
             }}
         >
             <Toolbar>
                 {/* Logo */}
                 <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                 <Link to={'/'}>
-                 <img
-                        src={logo}
-                        alt="Logo"
-                        style={{ width: 150, height: 41 }}
-                        sx={buttonStyle('Home')}
-                        onClick={() => handleButtonClick('Home')}
-                    />
-
-                 </Link>    
-
+                    <Link to={'/'}>
+                        <img
+                            src={logo}
+                            alt="Logo"
+                            style={{ width: 150, height: 41 }}
+                            sx={buttonStyle('Home')}
+                            onClick={() => handleButtonClick('Home')}
+                        />
+                    </Link>    
                 </Box>
 
                 {/* Navigation Buttons for larger screens */}
@@ -101,7 +103,6 @@ const Navigation = () => {
                     >
                         Contact Us
                     </Button>
-
                 </Box>
 
                 {/* Mobile Menu Icon */}
@@ -121,11 +122,7 @@ const Navigation = () => {
                             top: '64px', // Keep it below the AppBar
                             left: '50%',
                             transform: mobileMenuOpen ? 'translateX(-50%)' : 'translateX(-100%)', // Ensure it slides in from left to center
-                            backgroundColor: 'white',
-                            boxShadow: 3,
-                            width: '80%',
-                            maxWidth: '400px',
-                            background: 'rgba(255, 255, 255, 0.9)', // Slight transparency for the background
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)', // Slight transparency for the background
                             backdropFilter: 'blur(5px)', // Frosted effect
                             borderRadius: '8px',
                             padding: '8px',
