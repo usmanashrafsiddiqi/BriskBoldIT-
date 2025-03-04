@@ -11,7 +11,7 @@ import SmoothScroll from "smooth-scroll";
 import PageNotFound from "./pages/PageNotFound";
 import Footer from "./components/Footer";
 import Resources from "./pages/Resources";
-
+import WhatsAppChat from "./pages/WhatsAppChat";
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
@@ -41,6 +41,7 @@ const App = () => {
       </div>
 
       <Footer />
+      <WhatsAppChat/>
     </div>
   );
 };

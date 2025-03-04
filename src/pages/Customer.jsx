@@ -29,7 +29,7 @@ const Customer = () => {
                 sx={{
                     textAlign: 'center',
                     color: 'white',
-                    fontWeight: 500,
+                    fontWeight: 800,
                     marginBottom: '30px',
                     fontSize: '2rem',
                     letterSpacing: '1px',

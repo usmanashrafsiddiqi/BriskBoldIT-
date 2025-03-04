@@ -223,7 +223,7 @@ export const Contact = () => {
                 <Box mt={4}>
                     <Button
                         variant="contained"
-                        href="mailto: hr@briskboldit.com"
+                        href="mailto: info@briskboldit.com"
                         sx={{
                             background: 'linear-gradient(45deg, #18b4e7, #2de9e8)', // Apply the gradient
                             color: "#fff",

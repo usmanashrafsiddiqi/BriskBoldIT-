@@ -18,7 +18,7 @@ body {
   line-height: 1.6;
   
   /* Set up only the image as background */
-  background: url('/assets/backgg.jpg') no-repeat center center fixed;
+  background: url('/assets/newbg1.jpg') repeat center center fixed;
   
   /* Ensure the image covers the entire viewport */
   background-size: cover;  /* Ensures the image covers the full viewport */
@@ -27,6 +27,15 @@ body {
   min-height: 100vh;  /* Ensure the body takes the full height */
   overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
+
+/* src/App.css or your custom CSS file */
+.react-whatsapp-widget {
+  position: fixed !important;  /* Ensures it's fixed in the corner */
+  bottom: 20px !important;     /* 20px from the bottom */
+  right: 20px !important;      /* 20px from the right */
+  z-index: 1000 !important;    /* Ensure it's above other elements */
+}
+
 
 
 

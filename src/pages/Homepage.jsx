@@ -8,6 +8,7 @@ import Tools from './Tools'
 import Customer from './Customer'
 import Software from './Software'
 import LowCode from './LowCode'
+import GoogleReviews from './GoogleReviews'
 
 const Homepage = ({ header, services, about, gallery, contact }) => {
     return (
@@ -21,6 +22,7 @@ const Homepage = ({ header, services, about, gallery, contact }) => {
             <Tools />
             <About data={about} />
             <Contact data={contact} />
+          <GoogleReviews/>
         </div>
     )
 }

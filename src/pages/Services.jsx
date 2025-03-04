@@ -66,7 +66,7 @@ export const Services = ({ data }) => {
                         borderRadius: "25px", // Increased border-radius to make the box more rounded
                         padding: "20px", // Padding around the box to ensure spacing from edges
                         background: "rgba(255, 255, 255, 0.1)", // Light white background with transparency
-                        backdropFilter: "blur(-20px)", // Frosted glass effect
+                        backdropFilter: "blur(10px)", // Frosted glass effect
                         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)", // Light shadow to make the box stand out
                         position: "relative", // Ensure the content inside is positioned correctly
                     }}

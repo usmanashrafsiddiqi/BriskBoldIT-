@@ -76,7 +76,7 @@ export const About = (props) => {
                                     flexWrap: "wrap",
                                     border: "1px solid white", // Add border to box
                                     backgroundColor: "rgba(255, 255, 255, 0.1)", // Light white background with transparency
-                                    backdropFilter: "blur(-20px)", // Apply frosted glass blur effect
+                                    backdropFilter: "blur(10px)", // Apply frosted glass blur effect
                                     width: "100%",
                                     marginBottom: "2rem",
                                     flexDirection: { xs: "column", sm: "row" }, // Stack boxes on small devices

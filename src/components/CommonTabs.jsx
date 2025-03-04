@@ -78,7 +78,7 @@ const CommonTabs = ({ data }) => {
               transform: flip ? "rotateY(180deg)" : "rotateY(0deg)", // Apply rotation effect
               transition: "transform 5s ease-in-out",
               backfaceVisibility: "hidden", // Hide the backside
-              backdropFilter: "blur(-20px)", // Frosted glass effect
+              backdropFilter: "blur(10px)", // Frosted glass effect
               backgroundColor: "rgba(255, 255, 255, 0.1)", // Slight transparency for the frosted effect
               border: "1px solid rgba(255, 255, 255, 0.9)", // Shiny white border
               boxShadow: "0 4px 10px rgba(255, 255, 255, 0.3)", // Add subtle glowing effect
