@@ -18,7 +18,7 @@ export const Header = () => {
         "@media (max-width: 700px)": {
           backgroundImage: `url(${tabletbanner})`,
         },
-        "@media (max-width: 400px)": {
+        "@media (max-width: 450px)": {
           backgroundImage: `url(${mobilebanner})`,
           
         },

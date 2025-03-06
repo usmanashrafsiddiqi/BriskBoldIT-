@@ -16,17 +16,26 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  
-  /* Set up only the image as background */
+
+  /* Default background for all devices */
   background: url('/assets/newbg1.jpg') repeat center center fixed;
-  
-  /* Ensure the image covers the entire viewport */
-  background-size: cover;  /* Ensures the image covers the full viewport */
+  background-size: cover;
   
   color: #ffffff;
-  min-height: 100vh;  /* Ensure the body takes the full height */
-  overflow-x: hidden;  /* Prevent horizontal scrolling */
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
+/* iPhone-specific fix */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;  /* Fixes zoom issue */
+    background-size: cover;  /* Ensures the image still covers the full body */
+    background-position: center center;
+  }
+}
+
+
 
 /* src/App.css or your custom CSS file */
 .react-whatsapp-widget {
