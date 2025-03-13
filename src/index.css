@@ -10,31 +10,40 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.6;
 
-  /* Default background for all devices */
+  /* Background settings */
   background: url('/assets/newbg1.jpg') repeat center center fixed;
-  background-size: cover;
-  
+  background-size: auto; /* Prevents zooming */
   color: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* iPhone-specific fix */
+/* iPhone & iOS Safari Fix */
 @supports (-webkit-touch-callout: none) {
   body {
-    background-attachment: scroll;  /* Fixes zoom issue */
-    background-size: cover;  /* Ensures the image still covers the full body */
+    background-attachment: scroll; /* Fixes background issue on iPhones */
+    background-size: auto; /* Ensures it doesn’t zoom */
     background-position: center center;
   }
 }
 
+/* Ensure fix applies to ALL screen sizes */
+@media screen and (max-width: 1200px),
+       screen and (max-width: 992px),
+       screen and (max-width: 768px),
+       screen and (max-width: 576px),
+       screen and (max-width: 480px) {
+  body {
+    background-attachment: fixed; /* Keeps background fixed */
+    background-size: auto; /* Prevents zooming */
+    background-position: center center;
+  }
+}
 
 
 /* src/App.css or your custom CSS file */
