@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
 
-  /* Background settings */
+  /* Your Default Background */
   background: url('/assets/newbg1.jpg') repeat center center fixed;
   background-size: auto; /* Prevents zooming */
   color: #ffffff;
@@ -26,24 +26,13 @@ body {
 /* iPhone & iOS Safari Fix */
 @supports (-webkit-touch-callout: none) {
   body {
-    background-attachment: scroll; /* Fixes background issue on iPhones */
-    background-size: auto; /* Ensures it doesn’t zoom */
-    background-position: center center;
+    background-attachment: scroll !important; /* Fixes zoom issue on iPhones */
+    background-size: contain !important; /* Ensures full image without zoom */
+    background-repeat: repeat !important;
+    background-position: center center !important;
   }
 }
 
-/* Ensure fix applies to ALL screen sizes */
-@media screen and (max-width: 1200px),
-       screen and (max-width: 992px),
-       screen and (max-width: 768px),
-       screen and (max-width: 576px),
-       screen and (max-width: 480px) {
-  body {
-    background-attachment: fixed; /* Keeps background fixed */
-    background-size: auto; /* Prevents zooming */
-    background-position: center center;
-  }
-}
 
 
 /* src/App.css or your custom CSS file */
