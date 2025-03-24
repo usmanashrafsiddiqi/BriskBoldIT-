@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import automationanywhereimg from "/assets/automationanywhere.jpg";
-import uipathimg from "/assets/uipath.png";
+import uipathimg from "/assets/uipath.jpg";
 import softwareagimg from "/assets/softwareag.jpg";
 import powerautomateimg from "/assets/powerautomate.jpg";
 import druidimg from "/assets/druid1.png";
-import twixiorimg from "/assets/twix.png";
-import docaquireimg from "/assets/docaquire.png";
-import abbyimg from "/assets/abby.png";
+import twixiorimg from "/assets/twix.jpg";
+import docaquireimg from "/assets/doc1.jpg";
+import abbyimg from "/assets/abby.jpg";
 import powerbiimg from "/assets/powerbi.png";
 import microsoftimg from "/assets/microsoft.jpg";
 
