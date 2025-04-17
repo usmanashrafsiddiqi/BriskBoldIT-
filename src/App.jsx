@@ -23,17 +23,32 @@ const App = () => {
 
   useEffect(() => {
     setLandingPageData(JsonData);
-
+  
     // ✅ Inject Chatbase chatbot script
     const existingScript = document.getElementById("chatbase-script");
     if (!existingScript) {
       const script = document.createElement("script");
       script.src = "https://www.chatbase.co/embed.min.js";
-      script.id = "77r-rKKkAT3anoDPOhwFy"; // Your chatbot ID here
+      script.id = "chatbase-script"; // Give it a proper ID for future reference
+      script.setAttribute("chatbotId", "77r-rKKkAT3anoDPOhwFy"); // If needed
       script.setAttribute("domain", "www.chatbase.co");
       document.body.appendChild(script);
     }
+  
+    // ✅ Resize Chatbase widget after it loads
+    const observer = new MutationObserver(() => {
+      const iframe = document.querySelector('iframe[src*="chatbase"]');
+      if (iframe) {
+        iframe.style.width = "350px";  // Set your desired width
+        iframe.style.height = "500px"; // Set your desired height
+        iframe.style.borderRadius = "12px"; // Optional: nice rounded corners
+        observer.disconnect();
+      }
+    });
+  
+    observer.observe(document.body, { childList: true, subtree: true });
   }, []);
+  
 
   return (
     <div
