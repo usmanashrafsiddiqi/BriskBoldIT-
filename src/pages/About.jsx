@@ -1,8 +1,11 @@
 import React from "react";
 import { Container, Typography, Box, Button, Grid } from "@mui/material";
 import { School, Lightbulb, Speed, Loop, PeopleAlt, Verified } from "@mui/icons-material";  // Imported new icons
-
+import {useEffect} from 'react'
 export const About = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div
             id="about"

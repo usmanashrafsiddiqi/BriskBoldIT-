@@ -1,11 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Grid, Typography, Box, Card, CardContent } from "@mui/material";
-
+import {useEffect} from 'react'
 // Correctly import all the required icons
 import { faCogs, faThumbsUp, faPrint, faLanguage, faChild, faRobot } from "@fortawesome/free-solid-svg-icons";
 
 export const Services = ({ data }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const iconMapping = {
         "fa fa-cogs": faCogs,

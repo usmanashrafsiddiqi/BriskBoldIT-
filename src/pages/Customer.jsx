@@ -5,13 +5,15 @@ import abodeimg from "/assets/abode.jpg";
 import wabisabiimg from "/assets/wabisabi.jpg";
 import ucmimg from "/assets/ucm.jpg";
 import derimg from "/assets/der.jpg";
+import dunubai from "/assets/dunubai.jpg";
 
 const carouselImages = [
     nasdaqimg,
     abodeimg,
     wabisabiimg,
     ucmimg,
-    derimg
+    derimg,
+    dunubai
 ];
 
 const Customer = () => {

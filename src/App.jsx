@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import JsonData from "./Data/data.json";
@@ -12,6 +13,8 @@ import PageNotFound from "./pages/PageNotFound";
 import Footer from "./components/Footer";
 import Resources from "./pages/Resources";
 import WhatsAppChat from "./pages/WhatsAppChat";
+import PrivacyPolicy from './pages/PrivacyPolicy';
+
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -76,6 +79,7 @@ const App = () => {
           <Route path="/gallery" element={<Gallery data={landingPageData.Gallery} />} />
           <Route path="/contact" element={<Contact data={landingPageData.Contact} />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
