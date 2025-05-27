@@ -6,6 +6,7 @@ import wabisabiimg from "/assets/wabisabi.jpg";
 import ucmimg from "/assets/ucm.jpg";
 import derimg from "/assets/der.jpg";
 import dunubai from "/assets/dunubai.jpg";
+import newcust from "/assets/newcust.jpg";
 
 const carouselImages = [
     nasdaqimg,
@@ -13,7 +14,8 @@ const carouselImages = [
     wabisabiimg,
     ucmimg,
     derimg,
-    dunubai
+    dunubai,
+    newcust
 ];
 
 const Customer = () => {
