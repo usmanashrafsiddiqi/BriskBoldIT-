@@ -3,8 +3,8 @@ import { Box, Container, Typography, Grid, Button, Card, CardContent } from "@mu
 import { Phone, WhatsApp } from "@mui/icons-material";
 import dubaiimg from "/assets/dubai.png";
 import canadaimg from "/assets/canada.png";
-import japanimg from "/assets/japan.png";
-import indianimg from "/assets/india.png";
+import japanimg from "/assets/Japan.png";
+import indianimg from "/assets/India.png";
 import unitedimg from "/assets/united.png";
 
 const locations = [
