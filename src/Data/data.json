@@ -44,6 +44,11 @@
       "largeImage": "/assets/INTELIZvendor.jpg",
       "smallImage": "/assets/INTELIZvendor.jpg"
     },
+     {
+      "title": "Project Title",
+      "largeImage": "/assets/media.jpg",
+      "smallImage": "/assets/media.jpg"
+    },
     {
       "title": "Project Title",
       "largeImage": "/assets/RABBITTvendor.jpg",
