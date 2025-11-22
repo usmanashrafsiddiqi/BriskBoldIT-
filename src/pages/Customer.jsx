@@ -7,6 +7,12 @@ import ucmimg from "/assets/ucm.jpg";
 import derimg from "/assets/der.jpg";
 import dunubai from "/assets/dunubai.jpg";
 import newcust from "/assets/newcust.jpg";
+import newcust1 from "/assets/cust1.jpg";
+import newcust2 from "/assets/cust2.jpg";
+import newcust3 from "/assets/cust3.jpg";
+import newcust4 from "/assets/cust4.jpg";
+import newcust5 from "/assets/cust5.jpg";
+import newcust6 from "/assets/cust6.jpg";
 
 const carouselImages = [
     nasdaqimg,
@@ -15,7 +21,13 @@ const carouselImages = [
     ucmimg,
     derimg,
     dunubai,
-    newcust
+    newcust,
+    newcust1,
+    newcust2,
+    newcust3,
+    newcust4,
+    newcust5,
+    newcust6
 ];
 
 const Customer = () => {
